@@ -110,12 +110,30 @@
           <!-- Formulário de Passos -->
           <div class="booking-steps-column">
             
+            <!-- Barra de Passos (Wizard 1 2 3) -->
+            <div class="booking-wizard-steps-bar" role="tablist" aria-label="Progresso da Reserva">
+              <div class="wizard-step-tab active" id="tab-step-1">
+                <span class="tab-step-circle">1</span>
+                <span class="tab-step-text">Alojamento &amp; Datas</span>
+              </div>
+              <div class="wizard-step-line" id="line-step-1"></div>
+              <div class="wizard-step-tab" id="tab-step-2">
+                <span class="tab-step-circle">2</span>
+                <span class="tab-step-text">Dados Pessoais</span>
+              </div>
+              <div class="wizard-step-line" id="line-step-2"></div>
+              <div class="wizard-step-tab" id="tab-step-3">
+                <span class="tab-step-circle">3</span>
+                <span class="tab-step-text">Pagamento</span>
+              </div>
+            </div>
+
             <form id="direct-booking-form">
               
               <!-- PASSO 1: HABITAÇÃO & DATAS -->
-              <div class="booking-step-card">
+              <div class="booking-step-card" id="booking-step-1">
                 <div class="step-card-header">
-                  <span class="step-number">1</span>
+                  <span class="step-number" id="badge-step-1">1</span>
                   <h3>Alojamento e Datas de Estadia</h3>
                 </div>
 
@@ -192,12 +210,20 @@
 
                 </div>
 
+                <!-- Botão de Ação: Concluir Passo 1 -->
+                <div class="step-card-footer-actions">
+                  <button type="button" class="btn-step-next" id="btn-next-to-step-2">
+                    <span>Continuar para Dados do Titular (Passo 2)</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </button>
+                </div>
+
               </div>
 
               <!-- PASSO 2: DADOS DO TITULAR & FATURAÇÃO (NIF OPCIONAL) -->
-              <div class="booking-step-card">
+              <div class="booking-step-card is-step-hidden" id="booking-step-2">
                 <div class="step-card-header">
-                  <span class="step-number">2</span>
+                  <span class="step-number" id="badge-step-2">2</span>
                   <h3>Dados do Hóspede Titular & Faturação</h3>
                 </div>
 
@@ -274,12 +300,24 @@
                   </div>
                 </div>
 
+                <!-- Botões de Ação: Passo 2 -->
+                <div class="step-card-footer-actions">
+                  <button type="button" class="btn-step-prev" id="btn-back-to-step-1">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Voltar ao Passo 1</span>
+                  </button>
+                  <button type="button" class="btn-step-next" id="btn-next-to-step-3">
+                    <span>Continuar para Pagamento Seguro (Passo 3)</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </button>
+                </div>
+
               </div>
 
               <!-- PASSO 3: PAGAMENTO SEGURO NO MOMENTO -->
-              <div class="booking-step-card">
+              <div class="booking-step-card is-step-hidden" id="booking-step-3">
                 <div class="step-card-header">
-                  <span class="step-number">3</span>
+                  <span class="step-number" id="badge-step-3">3</span>
                   <h3>Pagamento Seguro no Momento</h3>
                 </div>
 
@@ -293,7 +331,7 @@
                     <span>Cartão de Crédito</span>
                   </button>
                   <button type="button" class="payment-tab-btn" data-method="multibanco">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="18" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                     <span>Multibanco</span>
                   </button>
                 </div>
@@ -337,6 +375,14 @@
                     <div><strong>Referência:</strong> 842 190 284</div>
                     <div><strong>Validade:</strong> 24 Horas</div>
                   </div>
+                </div>
+
+                <!-- Botões de Ação: Passo 3 -->
+                <div class="step-card-footer-actions">
+                  <button type="button" class="btn-step-prev" id="btn-back-to-step-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Voltar aos Dados</span>
+                  </button>
                 </div>
 
               </div>
@@ -444,15 +490,15 @@
           <ul class="footer-contacts-list">
             <li class="footer-contact-row">
               <span class="footer-contact-label">Telemóvel:</span>
-              <a href="tel:+351934297935" class="footer-contact-val">(+351) 934 297 935</a>
+              <span class="footer-contact-val">(+351) 934 297 935</span>
             </li>
             <li class="footer-contact-row">
               <span class="footer-contact-label">Telefone Fixo:</span>
-              <a href="tel:+351238496341" class="footer-contact-val">(+351) 238 496 341</a>
+              <span class="footer-contact-val">(+351) 238 496 341</span>
             </li>
             <li class="footer-contact-row">
               <span class="footer-contact-label">E-mail:</span>
-              <a href="mailto:info@casagrande.com.pt" class="footer-contact-val">info@casagrande.com.pt</a>
+              <span class="footer-contact-val">info@casagrande.com.pt</span>
             </li>
           </ul>
 

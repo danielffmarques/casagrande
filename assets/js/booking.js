@@ -507,6 +507,229 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // ==========================================================================
+  // WIZARD PROGRESSIVO DE RESERVAS: PASSOS 1, 2 E 3
+  // Os passos aparecem sucessivamente após validação do passo anterior
+  // ==========================================================================
+  const step1 = document.getElementById('booking-step-1');
+  const step2 = document.getElementById('booking-step-2');
+  const step3 = document.getElementById('booking-step-3');
+
+  const btnNextTo2 = document.getElementById('btn-next-to-step-2');
+  const btnBackTo1 = document.getElementById('btn-back-to-step-1');
+  const btnNextTo3 = document.getElementById('btn-next-to-step-3');
+  const btnBackTo2 = document.getElementById('btn-back-to-step-2');
+
+  const tabStep1 = document.getElementById('tab-step-1');
+  const tabStep2 = document.getElementById('tab-step-2');
+  const tabStep3 = document.getElementById('tab-step-3');
+  const lineStep1 = document.getElementById('line-step-1');
+  const lineStep2 = document.getElementById('line-step-2');
+  const badgeStep1 = document.getElementById('badge-step-1');
+  const badgeStep2 = document.getElementById('badge-step-2');
+  const badgeStep3 = document.getElementById('badge-step-3');
+
+  function validateStep1() {
+    const selectedKey = unitSelect ? unitSelect.value : null;
+    if (!selectedKey || !unitData[selectedKey]) {
+      if (unitSelect) unitSelect.classList.add('field-validation-error');
+      return false;
+    }
+    if (unitSelect) unitSelect.classList.remove('field-validation-error');
+
+    const dateIn = parseDateFlexible(checkinInput.value);
+    const dateOut = parseDateFlexible(checkoutInput.value);
+
+    if (!dateIn || !dateOut || isBeforeDay(dateOut, dateIn) || isSameDay(dateOut, dateIn)) {
+      if (checkinInput) checkinInput.classList.add('field-validation-error');
+      if (checkoutInput) checkoutInput.classList.add('field-validation-error');
+      openPicker('checkin', checkinInput);
+      return false;
+    }
+
+    const diffDays = Math.ceil((dateOut.getTime() - dateIn.getTime()) / (1000 * 60 * 60 * 24));
+    if (diffDays < 2) {
+      alert('A Casa Grande pratica uma estadia mínima de 2 noites. Por favor selecione uma estadia com pelo menos 2 noites.');
+      openPicker('checkout', checkoutInput);
+      return false;
+    }
+
+    if (checkinInput) checkinInput.classList.remove('field-validation-error');
+    if (checkoutInput) checkoutInput.classList.remove('field-validation-error');
+    return true;
+  }
+
+  function goToStep2() {
+    if (!validateStep1()) return false;
+
+    // Revela Passo 2
+    if (step2) {
+      step2.classList.remove('is-step-hidden');
+      step2.classList.add('is-step-visible');
+    }
+
+    // Atualiza Abas do Wizard
+    if (tabStep1) {
+      tabStep1.classList.remove('active');
+      tabStep1.classList.add('is-done');
+    }
+    if (lineStep1) lineStep1.classList.add('is-done');
+    if (badgeStep1) badgeStep1.classList.add('is-done');
+
+    if (tabStep2) {
+      tabStep2.classList.add('active');
+    }
+
+    // Scroll suave até o Passo 2
+    if (step2) {
+      step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const nameInput = document.getElementById('guest-name');
+        if (nameInput) nameInput.focus();
+      }, 350);
+    }
+    return true;
+  }
+
+  function validateStep2() {
+    const nameInput = document.getElementById('guest-name');
+    const emailInput = document.getElementById('guest-email');
+    const phoneInput = document.getElementById('guest-phone');
+
+    [nameInput, emailInput, phoneInput].forEach(el => {
+      if (el) el.classList.remove('field-validation-error');
+    });
+
+    if (!nameInput || !nameInput.value.trim()) {
+      if (nameInput) {
+        nameInput.classList.add('field-validation-error');
+        nameInput.focus();
+      }
+      alert('Por favor introduza o seu nome completo antes de prosseguir.');
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailInput || !emailRegex.test(emailInput.value.trim())) {
+      if (emailInput) {
+        emailInput.classList.add('field-validation-error');
+        emailInput.focus();
+      }
+      alert('Por favor introduza um endereço de e-mail válido.');
+      return false;
+    }
+
+    const phoneVal = phoneInput ? phoneInput.value.trim().replace(/[\s\-\(\)]/g, '') : '';
+    if (!phoneInput || phoneVal.length < 9) {
+      if (phoneInput) {
+        phoneInput.classList.add('field-validation-error');
+        phoneInput.focus();
+      }
+      alert('Por favor introduza um número de telemóvel para coordenação da chegada.');
+      return false;
+    }
+
+    if (invoiceToggle && invoiceToggle.checked) {
+      const nifInput = document.getElementById('fiscal-nif');
+      if (nifInput && nifInput.value.trim()) {
+        const cleanNif = nifInput.value.trim().replace(/\s/g, '');
+        if (cleanNif.length !== 9 || isNaN(Number(cleanNif))) {
+          nifInput.classList.add('field-validation-error');
+          alert('Por favor introduza um NIF / NIPC válido com 9 dígitos numéricos.');
+          nifInput.focus();
+          return false;
+        }
+      }
+    }
+
+    return true;
+  }
+
+  function goToStep3() {
+    if (!validateStep1()) return false;
+    if (!step2 || step2.classList.contains('is-step-hidden')) {
+      goToStep2();
+      return false;
+    }
+    if (!validateStep2()) return false;
+
+    // Revela Passo 3
+    if (step3) {
+      step3.classList.remove('is-step-hidden');
+      step3.classList.add('is-step-visible');
+    }
+
+    // Atualiza Abas do Wizard
+    if (tabStep2) {
+      tabStep2.classList.remove('active');
+      tabStep2.classList.add('is-done');
+    }
+    if (lineStep2) lineStep2.classList.add('is-done');
+    if (badgeStep2) badgeStep2.classList.add('is-done');
+
+    if (tabStep3) {
+      tabStep3.classList.add('active');
+    }
+
+    // Pré-preenche telemóvel no MB WAY se vazio
+    const guestPhone = document.getElementById('guest-phone');
+    const mbwayPhone = document.getElementById('mbway-phone');
+    if (guestPhone && mbwayPhone && !mbwayPhone.value && guestPhone.value) {
+      mbwayPhone.value = guestPhone.value;
+    }
+
+    // Scroll suave até o Passo 3
+    if (step3) {
+      step3.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    return true;
+  }
+
+  function goToStep1() {
+    if (step1) {
+      step1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (tabStep1) tabStep1.classList.add('active');
+    if (tabStep2) tabStep2.classList.remove('active');
+  }
+
+  function goToStep2FromBack() {
+    if (step2) {
+      step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (tabStep2) tabStep2.classList.add('active');
+    if (tabStep3) tabStep3.classList.remove('active');
+  }
+
+  if (btnNextTo2) btnNextTo2.addEventListener('click', goToStep2);
+  if (btnBackTo1) btnBackTo1.addEventListener('click', goToStep1);
+  if (btnNextTo3) btnNextTo3.addEventListener('click', goToStep3);
+  if (btnBackTo2) btnBackTo2.addEventListener('click', goToStep2FromBack);
+
+  // Cliques nas abas superiores
+  if (tabStep1) {
+    tabStep1.addEventListener('click', goToStep1);
+  }
+  if (tabStep2) {
+    tabStep2.addEventListener('click', () => {
+      if (step2 && !step2.classList.contains('is-step-hidden')) {
+        goToStep2FromBack();
+      } else {
+        goToStep2();
+      }
+    });
+  }
+  if (tabStep3) {
+    tabStep3.addEventListener('click', () => {
+      if (step3 && !step3.classList.contains('is-step-hidden')) {
+        step3.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (tabStep3) tabStep3.classList.add('active');
+      } else {
+        goToStep3();
+      }
+    });
+  }
+
   // Ouvintes de alteração
   if (unitSelect) unitSelect.addEventListener('change', updateExtrasDisplay);
   if (extraCribCheck) extraCribCheck.addEventListener('change', recalculate);
@@ -543,14 +766,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Confirmação e Modal
+  // Confirmação e Modal através do Botão Principal Lateral
   if (btnSubmit) {
     btnSubmit.addEventListener('click', () => {
-      const guestNameInput = document.getElementById('guest-name');
-      if (guestNameInput && !guestNameInput.value) {
-        alert('Por favor preencha o seu nome completo antes de prosseguir.');
-        guestNameInput.focus();
+      // Se o passo 2 ainda estiver oculto, avança para o passo 2
+      if (step2 && step2.classList.contains('is-step-hidden')) {
+        goToStep2();
         return;
+      }
+
+      // Se o passo 3 ainda estiver oculto, valida e avança para o passo 3
+      if (step3 && step3.classList.contains('is-step-hidden')) {
+        goToStep3();
+        return;
+      }
+
+      // Se ambos os passos já foram abertos, valida o passo 2 novamente por garantia
+      if (!validateStep2()) {
+        if (step2) step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      // Validação do método de pagamento ativo no Passo 3
+      const activeMethodTab = document.querySelector('.payment-tab-btn.active');
+      const activeMethod = activeMethodTab ? activeMethodTab.dataset.method : 'mbway';
+
+      if (activeMethod === 'mbway') {
+        const mbwayPhone = document.getElementById('mbway-phone');
+        if (!mbwayPhone || !mbwayPhone.value.trim() || mbwayPhone.value.trim().length < 9) {
+          if (mbwayPhone) {
+            mbwayPhone.classList.add('field-validation-error');
+            mbwayPhone.focus();
+          }
+          alert('Por favor introduza o seu número de telemóvel associado ao MB WAY.');
+          return;
+        }
+      } else if (activeMethod === 'card') {
+        const cardNum = document.getElementById('card-num');
+        const cardExp = document.getElementById('card-exp');
+        const cardCvc = document.getElementById('card-cvc');
+        if (!cardNum || cardNum.value.trim().length < 12) {
+          if (cardNum) { cardNum.classList.add('field-validation-error'); cardNum.focus(); }
+          alert('Por favor introduza o número do cartão de crédito válido.');
+          return;
+        }
+        if (!cardExp || cardExp.value.trim().length < 4) {
+          if (cardExp) { cardExp.classList.add('field-validation-error'); cardExp.focus(); }
+          alert('Por favor introduza a data de validade (MM/AA).');
+          return;
+        }
+        if (!cardCvc || cardCvc.value.trim().length < 3) {
+          if (cardCvc) { cardCvc.classList.add('field-validation-error'); cardCvc.focus(); }
+          alert('Por favor introduza o código de segurança (CVC).');
+          return;
+        }
       }
 
       const confirmedUnit = document.getElementById('modal-confirmed-unit');

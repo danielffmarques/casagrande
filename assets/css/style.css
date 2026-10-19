@@ -5603,3 +5603,190 @@ img:hover,
   border-radius: 0;
 }
 
+/* ==========================================================================
+   WIZARD DE RESERVA: PASSOS PROGRESSIVOS (1, 2, 3)
+   ========================================================================== */
+.booking-wizard-steps-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.wizard-step-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.wizard-step-tab:hover {
+  color: var(--color-text-main);
+}
+
+.wizard-step-tab.active {
+  color: var(--color-text-main);
+  font-weight: 700;
+}
+
+.wizard-step-tab.is-done {
+  color: #2D6A4F;
+  font-weight: 600;
+}
+
+.form-group input.field-validation-error,
+.form-group select.field-validation-error {
+  border-color: #C2410C !important;
+  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15) !important;
+}
+
+.tab-step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #EAE5DD;
+  color: #5A534B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.wizard-step-tab.active .tab-step-circle {
+  background: var(--color-accent-gold);
+  color: #FFFFFF;
+}
+
+.wizard-step-tab.is-done .tab-step-circle {
+  background: #2D6A4F;
+  color: #FFFFFF;
+}
+
+.wizard-step-line {
+  flex: 1;
+  height: 2px;
+  background: #EAE5DD;
+  margin: 0 14px;
+  transition: background 0.3s ease;
+}
+
+.wizard-step-line.is-done {
+  background: #2D6A4F;
+}
+
+/* Visibilidade dos Passos */
+.booking-step-card.is-step-hidden {
+  display: none !important;
+}
+
+.booking-step-card.is-step-visible {
+  display: block;
+  animation: stepCardReveal 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes stepCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-number.is-done {
+  background: #2D6A4F !important;
+  color: #FFFFFF !important;
+}
+
+.step-card-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-delicate);
+}
+
+.btn-step-next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-accent-gold);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 13px 26px;
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-left: auto;
+}
+
+.btn-step-next:hover {
+  background: #875727;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(158, 107, 56, 0.25);
+}
+
+.btn-step-prev {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #D6CCC2;
+  color: #5A534B;
+  border-radius: var(--radius-sm);
+  padding: 11px 20px;
+  font-family: var(--font-sans);
+  font-size: 0.90rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-step-prev:hover {
+  background: #F8F5F0;
+  border-color: #14110E;
+  color: #14110E;
+}
+
+@media (max-width: 640px) {
+  .booking-wizard-steps-bar {
+    padding: 12px 14px;
+  }
+  .tab-step-text {
+    display: none;
+  }
+  .wizard-step-line {
+    margin: 0 8px;
+  }
+  .btn-step-next {
+    width: 100%;
+  }
+  .step-card-footer-actions {
+    flex-direction: column-reverse;
+  }
+  .btn-step-prev {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
