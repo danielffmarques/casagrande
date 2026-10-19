@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPricingTableAnchor();
   initNavDrawer();
   initFaqAccordion();
+  initLegalModal();
 });
 
 
@@ -744,6 +745,71 @@ function initFaqAccordion() {
       }
     });
   });
+}
+
+/* 12. MODAL DE POLÍTICA DE PRIVACIDADE & RGPD */
+function initLegalModal() {
+  const legalTriggers = document.querySelectorAll('.legal-modal-trigger');
+  if (!legalTriggers.length) return;
+
+  legalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLegalModal();
+    });
+  });
+}
+
+function openLegalModal() {
+  let modal = document.getElementById('privacyLegalModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'privacyLegalModal';
+    modal.className = 'modal-overlay';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML = `
+      <div class="modal-card" style="max-width: 580px; text-align: left;">
+        <button type="button" class="modal-close-btn" id="privacyModalClose" aria-label="Fechar Janela">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div style="margin-bottom: 20px;">
+          <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-gold);">Privacidade &amp; RGPD</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 4px 0 0 0; color: var(--color-text-main);">Política de Privacidade</h3>
+        </div>
+        <div style="font-size: 0.94rem; color: #5A534B; line-height: 1.65;">
+          <p style="margin-bottom: 12px;">Em estrita conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD), a Casa Grande assegura a total confidencialidade e salvaguarda dos dados pessoais dos seus hóspedes:</p>
+          <ul style="margin: 0 0 16px 20px; padding: 0;">
+            <li style="margin-bottom: 8px;"><strong>Finalidade Estrita:</strong> Os dados facultados (nome, e-mail, telemóvel e dados de faturação) são utilizados exclusivamente para a confirmação de reservas, emissão de faturas e coordenação do acolhimento em Paços da Serra.</li>
+            <li style="margin-bottom: 8px;"><strong>Confidencialidade Absoluta:</strong> A Casa Grande não comercializa nem partilha informações com quaisquer entidades terceiras.</li>
+            <li style="margin-bottom: 8px;"><strong>Direitos do Titular:</strong> O hóspede pode a qualquer momento consultar, retificar ou solicitar a eliminação dos seus dados contactando diretamente a receção através do e-mail <code>info@casagrande.com.pt</code>.</li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0; padding-top: 12px; border-top: 1px solid var(--border-delicate);">
+            Turismo de Habitação &amp; Casas de Campo — Paços da Serra, Gouveia, Serra da Estrela.
+          </p>
+        </div>
+        <div style="margin-top: 24px; text-align: right;">
+          <button type="button" class="btn-confirm-booking" id="privacyModalBtnOk" style="width: auto; padding: 10px 24px; display: inline-flex; font-size: 0.88rem;">Compreendido</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeModal = () => {
+      modal.classList.remove('active');
+    };
+
+    modal.querySelector('#privacyModalClose').addEventListener('click', closeModal);
+    modal.querySelector('#privacyModalBtnOk').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  }
+
+  modal.classList.add('active');
 }
 
 
