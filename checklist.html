@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist Pré-Lançamento — Guia de Revisão Humana | Casa Grande</title>
+  <meta name="description" content="Guia prático e organizado de revisão pré-lançamento para utilizadores e anfitriões da Casa Grande. Verificação de experiência, reservas, visibilidade e confiança.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Estilos Específicos do Documento Checklist Humana */
+    .checklist-page {
+      background-color: var(--color-bg-light, #F8F5F0);
+      color: var(--color-text-main, #14110E);
+      font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+      padding: 48px 0 96px 0;
+      min-height: 100vh;
+    }
+
+    .checklist-container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .checklist-hero {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light, #E8E2D9);
+      border-radius: var(--radius-sm, 6px);
+      padding: 42px 48px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .checklist-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent-gold, #9E6B38);
+      background: rgba(158, 107, 56, 0.08);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .checklist-title {
+      font-family: var(--font-serif, 'Cormorant Garamond', serif);
+      font-size: 2.6rem;
+      font-weight: 600;
+      line-height: 1.15;
+      color: #14110E;
+      margin: 0 0 14px 0;
+    }
+
+    .checklist-subtitle {
+      font-size: 1.05rem;
+      color: var(--color-text-muted, #5A534B);
+      line-height: 1.65;
+      margin: 0 0 24px 0;
+    }
+
+    /* Barra de Progresso Interativa */
+    .progress-card {
+      background: #FAF8F5;
+      border: 1px solid #ECE6DC;
+      border-radius: 6px;
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .progress-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.88rem;
+    }
+
+    .progress-count {
+      font-weight: 700;
+      color: #14110E;
+    }
+
+    .progress-percentage {
+      font-weight: 700;
+      color: var(--color-accent-gold, #9E6B38);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: #E5DFD5;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--color-accent-gold, #9E6B38);
+      transition: width 0.3s ease;
+    }
+
+    .checklist-actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid #ECE6DC;
+    }
+
+    .btn-reset-checklist,
+    .btn-print-checklist {
+      background: none;
+      border: 1px solid #D6CCC2;
+      color: #5A534B;
+      padding: 7px 14px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-reset-checklist:hover,
+    .btn-print-checklist:hover {
+      background: #FFFFFF;
+      color: #14110E;
+      border-color: #14110E;
+    }
+
+    /* Blocos de Secções da Checklist */
+    .checklist-section {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light, #E8E2D9);
+      border-radius: var(--radius-sm, 6px);
+      padding: 32px 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #F0EAE1;
+    }
+
+    .section-number {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent-gold, #9E6B38);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-serif, 'Cormorant Garamond', serif);
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: #14110E;
+      margin: 0 0 6px 0;
+    }
+
+    .section-description {
+      font-size: 0.92rem;
+      color: #6B635A;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Itens da Checklist */
+    .checklist-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .check-item {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 16px;
+      padding: 14px 16px;
+      border-radius: 6px;
+      background: #FAF8F5;
+      border: 1px solid #ECE6DC;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .check-item:hover {
+      background: #F4EFE7;
+      border-color: #DCD4C7;
+    }
+
+    .check-item.is-completed {
+      background: #FFFFFF;
+      border-color: #D3C9BD;
+      opacity: 0.85;
+    }
+
+    .check-item.is-completed .check-title {
+      text-decoration: line-through;
+      color: #7A7268;
+    }
+
+    .check-input {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--color-accent-gold, #9E6B38);
+      cursor: pointer;
+    }
+
+    .check-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .check-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: #14110E;
+      line-height: 1.4;
+    }
+
+    .check-explain {
+      font-size: 0.84rem;
+      color: #5A534B;
+      line-height: 1.55;
+    }
+
+    .check-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+      font-size: 0.74rem;
+      color: #8C8275;
+    }
+
+    .meta-tag {
+      background: #EBE5DB;
+      color: #4A4238;
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    /* Botão flutuante de regresso */
+    .back-nav-bar {
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-to-site-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #5A534B;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .back-to-site-link:hover {
+      color: var(--color-accent-gold, #9E6B38);
+    }
+
+    @media print {
+      body { background: #FFFFFF; }
+      .checklist-page { padding: 0; }
+      .back-nav-bar, .checklist-actions-bar { display: none; }
+      .checklist-hero, .checklist-section { box-shadow: none; border: 1px solid #CCC; page-break-inside: avoid; }
+      .check-item { background: #FFFFFF !important; border: 1px solid #EEE !important; }
+    }
+  </style>
+</head>
+<body class="checklist-page">
+
+  <div class="checklist-container">
+    
+    <!-- Barra Superior de Navegação -->
+    <div class="back-nav-bar">
+      <a href="index.html" class="back-to-site-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Voltar à Casa Grande</span>
+      </a>
+      <span style="font-size: 0.8rem; color: #8C8275;">Standard Bruto • Validação Humana</span>
+    </div>
+
+    <!-- Cabeçalho do Documento -->
+    <header class="checklist-hero">
+      <span class="checklist-badge">Guia de Validação Pré-Lançamento</span>
+      <h1 class="checklist-title">Checklist de Revisão da Casa Grande</h1>
+      <p class="checklist-subtitle">
+        Este documento foi concebido para pessoas — anfitriões, gestores e equipa de lançamento. Utilize-o para testar o website de ponta a ponta através do olhar de quem vai visitar, escolher e reservar uma estadia na Serra da Estrela.
+      </p>
+
+      <!-- Painel de Progresso Interativo -->
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Progresso da Revisão:</span>
+          <div>
+            <span class="progress-count" id="progressCount">0 de 30</span> itens
+            (<span class="progress-percentage" id="progressPercent">0%</span>)
+          </div>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="checklist-actions-bar">
+          <button type="button" class="btn-print-checklist" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Imprimir / Guardar em PDF</span>
+          </button>
+          <button type="button" class="btn-reset-checklist" onclick="resetChecklist()">
+            <span>Limpar Seleções</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECÇÃO 1: PRIMEIRA IMPRESSÃO & HOSPITALIDADE -->
+    <section class="checklist-section">
+      <div class="section-head">
+        <span class="section-number">Passo 1</span>
+        <h2 class="section-title">Primeira Impressão &amp; Acolhimento na Homepage</h2>
+        <p class="section-description">O que o visitante sente nos primeiros 5 segundos ao abrir o website no telemóvel ou computador.</p>
+      </div>
+
+      <div class="checklist-items">
+        <label class="check-item" data-id="h1">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O ecrã inicial aparece completo sem obrigar a fazer scroll</span>
+            <span class="check-explain">Ao abrir a página inicial, a fotografia de inverno na montanha e a barra de reserva rápida devem caber na totalidade no primeiro ecrã.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Homepage • Ecrã Desktop e Telemóvel</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="h2">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Linguagem acolhedora e calorosa em vez de termos imobiliários</span>
+            <span class="check-explain">Confirme que não existem expressões frias como "moradia unifamiliar" ou "área de implantação". Deve ler-se a história do solar de quatro séculos, o pão fresco de aldeia e o aconchego da família.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Secção "A História" e "Alojamentos"</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="h3">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O cabeçalho está limpo e sem números burocráticos no topo</span>
+            <span class="check-explain">O topo deve apresentar unicamente o logótipo nobre da Casa Grande e por baixo a terra: "Paços da Serra, Gouveia". O número de registo de AL fica apenas no rodapé.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Cabeçalho em todas as 5 páginas</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="h4">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O botão de reserva do cabeçalho só surge após fazer scroll</span>
+            <span class="check-explain">O botão de reserva não deve competir com a barra do Hero; deve aparecer suavemente apenas quando o utilizador começa a descer a página, mantendo os links do menu sem qualquer salto de posição.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Rolar a página para cima e para baixo</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="h5">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Carrossel de fotografias e opiniões funciona com o dedo (drag/swipe)</span>
+            <span class="check-explain">Experimente arrastar as opiniões dos hóspedes e a galeria contínua com o dedo no telemóvel ou com o rato no computador. O movimento deve ser fluido e sem soluços.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Secção de Opiniões da Homepage</span>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 2: ALOJAMENTOS & ROTATIVIDADE DAS FOTOS -->
+    <section class="checklist-section">
+      <div class="section-head">
+        <span class="section-number">Passo 2</span>
+        <h2 class="section-title">Alojamentos, Fotografias &amp; Clareza de Preços</h2>
+        <p class="section-description">O hóspede precisa de comparar as 9 habitações, ver as fotografias sem cortes e perceber exatamente o preço a pagar.</p>
+      </div>
+
+      <div class="checklist-items">
+        <label class="check-item" data-id="a1">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">As setas de navegação de fotografias rodam em todos os cartões</span>
+            <span class="check-explain">Carregue nas setas esquerda e direita (&lt; e &gt;) nas Cameleiras, Ciprestes, Telheiro, Olival, etc. A fotografia muda com suavidade, o contador atualiza (ex.: 2/8) e a legenda em baixo descreve o espaço.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Página Alojamentos • Cartões das 9 Casas</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="a2">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">A lupa de ampliação (lightbox) abre a foto inteira sem cortes</span>
+            <span class="check-explain">Ao carregar no botão da lupa no canto superior esquerdo da foto, ela deve abrir em ecrã completo com fundo escuro. Deve fechar facilmente no 'X' ou clicando fora.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Botão da lupa de cada habitação</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="a3">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Preço normal e preço de época festiva explicados com clareza</span>
+            <span class="check-explain">Cada habitação mostra em grande o preço por noite normal (ex.: 85 € / NOITE) e por baixo a linha discreta e explícita: "Épocas festivas: 95 €/noite", sem o hóspede ter de adivinhar.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Base de cada cartão de alojamento</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="a4">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Filtro por número de hóspedes funciona e sugere a casa ideal</span>
+            <span class="check-explain">Selecione "2 Hóspedes" ou "6 Hóspedes" no topo da página. O catálogo deve filtrar as casas adequadas e exibir uma mensagem calorosa e contextualizada.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Seletor "Número de Hóspedes" no topo</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="a5">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O botão "Reservar" de cada casa encaminha com a casa pré-selecionada</span>
+            <span class="check-explain">Ao clicar em "Reservar" na Casa da Caseira, a página de reservas deve abrir já com a Casa da Caseira automaticamente selecionada no primeiro passo.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Botão castanho "Reservar" em cada habitação</span>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 3: PROCESSO DE RESERVA & PAGAMENTO -->
+    <section class="checklist-section">
+      <div class="section-head">
+        <span class="section-number">Passo 3</span>
+        <h2 class="section-title">Motor de Reserva, Faturação &amp; Contacto Direto</h2>
+        <p class="section-description">A experiência do hóspede ao concretizar a reserva ou ao colocar uma dúvida prévia à anfitriã.</p>
+      </div>
+
+      <div class="checklist-items">
+        <label class="check-item" data-id="r1">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O seletor de alojamento exibe apenas o nome limpo da habitação</span>
+            <span class="check-explain">Na página de reservas, o menu de escolha da casa deve mostrar apenas nomes elegantes (ex.: "Apartamento das Cameleiras (1-2 hóspedes)"), sem poluir com preços repetidos no menu.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Página de Reservas • Passo 1</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="r2">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O calendário de datas é intuitivo e respeita o mínimo de noites</span>
+            <span class="check-explain">O calendário não permite selecionar datas do passado e avisa de forma simpática caso o utilizador selecione menos noites do que o estipulado (mínimo de 2 ou 3 noites).</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Página de Reservas • Escolha de Datas</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="r3">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Bloco opcional de faturação com NIF expande suavemente</span>
+            <span class="check-explain">Ao assinalar "Desejo fatura com contribuinte (NIF)", os campos de NIF, Morada Fiscal e Código Postal abrem com elegância e pré-preenchem o nome do titular se já estiver escrito.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Página de Reservas • Passo de Dados Pessoais</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="r4">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Métodos de pagamento imediato funcionam na demonstração</span>
+            <span class="check-explain">Pode escolher Cartão, MB WAY (com campo de telemóvel) ou Referência Multibanco (com entidade/referência demonstrativa). O botão de confirmação e o resumo lateral atualizam em tempo real.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Página de Reservas • Passo de Pagamento</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="r5">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Comprovativo de confirmação inclui ligação direta de WhatsApp</span>
+            <span class="check-explain">Após simular a reserva, a janela final confirma a estadia e disponibiliza um botão direto para falar com a anfitriã por WhatsApp sobre horários de chegada.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Ecrã de Confirmação Final de Reserva</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="r6">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Formulário de dúvidas da anfitriã acompanha o scroll (sticky)</span>
+            <span class="check-explain">Na página de FAQs, enquanto lê as perguntas sobre lareiras ou aquecimento, o cartão da anfitriã à direita acompanha a leitura, facilitando tirar dúvidas a qualquer instante.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Página de FAQs (duvidas.html)</span>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 4: ENCONTRAR NO GOOGLE & MAPAS (SEO / GEO) -->
+    <section class="checklist-section">
+      <div class="section-head">
+        <span class="section-number">Passo 4</span>
+        <h2 class="section-title">Como o Hóspede Chega até Nós (Google, Mapas e WhatsApp)</h2>
+        <p class="section-description">Como a Casa Grande surge quando alguém pesquisa na internet ou quando o link é partilhado entre amigos e família.</p>
+      </div>
+
+      <div class="checklist-items">
+        <label class="check-item" data-id="g1">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Ao partilhar o link no WhatsApp, aparece a fotografia nobre e título certo</span>
+            <span class="check-explain">Envie o link para uma conversa de WhatsApp ou Telegram. Deve surgir automaticamente a imagem bonita do solar na Serra e a descrição acolhedora da Casa Grande, sem códigos estranhos.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Enviar link https://danielffmarques.github.io/casagrande/ no WhatsApp</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="g2">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O botão de Google Maps abre o portão exato da propriedade em Paços da Serra</span>
+            <span class="check-explain">Clique em "Abrir no Google Maps" no rodapé. A aplicação de mapas do telemóvel deve abrir exatamente no Largo Dr. Luís Mendes Caldeira nº 1, em Paços da Serra.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Rodapé em qualquer página do website</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="g3">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Tempos de viagem e distâncias aos sítios turísticos estão corretos</span>
+            <span class="check-explain">Verifique se as distâncias na secção da Serra (Gouveia 8 km / 10 min, Seia 8 km / 10 min, Vale do Rossim 24 km, Torre 38 km) correspondem à realidade de quem vai de carro.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Página Serra da Estrela (actividades.html)</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="g4">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O separador do browser exibe o Favicon oficial em todos os dispositivos</span>
+            <span class="check-explain">No topo do browser (separador), deve ser visível o pequeno símbolo distintivo da Casa Grande, bem centrado e visível tanto em fundo claro como escuro.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Separador de navegação no Chrome, Safari e telemóvel</span>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 5: ACESSIBILIDADE & FACILIDADE DE LEITURA -->
+    <section class="checklist-section">
+      <div class="section-head">
+        <span class="section-number">Passo 5</span>
+        <h2 class="section-title">Facilidade de Uso para Qualquer Pessoa (Acessibilidade)</h2>
+        <p class="section-description">Garantir que pessoas de qualquer idade, com óculos de leitura ou em telemóveis pequenos navegam sem esforço.</p>
+      </div>
+
+      <div class="checklist-items">
+        <label class="check-item" data-id="u1">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Todos os textos têm contraste nítido sobre o fundo (sem cansar a vista)</span>
+            <span class="check-explain">As letras escuras sobre os fundos creme e cinza suave devem ser fáceis de ler mesmo na rua sob a luz do sol, sem tons apagados ou cinzentos difíceis de decifrar.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Todas as secções e blocos de texto</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="u2">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Os botões são fáceis de carregar com o polegar no telemóvel</span>
+            <span class="check-explain">Nenhum botão de menu, seta de foto ou link de reserva deve ser demasiado pequeno ou estar colado a outro que cause toques acidentais por engano.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Navegação em smartphone com uma mão</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="u3">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O menu lateral fecha facilmente no botão 'X' ou tocando fora</span>
+            <span class="check-explain">Ao abrir o menu no telemóvel ou computador, deve ser simples e imediato fechá-lo para voltar à leitura do sítio onde estava.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Menu lateral deslizante</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="u4">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Tocar nos números de telefone inicia logo a chamada</span>
+            <span class="check-explain">Ao tocar no número de telemóvel (+351 934 297 935) ou fixo no rodapé através de um smartphone, o telemóvel deve abrir de imediato o teclado para marcar a chamada.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Contactos telefónicos no rodapé</span>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 6: CONFIANÇA, TRANSPARÊNCIA & REGRAS LEGAIS -->
+    <section class="checklist-section">
+      <div class="section-head">
+        <span class="section-number">Passo 6</span>
+        <h2 class="section-title">Confiança do Hóspede &amp; Conformidade Legal</h2>
+        <p class="section-description">A validação final de credibilidade institucional para o lançamento definitivo.</p>
+      </div>
+
+      <div class="checklist-items">
+        <label class="check-item" data-id="c1">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">As notas de transparência do protótipo são mantidas ou retiradas em bloco</span>
+            <span class="check-explain">As pequenas caixas castanhas que avisam "Nota de Transparência Bruto" servem para a anfitriã validar preços e fotos. No dia de lançamento oficial, devem ser desativadas em simultâneo em todo o site.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Transição de protótipo para versão pública final</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="c2">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">O link do Livro de Reclamações Eletrónico funciona</span>
+            <span class="check-explain">No rodapé, a ligação "Livro de Reclamações" abre a página oficial nacional (livroreclamacoes.pt) num novo separador, cumprindo a lei portuguesa de turismo.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Linha legal no rodapé</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="c3">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">Registo de Turismo / Alojamento Local identificado no rodapé</span>
+            <span class="check-explain">Os dados burocráticos de registo oficial (RNT / AL) encontram-se no rodapé da página para quem necessitar de verificar a autenticidade jurídica da propriedade.</span>
+            <span class="check-meta"><span class="meta-tag">Onde testar</span> Rodapé legal</span>
+          </div>
+        </label>
+
+        <label class="check-item" data-id="c4">
+          <input type="checkbox" class="check-input">
+          <div class="check-content">
+            <span class="check-title">A anfitriã aprovou os preços, condições de cancelamento e regras da casa</span>
+            <span class="check-explain">Confirmação presencial ou por escrito com a anfitriã da Casa Grande de que as 9 casas têm as comodidades corretas (lareira, kitchenette, berço) e as regras de animais/fumadores bem descritas.</span>
+            <span class="check-meta"><span class="meta-tag">Alinhamento</span> Validação com a proprietária</span>
+          </div>
+        </label>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Gestão de Estado Interativa da Checklist com Armazenamento Local (localStorage)
+    const STORAGE_KEY = 'casagrande_prelaunch_checklist';
+    const checkboxes = document.querySelectorAll('.check-input');
+    const progressFill = document.getElementById('progressFill');
+    const progressCount = document.getElementById('progressCount');
+    const progressPercent = document.getElementById('progressPercent');
+
+    function loadSavedState() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        checkboxes.forEach(cb => {
+          const item = cb.closest('.check-item');
+          const id = item.getAttribute('data-id');
+          if (saved[id]) {
+            cb.checked = true;
+            item.classList.add('is-completed');
+          } else {
+            cb.checked = false;
+            item.classList.remove('is-completed');
+          }
+        });
+      } catch (e) {
+        console.warn('Erro ao carregar estado da checklist:', e);
+      }
+      updateProgress();
+    }
+
+    function saveState() {
+      const state = {};
+      checkboxes.forEach(cb => {
+        const item = cb.closest('.check-item');
+        const id = item.getAttribute('data-id');
+        if (cb.checked) {
+          state[id] = true;
+          item.classList.add('is-completed');
+        } else {
+          item.classList.remove('is-completed');
+        }
+      });
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {}
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const total = checkboxes.length;
+      let completed = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) completed++;
+      });
+      const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+      
+      if (progressCount) progressCount.textContent = `${completed} de ${total}`;
+      if (progressPercent) progressPercent.textContent = `${percent}%`;
+      if (progressFill) progressFill.style.width = `${percent}%`;
+    }
+
+    function resetChecklist() {
+      if (confirm('Tem a certeza de que deseja reiniciar todas as marcações da checklist?')) {
+        localStorage.removeItem(STORAGE_KEY);
+        checkboxes.forEach(cb => {
+          cb.checked = false;
+          cb.closest('.check-item').classList.remove('is-completed');
+        });
+        updateProgress();
+      }
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', saveState);
+    });
+
+    document.addEventListener('DOMContentLoaded', loadSavedState);
+  </script>
+</body>
+</html>
