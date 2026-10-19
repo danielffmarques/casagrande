@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" fill="none">
+  <defs>
+    <!-- Brilho quente do sol da Beira Alta -->
+    <radialGradient id="sunAura" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#C2A649" stop-opacity="0.08"/>
+      <stop offset="75%" stop-color="#556B2F" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#556B2F" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradientes de Madeira / Ramos -->
+    <linearGradient id="barkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A3525"/>
+      <stop offset="50%" stop-color="#382415"/>
+      <stop offset="100%" stop-color="#23170E"/>
+    </linearGradient>
+    <linearGradient id="barkHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#73553C"/>
+      <stop offset="100%" stop-color="#382415"/>
+    </linearGradient>
+
+    <!-- Folhas de Camélia: Lustrosas, Verde-Floresta e Verde-Oliva Profundo -->
+    <linearGradient id="camelliaLeafDark" x1="0%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#2D5A3C"/>
+      <stop offset="45%" stop-color="#1A3E26"/>
+      <stop offset="100%" stop-color="#0E2416"/>
+    </linearGradient>
+    <linearGradient id="camelliaLeafMedium" x1="10%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D734E"/>
+      <stop offset="55%" stop-color="#245434"/>
+      <stop offset="100%" stop-color="#14331F"/>
+    </linearGradient>
+    <linearGradient id="camelliaLeafLight" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#5B8E65"/>
+      <stop offset="60%" stop-color="#386A45"/>
+      <stop offset="100%" stop-color="#1D4028"/>
+    </linearGradient>
+    <linearGradient id="leafLuster" x1="30%" y1="10%" x2="70%" y2="90%">
+      <stop offset="0%" stop-color="#A4C2A5" stop-opacity="0.45"/>
+      <stop offset="40%" stop-color="#6F9E74" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1A3E26" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Nervuras Foliares Douradas e Salmão Suave -->
+    <linearGradient id="veinGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#8F9E6D" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Pétalas da Camélia: Camadas Aveludadas Carmim / Rosa Nobre Antigo -->
+    <linearGradient id="petalOuter1" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#C24153"/>
+      <stop offset="40%" stop-color="#9C2738"/>
+      <stop offset="85%" stop-color="#6D1522"/>
+      <stop offset="100%" stop-color="#4A0B14"/>
+    </linearGradient>
+    <linearGradient id="petalOuter2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D45366"/>
+      <stop offset="50%" stop-color="#AA2E40"/>
+      <stop offset="90%" stop-color="#731926"/>
+      <stop offset="100%" stop-color="#4F0E18"/>
+    </linearGradient>
+    <linearGradient id="petalMid1" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E26577"/>
+      <stop offset="35%" stop-color="#C2384B"/>
+      <stop offset="75%" stop-color="#8F1D2C"/>
+      <stop offset="100%" stop-color="#61101D"/>
+    </linearGradient>
+    <linearGradient id="petalMid2" x1="0%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#EB7889"/>
+      <stop offset="45%" stop-color="#CB475B"/>
+      <stop offset="85%" stop-color="#9B2232"/>
+      <stop offset="100%" stop-color="#69121E"/>
+    </linearGradient>
+    <linearGradient id="petalInner" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#F28E9E"/>
+      <stop offset="40%" stop-color="#D8566A"/>
+      <stop offset="80%" stop-color="#A8283A"/>
+      <stop offset="100%" stop-color="#781423"/>
+    </linearGradient>
+    <linearGradient id="petalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="30%" stop-color="#FFA8B6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#D8566A" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Centro dos Estames: Pólen Dourado -->
+    <radialGradient id="stamenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="55%" stop-color="#F4A261"/>
+      <stop offset="90%" stop-color="#E76F51"/>
+      <stop offset="100%" stop-color="#9C2738"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Halo de Luz Suave no Fundo -->
+  <circle cx="420" cy="380" r="320" fill="url(#sunAura)"/>
+
+  <!-- GRUPO PRINCIPAL COM ACABAMENTO REALISTA -->
+  <g id="botanical-branch" opacity="0.82">
+
+    <!-- RAMO DE MADEIRA SECULAR COM CURVATURA ORGÂNICA -->
+    <g id="branches">
+      <!-- Ramo Principal de Encosto -->
+      <path d="M 760 140 C 660 170, 560 215, 470 290 C 390 355, 320 435, 240 550 C 180 635, 120 710, 50 760" 
+            stroke="url(#barkGrad)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Filete de Luz na Casca do Ramo -->
+      <path d="M 755 138 C 657 168, 558 213, 469 288 C 390 352, 321 432, 243 546 C 184 630, 125 704, 58 753" 
+            stroke="url(#barkHighlight)" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- Ramificações Laterais Naturais -->
+      <path d="M 545 228 C 500 170, 440 120, 360 85" stroke="url(#barkGrad)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 430 325 C 365 290, 290 270, 205 265" stroke="url(#barkGrad)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 335 425 C 295 445, 235 480, 175 540" stroke="url(#barkGrad)" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M 285 490 C 330 545, 385 605, 435 680" stroke="url(#barkGrad)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M 610 190 C 665 240, 715 305, 755 385" stroke="url(#barkGrad)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M 495 260 C 535 320, 565 390, 580 470" stroke="url(#barkGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- FOLHAGEM DE CAMÉLIA DE FUNDO (PLANOS PROFUNDOS) -->
+    <g id="leaves-background">
+      <!-- Folha 1 Superior Esquerda -->
+      <path d="M 360 85 C 335 30, 260 20, 220 50 C 240 100, 310 120, 360 85 Z" 
+            fill="url(#camelliaLeafDark)" stroke="#112918" stroke-width="1.2"/>
+      <path d="M 360 85 C 305 60, 255 45, 220 50" stroke="url(#veinGold)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <!-- Folha 2 Superior Central -->
+      <path d="M 470 145 C 475 75, 430 30, 380 40 C 375 105, 420 145, 470 145 Z" 
+            fill="url(#camelliaLeafMedium)" stroke="#112918" stroke-width="1.2"/>
+      <path d="M 470 145 C 430 95, 400 60, 380 40" stroke="url(#veinGold)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <!-- Folha 3 Lateral Direita Alta -->
+      <path d="M 640 175 C 700 145, 755 170, 775 220 C 725 240, 665 225, 640 175 Z" 
+            fill="url(#camelliaLeafDark)" stroke="#112918" stroke-width="1.2"/>
+      <path d="M 640 175 C 695 185, 740 200, 775 220" stroke="url(#veinGold)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <!-- Folha 4 Esquerda Média -->
+      <path d="M 205 265 C 145 235, 90 260, 70 310 C 115 340, 175 320, 205 265 Z" 
+            fill="url(#camelliaLeafMedium)" stroke="#112918" stroke-width="1.2"/>
+      <path d="M 205 265 C 150 280, 105 295, 70 310" stroke="url(#veinGold)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <!-- Folha 5 Inferior Esquerda Longa -->
+      <path d="M 175 540 C 115 545, 65 590, 45 650 C 95 680, 160 635, 175 540 Z" 
+            fill="url(#camelliaLeafDark)" stroke="#112918" stroke-width="1.2"/>
+      <path d="M 175 540 C 120 580, 80 620, 45 650" stroke="url(#veinGold)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <!-- Folha 6 Inferior Direita -->
+      <path d="M 435 680 C 470 735, 530 755, 575 730 C 565 670, 495 645, 435 680 Z" 
+            fill="url(#camelliaLeafMedium)" stroke="#112918" stroke-width="1.2"/>
+      <path d="M 435 680 C 490 700, 540 720, 575 730" stroke="url(#veinGold)" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- BOTÃO DE FLOR DE CAMÉLIA EM CRESCIMENTO (SUB-ELEMENTO DELICADO) -->
+    <g id="camellia-bud" transform="translate(195, 230)">
+      <!-- Sépalas Verdes -->
+      <path d="M 0 35 C -15 15, -15 -10, 5 -25 C 10 5, 5 25, 0 35 Z" fill="url(#camelliaLeafDark)" stroke="#0E2416" stroke-width="1"/>
+      <path d="M 15 30 C 25 10, 20 -15, 5 -25 C 0 0, 5 20, 15 30 Z" fill="url(#camelliaLeafMedium)" stroke="#0E2416" stroke-width="1"/>
+      <!-- Ponta Vermelha a despontar -->
+      <path d="M 2 -22 C -6 -35, 12 -42, 10 -25 Z" fill="url(#petalMid1)"/>
+      <path d="M 5 -25 C 2 -38, 16 -36, 12 -23 Z" fill="url(#petalHighlight)" opacity="0.6"/>
+    </g>
+
+    <!-- FOLHAS DO PRIMEIRO PLANO (COM LUSTRO E NERVURAS DETALHADAS) -->
+    <g id="leaves-foreground">
+      <!-- Folha Nobre 1 (Direita Superior) -->
+      <path d="M 520 220 C 585 160, 660 170, 710 225 C 670 280, 580 295, 520 220 Z" 
+            fill="url(#camelliaLeafLight)" stroke="#14331F" stroke-width="1.4"/>
+      <!-- Reflexo Ceroso (Lustro) -->
+      <path d="M 540 215 C 595 175, 650 185, 685 220 C 640 240, 585 240, 540 215 Z" 
+            fill="url(#leafLuster)"/>
+      <!-- Nervura Central -->
+      <path d="M 520 220 C 585 210, 655 220, 710 225" stroke="url(#veinGold)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Nervuras Laterais Finas -->
+      <path d="M 565 214 C 585 195, 615 190, 635 192" stroke="#8F9E6D" stroke-width="0.9" opacity="0.7"/>
+      <path d="M 590 217 C 610 238, 640 245, 660 245" stroke="#8F9E6D" stroke-width="0.9" opacity="0.7"/>
+      <path d="M 625 222 C 645 205, 675 205, 690 210" stroke="#8F9E6D" stroke-width="0.9" opacity="0.7"/>
+
+      <!-- Folha Nobre 2 (Direita Média/Baixa) -->
+      <path d="M 550 360 C 630 340, 695 385, 720 455 C 655 490, 580 450, 550 360 Z" 
+            fill="url(#camelliaLeafMedium)" stroke="#14331F" stroke-width="1.4"/>
+      <path d="M 570 365 C 625 355, 670 390, 690 435 C 645 445, 600 425, 570 365 Z" 
+            fill="url(#leafLuster)"/>
+      <path d="M 550 360 C 615 390, 670 425, 720 455" stroke="url(#veinGold)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 590 380 C 615 365, 645 365, 665 372" stroke="#8F9E6D" stroke-width="0.9" opacity="0.7"/>
+      <path d="M 625 400 C 640 425, 665 440, 685 445" stroke="#8F9E6D" stroke-width="0.9" opacity="0.7"/>
+
+      <!-- Folha Nobre 3 (Esquerda Abaixo da Flor) -->
+      <path d="M 315 415 C 240 405, 175 445, 140 515 C 205 565, 280 510, 315 415 Z" 
+            fill="url(#camelliaLeafLight)" stroke="#14331F" stroke-width="1.4"/>
+      <path d="M 295 425 C 245 425, 195 455, 170 500 C 215 520, 265 490, 295 425 Z" 
+            fill="url(#leafLuster)"/>
+      <path d="M 315 415 C 250 445, 190 480, 140 515" stroke="url(#veinGold)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 265 440 C 240 425, 215 425, 195 432" stroke="#8F9E6D" stroke-width="0.9" opacity="0.7"/>
+      <path d="M 235 465 C 245 490, 260 510, 280 515" stroke="#8F9E6D" stroke-width="0.9" opacity="0.7"/>
+
+      <!-- Folha Nobre 4 (Topo da Flor) -->
+      <path d="M 405 235 C 380 160, 310 130, 245 150 C 240 225, 325 270, 405 235 Z" 
+            fill="url(#camelliaLeafMedium)" stroke="#14331F" stroke-width="1.4"/>
+      <path d="M 385 220 C 360 165, 310 145, 265 160 C 265 210, 325 240, 385 220 Z" 
+            fill="url(#leafLuster)"/>
+      <path d="M 405 235 C 345 200, 290 175, 245 150" stroke="url(#veinGold)" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- FLOR PRINCIPAL DE CAMÉLIA SECULAR EM PLENA FLORAÇÃO (CAMADAS REALISTAS) -->
+    <g id="camellia-blossom" transform="translate(430, 380)">
+
+      <!-- SOMBRA PROFUNDA BASE DA FLOR -->
+      <circle cx="0" cy="5" r="145" fill="#380910" opacity="0.25"/>
+
+      <!-- CAMADA 1: PÉTALAS EXTERIORES LARGAS E AVELUDADAS -->
+      <!-- Pétala Exterior 1 (Topo-Noroeste) -->
+      <path d="M 0 -30 C -55 -115, -135 -95, -150 -35 C -160 20, -100 55, -20 20 Z" 
+            fill="url(#petalOuter1)" stroke="#5A0E18" stroke-width="1.2"/>
+      <path d="M -20 -35 C -65 -100, -125 -85, -140 -35 C -125 -10, -75 0, -20 -35 Z" 
+            fill="url(#petalHighlight)" opacity="0.35"/>
+
+      <!-- Pétala Exterior 2 (Norte) -->
+      <path d="M -30 -25 C -50 -125, 45 -145, 80 -85 C 105 -40, 75 25, 0 10 Z" 
+            fill="url(#petalOuter2)" stroke="#5A0E18" stroke-width="1.2"/>
+      <path d="M -15 -35 C -30 -115, 45 -130, 70 -80 C 60 -40, 20 -20, -15 -35 Z" 
+            fill="url(#petalHighlight)" opacity="0.4"/>
+
+      <!-- Pétala Exterior 3 (Nordeste) -->
+      <path d="M 15 -20 C 75 -100, 155 -70, 155 0 C 150 65, 85 75, 10 20 Z" 
+            fill="url(#petalOuter1)" stroke="#5A0E18" stroke-width="1.2"/>
+      <path d="M 25 -15 C 75 -80, 140 -55, 140 5 C 120 40, 65 30, 25 -15 Z" 
+            fill="url(#petalHighlight)" opacity="0.35"/>
+
+      <!-- Pétala Exterior 4 (Sudeste) -->
+      <path d="M 15 10 C 95 30, 150 95, 120 160 C 85 200, 5 180, -25 70 Z" 
+            fill="url(#petalOuter2)" stroke="#5A0E18" stroke-width="1.2"/>
+      <path d="M 20 25 C 80 45, 130 95, 105 145 C 80 165, 20 135, 20 25 Z" 
+            fill="url(#petalHighlight)" opacity="0.35"/>
+
+      <!-- Pétala Exterior 5 (Sul) -->
+      <path d="M -20 15 C 10 85, 30 170, -40 185 C -115 195, -130 120, -60 55 Z" 
+            fill="url(#petalOuter1)" stroke="#5A0E18" stroke-width="1.2"/>
+      <path d="M -20 25 C 0 80, 15 150, -40 165 C -85 160, -95 105, -20 25 Z" 
+            fill="url(#petalHighlight)" opacity="0.4"/>
+
+      <!-- Pétala Exterior 6 (Sudoeste) -->
+      <path d="M -25 5 C -95 35, -175 10, -165 -60 C -150 -110, -75 -70, -15 -10 Z" 
+            fill="url(#petalOuter2)" stroke="#5A0E18" stroke-width="1.2"/>
+
+      <!-- CAMADA 2: PÉTALAS INTERMÉDIAS (ONDULADAS E VOLUMOSAS) -->
+      <!-- Pétala Intermédia A -->
+      <path d="M -15 -15 C -65 -85, -15 -115, 35 -75 C 65 -45, 45 15, -5 5 Z" 
+            fill="url(#petalMid1)" stroke="#6B1320" stroke-width="1.1"/>
+      <path d="M -5 -20 C -45 -75, -5 -100, 30 -65 C 45 -40, 25 -5, -5 -20 Z" 
+            fill="url(#petalHighlight)" opacity="0.45"/>
+
+      <!-- Pétala Intermédia B -->
+      <path d="M 10 -15 C 65 -65, 120 -25, 110 35 C 100 80, 35 60, -5 15 Z" 
+            fill="url(#petalMid2)" stroke="#6B1320" stroke-width="1.1"/>
+      <path d="M 15 -5 C 55 -45, 100 -15, 95 30 C 80 60, 35 45, 15 -5 Z" 
+            fill="url(#petalHighlight)" opacity="0.45"/>
+
+      <!-- Pétala Intermédia C -->
+      <path d="M 10 10 C 55 50, 65 120, 5 135 C -50 145, -60 85, -15 25 Z" 
+            fill="url(#petalMid1)" stroke="#6B1320" stroke-width="1.1"/>
+      <path d="M 5 20 C 40 50, 45 105, 5 120 C -35 120, -40 75, 5 20 Z" 
+            fill="url(#petalHighlight)" opacity="0.45"/>
+
+      <!-- Pétala Intermédia D -->
+      <path d="M -15 10 C -55 65, -125 45, -115 -15 C -105 -60, -45 -40, -5 0 Z" 
+            fill="url(#petalMid2)" stroke="#6B1320" stroke-width="1.1"/>
+      <path d="M -15 5 C -45 45, -100 35, -95 -10 C -80 -40, -40 -25, -15 5 Z" 
+            fill="url(#petalHighlight)" opacity="0.45"/>
+
+      <!-- CAMADA 3: PÉTALAS INTERIORES ENVOLVENTES (SUAVES E LUMINOSAS) -->
+      <path d="M -5 -5 C -35 -55, 15 -65, 35 -30 C 45 -5, 20 20, -5 5 Z" 
+            fill="url(#petalInner)" stroke="#781423" stroke-width="1"/>
+      <path d="M 5 -5 C 35 -35, 65 0, 50 35 C 35 55, 0 40, -5 10 Z" 
+            fill="url(#petalInner)" stroke="#781423" stroke-width="1"/>
+      <path d="M 5 5 C 20 40, -20 60, -40 30 C -55 5, -25 -15, 5 5 Z" 
+            fill="url(#petalInner)" stroke="#781423" stroke-width="1"/>
+      <path d="M -10 -5 C -40 -25, -45 15, -25 35 C -10 45, 15 25, 0 0 Z" 
+            fill="url(#petalInner)" stroke="#781423" stroke-width="1"/>
+
+      <!-- CAMADA 4: CENTRO DOS ESTAMES COM PÓLEN DOURADO -->
+      <!-- Coroa Central de Filamentos e Anteras Douradas -->
+      <g id="stamens">
+        <!-- Fundo de contraste escuro no centro -->
+        <circle cx="0" cy="2" r="24" fill="#5E0B16"/>
+
+        <!-- Filamentos Dourados Irradiando do Centro -->
+        <!-- Filamentos Norte -->
+        <path d="M -6 0 Q -10 -18 -8 -26" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="-8" cy="-26" r="2.8" fill="url(#stamenGlow)"/>
+        
+        <path d="M 0 -2 Q 2 -20 5 -28" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="5" cy="-28" r="3" fill="url(#stamenGlow)"/>
+        
+        <path d="M 6 -1 Q 14 -16 16 -24" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="16" cy="-24" r="2.8" fill="url(#stamenGlow)"/>
+
+        <!-- Filamentos Leste -->
+        <path d="M 5 2 Q 18 5 26 3" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="26" cy="3" r="3" fill="url(#stamenGlow)"/>
+
+        <path d="M 4 8 Q 18 14 24 20" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="24" cy="20" r="2.8" fill="url(#stamenGlow)"/>
+
+        <!-- Filamentos Sul -->
+        <path d="M 1 6 Q 4 20 2 28" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="2" cy="28" r="3.2" fill="url(#stamenGlow)"/>
+
+        <path d="M -5 5 Q -10 18 -12 25" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="-12" cy="25" r="2.8" fill="url(#stamenGlow)"/>
+
+        <!-- Filamentos Oeste -->
+        <path d="M -6 1 Q -18 2 -25 -2" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="-25" cy="-2" r="3" fill="url(#stamenGlow)"/>
+
+        <path d="M -5 -5 Q -18 -10 -22 -16" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="-22" cy="-16" r="2.8" fill="url(#stamenGlow)"/>
+
+        <!-- Filamentos Diagonais Interiores -->
+        <path d="M -2 -1 Q -8 -10 -12 -14" stroke="#FFF3B0" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="-12" cy="-14" r="2.4" fill="#FFE066"/>
+
+        <path d="M 2 -1 Q 8 -10 12 -12" stroke="#FFF3B0" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="12" cy="-12" r="2.4" fill="#FFE066"/>
+
+        <path d="M 2 3 Q 10 10 14 14" stroke="#FFF3B0" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="14" cy="14" r="2.4" fill="#FFE066"/>
+
+        <path d="M -2 3 Q -8 10 -11 13" stroke="#FFF3B0" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="-11" cy="13" r="2.4" fill="#FFE066"/>
+
+        <!-- Ponto de luz no pistilo central -->
+        <circle cx="0" cy="2" r="3.5" fill="#FFF3B0"/>
+        <circle cx="0" cy="2" r="1.5" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+</svg>

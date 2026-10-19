@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" fill="none">
+  <defs>
+    <!-- Brilho âmbar quente do pomar ao entardecer -->
+    <radialGradient id="sunCitrus" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#E9C46A" stop-opacity="0.18"/>
+      <stop offset="45%" stop-color="#F4A261" stop-opacity="0.07"/>
+      <stop offset="80%" stop-color="#2A9D8F" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#2A9D8F" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Madeira da Laranjeira -->
+    <linearGradient id="citrusBark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4E3629"/>
+      <stop offset="50%" stop-color="#3A261C"/>
+      <stop offset="100%" stop-color="#241710"/>
+    </linearGradient>
+
+    <!-- Folhas de Laranjeira: Verde-Esmeralda Quente e Lustroso -->
+    <linearGradient id="citrusLeafDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D5A27"/>
+      <stop offset="60%" stop-color="#1B3A17"/>
+      <stop offset="100%" stop-color="#0E230B"/>
+    </linearGradient>
+    <linearGradient id="citrusLeafMid" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#497D3C"/>
+      <stop offset="50%" stop-color="#2F5C24"/>
+      <stop offset="100%" stop-color="#193B12"/>
+    </linearGradient>
+    <linearGradient id="citrusLeafLight" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#6F9C4A"/>
+      <stop offset="55%" stop-color="#47732C"/>
+      <stop offset="100%" stop-color="#254A15"/>
+    </linearGradient>
+    <linearGradient id="citrusVein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#8DA65A" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- Pétalas Brancas da Flor de Laranjeira (Azahar) com Sombra Marfim e Luz Suave -->
+    <linearGradient id="petalWhite1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FDFBF7"/>
+      <stop offset="90%" stop-color="#E8E4DA"/>
+      <stop offset="100%" stop-color="#D3CEBF"/>
+    </linearGradient>
+    <linearGradient id="petalWhite2" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#F9F6EE"/>
+      <stop offset="85%" stop-color="#E2DDD0"/>
+      <stop offset="100%" stop-color="#C5BEAE"/>
+    </linearGradient>
+    <linearGradient id="petalShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="70%" stop-color="#D6CEBE"/>
+      <stop offset="100%" stop-color="#B2A793"/>
+    </linearGradient>
+
+    <!-- Fruto da Laranja: Gradientes Ricos e Quentes -->
+    <radialGradient id="orangeFruit" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFB03A"/>
+      <stop offset="35%" stop-color="#F77F00"/>
+      <stop offset="75%" stop-color="#D65A00"/>
+      <stop offset="100%" stop-color="#9E3A00"/>
+    </radialGradient>
+    <radialGradient id="orangeSmall" cx="30%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#FFCA3A"/>
+      <stop offset="45%" stop-color="#FA8C16"/>
+      <stop offset="85%" stop-color="#C65102"/>
+      <stop offset="100%" stop-color="#7A2E00"/>
+    </radialGradient>
+
+    <!-- Centro dos Estames das Flores Brancas -->
+    <radialGradient id="azaharCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE66D"/>
+      <stop offset="60%" stop-color="#F4A261"/>
+      <stop offset="100%" stop-color="#7B9E3A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Brilho Quente de Fundo -->
+  <circle cx="400" cy="400" r="340" fill="url(#sunCitrus)"/>
+
+  <!-- RAMO BOTÂNICO REALISTA DE LARANJEIRA -->
+  <g id="citrus-branch-group" opacity="0.82">
+
+    <!-- RAMIFICAÇÃO PRINCIPAL DE MADEIRA -->
+    <g id="citrus-branches">
+      <path d="M 60 160 C 180 200, 290 260, 390 350 C 480 430, 560 520, 680 680 C 720 730, 750 780, 770 810" 
+            stroke="url(#citrusBark)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 65 158 C 183 198, 292 258, 391 348 C 481 428, 561 517, 681 676" 
+            stroke="#6B4E38" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+
+      <!-- Ramos Secundários -->
+      <path d="M 230 225 C 200 160, 160 110, 100 80" stroke="url(#citrusBark)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 330 300 C 370 230, 420 180, 490 140" stroke="url(#citrusBark)" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M 390 350 C 350 420, 290 480, 210 520" stroke="url(#citrusBark)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 470 420 C 530 380, 600 360, 680 355" stroke="url(#citrusBark)" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M 540 500 C 500 580, 440 640, 360 690" stroke="url(#citrusBark)" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M 610 585 C 670 600, 725 625, 775 660" stroke="url(#citrusBark)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- FOLHAS DO PLANO DE FUNDO -->
+    <g id="citrus-leaves-bg">
+      <path d="M 100 80 C 60 45, 15 55, 5 95 C 30 120, 75 110, 100 80 Z" fill="url(#citrusLeafDark)" stroke="#0E230B" stroke-width="1.2"/>
+      <path d="M 100 80 C 60 75, 25 80, 5 95" stroke="url(#citrusVein)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <path d="M 490 140 C 530 90, 585 95, 615 135 C 585 165, 525 165, 490 140 Z" fill="url(#citrusLeafDark)" stroke="#0E230B" stroke-width="1.2"/>
+      <path d="M 490 140 C 540 130, 580 130, 615 135" stroke="url(#citrusVein)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <path d="M 680 355 C 740 330, 790 350, 810 395 C 765 425, 715 405, 680 355 Z" fill="url(#citrusLeafMid)" stroke="#0E230B" stroke-width="1.2"/>
+      <path d="M 680 355 C 730 360, 775 375, 810 395" stroke="url(#citrusVein)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <path d="M 360 690 C 320 735, 260 745, 220 720 C 240 670, 300 655, 360 690 Z" fill="url(#citrusLeafDark)" stroke="#0E230B" stroke-width="1.2"/>
+      <path d="M 360 690 C 310 710, 260 720, 220 720" stroke="url(#citrusVein)" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- LARANJAS DOURADAS (FRUTOS MADUROS DO POMAR) -->
+    <!-- Laranja 1 (Média/Direita Superior) -->
+    <g id="orange-fruit-1" transform="translate(560, 280)">
+      <circle cx="0" cy="0" r="54" fill="url(#orangeFruit)" stroke="#8A3200" stroke-width="1.4"/>
+      <!-- Brilho de Reflexo Suave na Casca -->
+      <ellipse cx="-16" cy="-18" rx="24" ry="16" fill="#FFE599" opacity="0.4" transform="rotate(-20, -16, -18)"/>
+      <!-- Pedúnculo e Estrela Cálice da Laranja -->
+      <path d="M 0 -54 C -3 -68, -8 -75, -12 -80" stroke="#3A261C" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 0 -54 L -6 -60 L 0 -57 L 6 -60 Z" fill="#254A15" stroke="#12260A" stroke-width="1"/>
+      <path d="M 0 -54 L -8 -52 L -3 -50 L 0 -54 Z" fill="#254A15"/>
+      <path d="M 0 -54 L 8 -52 L 3 -50 L 0 -54 Z" fill="#254A15"/>
+    </g>
+
+    <!-- Laranja 2 (Inferior Esquerda - Pequena a Amadurecer) -->
+    <g id="orange-fruit-2" transform="translate(240, 580)">
+      <circle cx="0" cy="0" r="42" fill="url(#orangeSmall)" stroke="#7A2E00" stroke-width="1.2"/>
+      <ellipse cx="-12" cy="-14" rx="18" ry="12" fill="#FFF3B0" opacity="0.45" transform="rotate(-15, -12, -14)"/>
+      <path d="M 0 -42 C 4 -52, 10 -60, 16 -65" stroke="#3A261C" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M 0 -42 L -5 -47 L 0 -45 L 5 -47 Z" fill="#2F5C24" stroke="#12260A" stroke-width="0.8"/>
+    </g>
+
+    <!-- FOLHAS DO PRIMEIRO PLANO (LUSTROSAS COM NERVURAS DOURADAS) -->
+    <g id="citrus-leaves-fg">
+      <!-- Folha 1 -->
+      <path d="M 270 235 C 335 170, 410 180, 450 240 C 400 295, 320 295, 270 235 Z" 
+            fill="url(#citrusLeafLight)" stroke="#193B12" stroke-width="1.4"/>
+      <path d="M 270 235 C 340 225, 400 230, 450 240" stroke="url(#citrusVein)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 320 230 C 340 210, 365 205, 390 210" stroke="#8DA65A" stroke-width="0.9" opacity="0.75"/>
+      <path d="M 350 232 C 370 250, 400 255, 420 255" stroke="#8DA65A" stroke-width="0.9" opacity="0.75"/>
+
+      <!-- Folha 2 -->
+      <path d="M 440 380 C 490 320, 560 325, 600 375 C 560 430, 490 435, 440 380 Z" 
+            fill="url(#citrusLeafMid)" stroke="#193B12" stroke-width="1.4"/>
+      <path d="M 440 380 C 500 365, 555 365, 600 375" stroke="url(#citrusVein)" stroke-width="1.6" stroke-linecap="round"/>
+
+      <!-- Folha 3 (Perto das Flores) -->
+      <path d="M 340 430 C 275 440, 220 480, 190 540 C 250 580, 315 530, 340 430 Z" 
+            fill="url(#citrusLeafLight)" stroke="#193B12" stroke-width="1.4"/>
+      <path d="M 340 430 C 285 465, 235 500, 190 540" stroke="url(#citrusVein)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 295 455 C 275 445, 250 445, 230 450" stroke="#8DA65A" stroke-width="0.9" opacity="0.75"/>
+      <path d="M 265 480 C 275 505, 290 520, 310 525" stroke="#8DA65A" stroke-width="0.9" opacity="0.75"/>
+    </g>
+
+    <!-- GRUPO DE FLORES BRANCAS DE LARANJEIRA (AZAHAR) -->
+    <!-- Flor 1: Aberta em Plena Floração (Centro Nobre) -->
+    <g id="azahar-blossom-1" transform="translate(370, 360)">
+      <!-- Pétala 1 (Norte) -->
+      <path d="M 0 -10 C -25 -55, 0 -85, 12 -80 C 24 -75, 30 -45, 5 -8 Z" 
+            fill="url(#petalWhite1)" stroke="#B8B09F" stroke-width="1"/>
+      <path d="M 0 -15 C -15 -50, 2 -70, 10 -68 C 18 -62, 22 -40, 5 -12 Z" 
+            fill="#FFFFFF" opacity="0.7"/>
+
+      <!-- Pétala 2 (Nordeste) -->
+      <path d="M 5 -5 C 40 -40, 75 -25, 78 -10 C 80 5, 55 25, 8 2 Z" 
+            fill="url(#petalWhite2)" stroke="#B8B09F" stroke-width="1"/>
+      <path d="M 8 -3 C 35 -30, 62 -18, 65 -8 C 65 5, 45 18, 10 3 Z" 
+            fill="#FFFFFF" opacity="0.7"/>
+
+      <!-- Pétala 3 (Sudeste) -->
+      <path d="M 5 5 C 35 35, 45 75, 30 82 C 15 88, -10 65, -2 8 Z" 
+            fill="url(#petalWhite1)" stroke="#B8B09F" stroke-width="1"/>
+      <path d="M 4 6 C 28 30, 35 60, 25 68 C 15 72, -3 52, 0 10 Z" 
+            fill="#FFFFFF" opacity="0.7"/>
+
+      <!-- Pétala 4 (Sudoeste) -->
+      <path d="M -5 5 C -30 40, -70 45, -78 30 C -85 15, -60 -10, -8 -2 Z" 
+            fill="url(#petalWhite2)" stroke="#B8B09F" stroke-width="1"/>
+      <path d="M -5 3 C -25 30, -58 32, -65 22 C -70 12, -50 -5, -8 0 Z" 
+            fill="#FFFFFF" opacity="0.7"/>
+
+      <!-- Pétala 5 (Noroeste) -->
+      <path d="M -5 -8 C -45 -25, -65 -60, -50 -72 C -35 -82, -15 -50, -2 -10 Z" 
+            fill="url(#petalShadow)" stroke="#B8B09F" stroke-width="1"/>
+      <path d="M -5 -8 C -35 -22, -50 -48, -40 -58 C -30 -65, -12 -42, -2 -10 Z" 
+            fill="#FFFFFF" opacity="0.6"/>
+
+      <!-- Pistilo Central e Estames Dourados da Flor de Laranjeira -->
+      <circle cx="0" cy="0" r="14" fill="url(#azaharCenter)"/>
+      <circle cx="0" cy="0" r="5" fill="#4B6B18"/>
+      <circle cx="0" cy="0" r="2.5" fill="#FFE66D"/>
+
+      <!-- Anteras em Coroa Circular -->
+      <circle cx="0" cy="-10" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+      <circle cx="8" cy="-7" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+      <circle cx="10" cy="2" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+      <circle cx="6" cy="9" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+      <circle cx="-2" cy="11" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+      <circle cx="-9" cy="6" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+      <circle cx="-10" cy="-3" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+      <circle cx="-5" cy="-9" r="2.2" fill="#FFE066" stroke="#C2A649" stroke-width="0.5"/>
+    </g>
+
+    <!-- Flor 2: Flor Secundária Lateral / Botão Quase Aberto -->
+    <g id="azahar-blossom-2" transform="translate(470, 460)">
+      <path d="M -5 10 C -25 -15, -15 -45, 0 -40 C 15 -35, 15 -5, 5 12 Z" fill="url(#petalWhite1)" stroke="#B8B09F" stroke-width="0.9"/>
+      <path d="M 0 5 C 20 -15, 45 -5, 40 10 C 35 25, 10 20, 2 5 Z" fill="url(#petalWhite2)" stroke="#B8B09F" stroke-width="0.9"/>
+      <path d="M -5 8 C -20 25, -5 45, 10 40 C 20 35, 10 15, -2 8 Z" fill="url(#petalShadow)" stroke="#B8B09F" stroke-width="0.9"/>
+      <circle cx="5" cy="5" r="7" fill="url(#azaharCenter)"/>
+      <circle cx="5" cy="5" r="2" fill="#FFE66D"/>
+    </g>
+
+    <!-- Botões Cerrados com Cálice Verde -->
+    <g id="azahar-buds" transform="translate(290, 280)">
+      <!-- Pedúnculo -->
+      <path d="M 0 0 C 10 -15, 18 -25, 25 -32" stroke="#254A15" stroke-width="2" stroke-linecap="round"/>
+      <!-- Cálice -->
+      <path d="M 25 -32 L 20 -40 L 27 -38 L 34 -40 Z" fill="#3D734E" stroke="#1B3A17" stroke-width="0.8"/>
+      <!-- Botão Cónico Branco -->
+      <ellipse cx="27" cy="-45" rx="7" ry="11" fill="url(#petalWhite1)" stroke="#B8B09F" stroke-width="0.8" transform="rotate(15, 27, -45)"/>
+    </g>
+  </g>
+</svg>

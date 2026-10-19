@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" fill="none">
+  <defs>
+    <!-- Brilho Dourado e Lavanda Suave de Fundo -->
+    <radialGradient id="sunQuinta" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.16"/>
+      <stop offset="40%" stop-color="#9AA874" stop-opacity="0.08"/>
+      <stop offset="75%" stop-color="#7B8EC8" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#7B8EC8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Madeira da Oliveira Centenária -->
+    <linearGradient id="woodOlive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4B4434"/>
+      <stop offset="50%" stop-color="#342F23"/>
+      <stop offset="100%" stop-color="#1F1C15"/>
+    </linearGradient>
+
+    <!-- Folhas de Oliveira Superior (Verde Azeitona Profundo) -->
+    <linearGradient id="leafOliveDeep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#556B2F"/>
+      <stop offset="60%" stop-color="#3A4A1F"/>
+      <stop offset="100%" stop-color="#232E11"/>
+    </linearGradient>
+
+    <!-- Verso Prateado das Folhas de Oliveira -->
+    <linearGradient id="leafOliveSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A9B88B"/>
+      <stop offset="50%" stop-color="#849468"/>
+      <stop offset="100%" stop-color="#5E6B47"/>
+    </linearGradient>
+
+    <!-- Nervuras da Oliveira -->
+    <linearGradient id="veinOlive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#6E7B48" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Azeitona Madura da Beira -->
+    <radialGradient id="oliveMadura" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#483D3F"/>
+      <stop offset="40%" stop-color="#2D2327"/>
+      <stop offset="85%" stop-color="#191316"/>
+      <stop offset="100%" stop-color="#0A0809"/>
+    </radialGradient>
+
+    <!-- Flores de Agapanto / Hortênsia da Serra (Azul / Alfazema / Lilás Nobre) -->
+    <linearGradient id="floretBlue1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8C5E8"/>
+      <stop offset="45%" stop-color="#8E9FC8"/>
+      <stop offset="85%" stop-color="#5D6E9E"/>
+      <stop offset="100%" stop-color="#3D4B75"/>
+    </linearGradient>
+    <linearGradient id="floretBlue2" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#CBD5F0"/>
+      <stop offset="50%" stop-color="#9FB0DC"/>
+      <stop offset="85%" stop-color="#6F80B0"/>
+      <stop offset="100%" stop-color="#485782"/>
+    </linearGradient>
+    <linearGradient id="floretGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#CBD5F0" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8E9FC8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Aura do Fundo -->
+  <circle cx="410" cy="400" r="330" fill="url(#sunQuinta)"/>
+
+  <g id="quinta-botanical" opacity="0.82">
+
+    <!-- RAMIFICAÇÃO RETORCIDA DE OLIVEIRA SECULAR -->
+    <g id="branches-olive">
+      <path d="M 740 680 C 620 620, 500 520, 420 410 C 350 310, 270 220, 140 160 C 90 140, 50 130, 20 120" 
+            stroke="url(#woodOlive)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 735 678 C 617 618, 498 518, 419 408 C 349 308, 271 219, 143 159" 
+            stroke="#6B624E" stroke-width="2.6" stroke-linecap="round" opacity="0.55"/>
+
+      <!-- Ramos Laterais -->
+      <path d="M 500 520 C 530 450, 570 380, 630 320" stroke="url(#woodOlive)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 420 410 C 380 470, 320 530, 240 570" stroke="url(#woodOlive)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 330 280 C 370 220, 430 180, 510 150" stroke="url(#woodOlive)" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M 230 200 C 200 260, 160 320, 100 360" stroke="url(#woodOlive)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- FOLHAS PRATEADAS DE OLIVEIRA (FUNDO) -->
+    <g id="olive-leaves-bg">
+      <path d="M 630 320 C 670 280, 720 285, 750 315 C 720 345, 670 345, 630 320 Z" fill="url(#leafOliveSilver)" stroke="#3A4A1F" stroke-width="1.2"/>
+      <path d="M 630 320 C 680 310, 720 312, 750 315" stroke="url(#veinOlive)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <path d="M 510 150 C 540 100, 595 105, 620 145 C 585 175, 535 175, 510 150 Z" fill="url(#leafOliveSilver)" stroke="#3A4A1F" stroke-width="1.2"/>
+      <path d="M 510 150 C 560 140, 595 142, 620 145" stroke="url(#veinOlive)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <path d="M 240 570 C 200 615, 140 625, 100 600 C 120 550, 180 535, 240 570 Z" fill="url(#leafOliveSilver)" stroke="#3A4A1F" stroke-width="1.2"/>
+      <path d="M 240 570 C 190 590, 140 600, 100 600" stroke="url(#veinOlive)" stroke-width="1.2" stroke-linecap="round"/>
+
+      <path d="M 100 360 C 60 380, 15 365, 0 330 C 35 305, 80 320, 100 360 Z" fill="url(#leafOliveSilver)" stroke="#3A4A1F" stroke-width="1.2"/>
+    </g>
+
+    <!-- AZEITONAS NEGRAS MADURAS (BRILHO NATURAL) -->
+    <g id="ripe-olives">
+      <!-- Azeitona 1 -->
+      <g transform="translate(480, 460)">
+        <ellipse cx="0" cy="0" rx="20" ry="26" fill="url(#oliveMadura)" stroke="#191316" stroke-width="1" transform="rotate(25)"/>
+        <ellipse cx="-6" cy="-8" rx="6" ry="12" fill="#FFFFFF" opacity="0.32" transform="rotate(20, -6, -8)"/>
+        <path d="M 0 -26 C 2 -36, 6 -42, 12 -46" stroke="#342F23" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <!-- Azeitona 2 -->
+      <g transform="translate(520, 485)">
+        <ellipse cx="0" cy="0" rx="18" ry="24" fill="url(#oliveMadura)" stroke="#191316" stroke-width="1" transform="rotate(-15)"/>
+        <ellipse cx="-5" cy="-7" rx="5" ry="10" fill="#FFFFFF" opacity="0.3" transform="rotate(-15, -5, -7)"/>
+        <path d="M 0 -24 C -2 -34, -4 -40, -10 -44" stroke="#342F23" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- FOLHAS DE OLIVEIRA (VERDE-AZEITONA PRIMEIRO PLANO) -->
+    <g id="olive-leaves-fg">
+      <path d="M 440 370 C 510 320, 580 330, 620 385 C 570 435, 490 425, 440 370 Z" 
+            fill="url(#leafOliveDeep)" stroke="#1F2A0E" stroke-width="1.4"/>
+      <path d="M 440 370 C 515 360, 575 370, 620 385" stroke="url(#veinOlive)" stroke-width="1.6" stroke-linecap="round"/>
+
+      <path d="M 360 250 C 420 185, 490 195, 525 255 C 475 305, 405 300, 360 250 Z" 
+            fill="url(#leafOliveDeep)" stroke="#1F2A0E" stroke-width="1.4"/>
+      <path d="M 360 250 C 430 235, 485 242, 525 255" stroke="url(#veinOlive)" stroke-width="1.6" stroke-linecap="round"/>
+
+      <path d="M 260 230 C 205 180, 140 190, 105 245 C 155 285, 220 280, 260 230 Z" 
+            fill="url(#leafOliveDeep)" stroke="#1F2A0E" stroke-width="1.4"/>
+      <path d="M 260 230 C 195 220, 145 230, 105 245" stroke="url(#veinOlive)" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+
+    <!-- INFLORESCÊNCIA DELICADA DA SERRA (AGAPANTO / HORTÊNSIA DE JARDIM) -->
+    <g id="mountain-florets" transform="translate(320, 340)">
+      <!-- Hastes Verdes Finas Irradiando -->
+      <path d="M 0 0 C -25 -25, -45 -65, -55 -110" stroke="#4B6B18" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 0 0 C -5 -35, -15 -80, -20 -125" stroke="#4B6B18" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 0 0 C 15 -35, 25 -75, 30 -120" stroke="#4B6B18" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 0 0 C 35 -25, 65 -60, 85 -105" stroke="#4B6B18" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 0 0 C -35 -10, -75 -25, -105 -50" stroke="#4B6B18" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 0 0 C 40 -10, 80 -15, 115 -35" stroke="#4B6B18" stroke-width="1.6" stroke-linecap="round"/>
+
+      <!-- Flor 1 (Noroeste Alta) -->
+      <g transform="translate(-55, -110)">
+        <path d="M 0 0 C -14 -10, -20 -25, -10 -30 C 0 -35, 12 -20, 0 0 Z" fill="url(#floretBlue1)" stroke="#3D4B75" stroke-width="0.8"/>
+        <path d="M 0 0 C -5 -25, 10 -35, 18 -25 C 22 -15, 12 0, 0 0 Z" fill="url(#floretBlue2)" stroke="#3D4B75" stroke-width="0.8"/>
+        <path d="M 0 0 C -25 -5, -35 10, -25 18 C -15 22, 0 10, 0 0 Z" fill="url(#floretBlue1)" stroke="#3D4B75" stroke-width="0.8"/>
+        <circle cx="0" cy="-5" r="2" fill="#FFE066"/>
+      </g>
+
+      <!-- Flor 2 (Norte Alta) -->
+      <g transform="translate(-20, -125)">
+        <path d="M 0 0 C -12 -12, -15 -28, -5 -32 C 8 -34, 15 -18, 0 0 Z" fill="url(#floretBlue2)" stroke="#3D4B75" stroke-width="0.8"/>
+        <path d="M 0 0 C 8 -18, 25 -22, 28 -10 C 28 2, 12 5, 0 0 Z" fill="url(#floretBlue1)" stroke="#3D4B75" stroke-width="0.8"/>
+        <path d="M 0 0 C -18 8, -25 22, -15 26 C -2 28, 5 12, 0 0 Z" fill="url(#floretBlue2)" stroke="#3D4B75" stroke-width="0.8"/>
+        <circle cx="2" cy="-6" r="2.2" fill="#FFE066"/>
+      </g>
+
+      <!-- Flor 3 (Nordeste Alta) -->
+      <g transform="translate(30, -120)">
+        <path d="M 0 0 C -8 -15, -5 -32, 8 -32 C 18 -28, 16 -12, 0 0 Z" fill="url(#floretBlue1)" stroke="#3D4B75" stroke-width="0.8"/>
+        <path d="M 0 0 C 15 -12, 32 -5, 30 8 C 26 18, 10 12, 0 0 Z" fill="url(#floretBlue2)" stroke="#3D4B75" stroke-width="0.8"/>
+        <circle cx="5" cy="-8" r="2" fill="#FFE066"/>
+      </g>
+
+      <!-- Flor 4 (Extremo Leste) -->
+      <g transform="translate(85, -105)">
+        <path d="M 0 0 C 10 -15, 28 -20, 30 -8 C 30 5, 15 12, 0 0 Z" fill="url(#floretBlue2)" stroke="#3D4B75" stroke-width="0.8"/>
+        <path d="M 0 0 C 15 8, 25 25, 12 30 C 0 32, -5 15, 0 0 Z" fill="url(#floretBlue1)" stroke="#3D4B75" stroke-width="0.8"/>
+        <circle cx="8" cy="2" r="2" fill="#FFE066"/>
+      </g>
+
+      <!-- Flor 5 (Extremo Oeste) -->
+      <g transform="translate(-105, -50)">
+        <path d="M 0 0 C -18 -8, -30 2, -28 15 C -24 25, -10 18, 0 0 Z" fill="url(#floretBlue1)" stroke="#3D4B75" stroke-width="0.8"/>
+        <path d="M 0 0 C -8 -20, 8 -28, 18 -18 C 22 -5, 10 5, 0 0 Z" fill="url(#floretBlue2)" stroke="#3D4B75" stroke-width="0.8"/>
+        <circle cx="-5" cy="-4" r="2" fill="#FFE066"/>
+      </g>
+
+      <!-- Flor 6 (Leste Baixo) -->
+      <g transform="translate(115, -35)">
+        <path d="M 0 0 C 12 -12, 28 -8, 28 5 C 26 18, 10 14, 0 0 Z" fill="url(#floretBlue1)" stroke="#3D4B75" stroke-width="0.8"/>
+        <circle cx="7" cy="-2" r="1.8" fill="#FFE066"/>
+      </g>
+    </g>
+  </g>
+</svg>

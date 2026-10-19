@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Os Nove Alojamentos — Casa Grande | Turismo de Habitação & Casas de Campo</title>
+  <meta name="description" content="Conheça as nove habitações rurais da Casa Grande na Serra da Estrela, divididas por capacidade de hóspedes: apartamentos históricos no solar e casas de pedra autónomas com lareira privativa e pequeno-almoço incluído.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  
+  <!-- Favicon Standard Bruto -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-interior page-accommodations">
+
+  <!-- BOTÃO FLUTUANTE DE MENU (FIXO NO TOPO ESQUERDO) -->
+  <button type="button" class="floating-menu-trigger js-drawer-open" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="main-drawer">
+    <span class="menu-icon-bars" aria-hidden="true">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+    </span>
+    <span class="menu-trigger-text">Menu</span>
+  </button>
+
+  <!-- BOTÃO FLUTUANTE DE RESERVA (CALENDÁRIO — REVELA 'RESERVAR' & GLOW NO HOVER) -->
+  <a href="reservas.html" class="floating-booking-cta" aria-label="Reservar Estadia na Casa Grande">
+    <span class="booking-cta-icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    </span>
+    <span class="booking-cta-text">Reservar</span>
+  </a>
+
+  <!-- PAINEL LATERAL DE NAVEGAÇÃO (LUXURY SLIDE-IN DRAWER) -->
+  <div class="nav-drawer-backdrop js-drawer-close" aria-hidden="true"></div>
+  <aside class="nav-drawer" id="main-drawer" aria-label="Menu Principal" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/img/logo_center.png" alt="Casa Grande" class="drawer-logo" / decoding="async">
+      </div>
+      <button type="button" class="drawer-close-btn js-drawer-close" aria-label="Fechar Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <nav class="drawer-nav">
+        <ul class="drawer-menu-list">
+          <li><a href="index.html" class="drawer-menu-link"><span class="link-title">Início</span></a></li>
+          <li><a href="alojamentos.html" class="drawer-menu-link drawer-menu-link--highlight"><span class="link-title">Alojamentos</span></a></li>
+          <li><a href="actividades.html" class="drawer-menu-link"><span class="link-title">Serra da Estrela</span></a></li>
+          <li><a href="duvidas.html" class="drawer-menu-link"><span class="link-title">FAQs</span></a></li>
+        </ul>
+
+        <div class="drawer-booking-action">
+          <a href="reservas.html" class="drawer-booking-btn">
+            <span class="drawer-btn-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
+            <span class="drawer-btn-label">Reservar Estadia</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="drawer-footer">
+        <div class="drawer-contacts">
+          <a href="duvidas.html#contacto" class="drawer-section-title">Contactos</a>
+          <a href="tel:+351934297935" class="drawer-contact-val">(+351) 934 297 935</a>
+          <a href="mailto:info@casagrande.com.pt" class="drawer-contact-val">info@casagrande.com.pt</a>
+          <p class="drawer-address-text">Largo Dr. Luís Mendes Caldeira nº 1<br>6290-241 Paços da Serra, Gouveia</p>
+        </div>
+
+        <div class="drawer-socials">
+          <a href="https://instagram.com/casagrande_th" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Instagram</a>
+          <span class="sep">·</span>
+          <a href="https://www.facebook.com/CGPacosDaSerra" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+    
+    <!-- HERO ESCURO EDITORIAL COM MARCA (DESTAQUE MÁXIMO DO LOGÓTIPO BRUTO) -->
+    <header class="subpage-dark-hero">
+      <div class="interior-brand-bar">
+        <a href="index.html" title="Voltar à Página Inicial — Casa Grande">
+          <img src="assets/img/logo_center.png" alt="Casa Grande" class="interior-brand-logo" decoding="async">
+        </a>
+      </div>
+
+      <div class="container subpage-hero-container">
+        <h1 class="subpage-hero-title">As Nossas Habitações Rurais</h1>
+        <i class="ico-separator" style="margin: 16px auto 20px auto;"></i>
+        <p class="subpage-hero-desc">
+          Das suites íntimas no solar histórico às casas de campo independentes espalhadas pela quinta, escolha o refúgio ideal para a sua estadia a dois, em família ou em grupo.
+        </p>
+      </div>
+    </header>
+
+    <!-- 6 PILARES DE CONVERSÃO & CONFIANÇA -->
+    <section class="accommodations-hero-intro" style="padding: 40px 0 36px 0;">
+      <div class="container">
+        <!-- 6 Pilares de Conversão & Confiança -->
+        <div class="conversion-pillars-grid">
+          
+          <div class="conversion-pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>Lareira &amp; Lenha Diária Incluída</h4>
+              <p>Lareira privativa em pedra de cantaria em todas as habitações com reposição diária de lenha da propriedade.</p>
+            </div>
+          </div>
+
+          <div class="conversion-pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>Pequeno-Almoço à Porta</h4>
+              <p>Pão fresco da aldeia entregue de manhã, compotas caseiras da quinta, queijo regional e manteiga fresca.</p>
+            </div>
+          </div>
+
+          <div class="conversion-pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>Kitchenette &amp; Entrada Privativa</h4>
+              <p>Entrada direta independente e kitchenette equipada com frigorífico, placa, micro-ondas e máquina de café.</p>
+            </div>
+          </div>
+
+          <div class="conversion-pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>3,2 Hectares de Natureza &amp; Olival</h4>
+              <p>Jardim secular de camélias, eira tradicional em granito, baloiços, oliveiras e ar puro a 720m de altitude.</p>
+            </div>
+          </div>
+
+          <div class="conversion-pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>Wi-Fi Fibra Rápido &amp; Teletrabalho</h4>
+              <p>Cobertura fiável de internet para descanso, séries ou teletrabalho com vista para o vale da serra.</p>
+            </div>
+          </div>
+
+          <div class="conversion-pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>Melhor Tarifa &amp; Apoio Pessoal</h4>
+              <p>Reserva sem comissões de plataformas com cancelamento flexível e acolhimento direto pela família Vasconcelos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 BLOCOS ESSENCIAIS: ESTADIA MÍNIMA & ÉPOCAS FESTIVAS (MESMO DESIGN DOS DE CIMA, CLOSE E COM DETALHE DOURADO) -->
+        <div class="conditions-pillars-row">
+          
+          <!-- Card 1: Estadia Mínima -->
+          <div class="condition-pillar-card">
+            <div class="pillar-icon-box condition-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div class="pillar-content">
+              <span class="condition-eyebrow">Duração da Estadia</span>
+              <h4 class="condition-card-title">Estadia Mínima</h4>
+              <div class="condition-chips-row">
+                <span class="rule-chip">Época Habitual: <strong>2 Noites</strong></span>
+                <span class="rule-chip rule-chip--festive">Épocas Festivas: <strong>3 Noites</strong></span>
+              </div>
+              <p class="condition-card-desc">
+                Requisito para garantir o ritmo tranquilo da serra e a preparação com lenha e pequeno-almoço fresco.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Épocas Festivas -->
+          <div class="condition-pillar-card">
+            <div class="pillar-icon-box condition-icon-box" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div class="pillar-content">
+              <span class="condition-eyebrow">Tarifário Diferenciado</span>
+              <h4 class="condition-card-title">Épocas Festivas</h4>
+              <div class="condition-chips-row">
+                <span class="season-chip">Natal</span>
+                <span class="season-chip">Passagem de Ano</span>
+                <span class="season-chip">Carnaval</span>
+                <span class="season-chip">Páscoa</span>
+              </div>
+              <p class="condition-card-desc">
+                Nestes quatro períodos vigoram as tarifas de época festiva indicadas no detalhe de cada habitação.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SELETOR ELEGANTE DE NÚMERO DE HÓSPEDES & GRELHA FLUIDA CONTÍNUA -->
+    <section class="accommodations-unified-section" id="catalogo-alojamentos">
+      <div class="container">
+        
+        <!-- BARRA SELETORA COMPACTA COM DROPDOWN ELEGANTE -->
+        <div class="guests-filter-compact-bar">
+          <div class="filter-dropdown-wrapper">
+            <label for="guest-filter-select" class="filter-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>Número de Hóspedes:</span>
+            </label>
+            <div class="custom-select-box">
+              <select id="guest-filter-select" class="guest-select-input" aria-label="Filtrar por número de hóspedes">
+                <option value="all" selected>Todas as Habitações</option>
+                <option value="1">1 Hóspede</option>
+                <option value="2">2 Hóspedes</option>
+                <option value="3">3 Hóspedes</option>
+                <option value="4">4 Hóspedes</option>
+                <option value="5">5 Hóspedes</option>
+                <option value="6">6 Hóspedes</option>
+                <option value="7">7 Hóspedes</option>
+                <option value="8">8 Hóspedes</option>
+              </select>
+              <div class="select-chevron" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-live-status">
+            <span class="active-count-badge" id="active-units-count">9 Habitações Disponíveis</span>
+            <span class="filter-context-text" id="filter-context-text">A apresentar todas as habitações da quinta</span>
+          </div>
+        </div>
+
+        <!-- GRELHA FLUIDA UNIFICADA COM TODOS OS 9 ALOJAMENTOS -->
+        <div class="accommodations-grid" id="accommodations-unified-grid">
+          <!-- CARTÃO: APARTAMENTO DAS CAMELEIRAS -->
+          <article class="accommodation-card accommodation-card-zigzag " 
+                   id="card-cameleiras" 
+                   data-min-guests="1" 
+                   data-max-guests="2" 
+                   data-guests-min="1" 
+                   data-guests-max="2">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Sala de estar com mesa de refeições e lareira&quot;},{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Sala acolhedora com TV e lareira de época&quot;},{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Kitchenette privativa equipada&quot;},{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Casa de banho com chuveiro e toalhas&quot;},{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_5.jpg&quot;,&quot;caption&quot;:&quot;Quarto com roupeiro em madeira&quot;},{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_6.jpg&quot;,&quot;caption&quot;:&quot;Quarto de casal com luz natural da serra&quot;},{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_7.jpg&quot;,&quot;caption&quot;:&quot;Varanda coberta virada a poente sobre o olival&quot;},{&quot;src&quot;:&quot;assets/img/units/cameleiras/photo_8.jpg&quot;,&quot;caption&quot;:&quot;Entrada exterior e portão da quinta&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/cameleiras/photo_1.jpg" 
+                     alt="Apartamento das Cameleiras — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-cameleiras" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-cameleiras', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-cameleiras', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-cameleiras">
+                1 / 8
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-cameleiras')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-cameleiras">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Sala de estar com mesa de refeições e lareira</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Apartamento das Cameleiras</h3>
+                <p class="card-story-desc">Vista privilegiada sobre o secular jardim de cameleiras e olival. Sala de estar acolhedora com lareira tradicional em pedra de cantaria, kitchenette privativa e quarto de casal confortável.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">1 Cama de Casal</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">1-2 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Solar T1 · 45 m²</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira a Lenha</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Kitchenette Equipada</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <span class="spec-text">Jardim de Camélias</span>
+                </div>
+  
+              </div>
+
+              
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">85&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>95&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=cameleiras" class="card-details-btn" aria-label="Reservar Apartamento das Cameleiras">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: APARTAMENTO DOS CIPRESTES -->
+          <article class="accommodation-card accommodation-card-zigzag is-reversed" 
+                   id="card-ciprestes" 
+                   data-min-guests="1" 
+                   data-max-guests="2" 
+                   data-guests-min="1" 
+                   data-guests-max="2">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/ciprestes/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Sala com mesa de refeições e kitchenette&quot;},{&quot;src&quot;:&quot;assets/img/units/ciprestes/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Casa de banho completa com banheira&quot;},{&quot;src&quot;:&quot;assets/img/units/ciprestes/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Salinha privativa em cantaria com lareira&quot;},{&quot;src&quot;:&quot;assets/img/units/ciprestes/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Varanda virada a poente com vista para o jardim&quot;},{&quot;src&quot;:&quot;assets/img/units/ciprestes/photo_5.jpg&quot;,&quot;caption&quot;:&quot;Sala de estar com TV, frigorífico e micro-ondas&quot;},{&quot;src&quot;:&quot;assets/img/units/ciprestes/photo_6.jpg&quot;,&quot;caption&quot;:&quot;Quarto espaçoso com duas camas de solteiro&quot;},{&quot;src&quot;:&quot;assets/img/units/ciprestes/photo_7.jpg&quot;,&quot;caption&quot;:&quot;Porta de entrada nobre e alpendre da quinta&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/ciprestes/photo_1.jpg" 
+                     alt="Apartamento dos Ciprestes — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-ciprestes" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-ciprestes', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-ciprestes', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-ciprestes">
+                1 / 7
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-ciprestes')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-ciprestes">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Sala com mesa de refeições e kitchenette</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Apartamento dos Ciprestes</h3>
+                <p class="card-story-desc">Ambiente nobre e recolhido virado para a alameda secular de ciprestes. Vigas em madeira de castanho, lareira histórica em pedra e recanto sereno de montanha.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">2 Camas Twin</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">1-2 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Solar T1 · 45 m²</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira Histórica</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Kitchenette Equipada</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <span class="spec-text">Alameda de Ciprestes</span>
+                </div>
+  
+              </div>
+
+              
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">85&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>95&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=ciprestes" class="card-details-btn" aria-label="Reservar Apartamento dos Ciprestes">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: APARTAMENTO DAS LARANJEIRAS -->
+          <article class="accommodation-card accommodation-card-zigzag " 
+                   id="card-laranjeiras" 
+                   data-min-guests="1" 
+                   data-max-guests="2" 
+                   data-guests-min="1" 
+                   data-guests-max="2">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/laranjeiras/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Sala de estar com lareira rústica e TV&quot;},{&quot;src&quot;:&quot;assets/img/units/laranjeiras/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Quarto de casal com vista para as laranjeiras&quot;},{&quot;src&quot;:&quot;assets/img/units/laranjeiras/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Kitchenette equipada e mesa de madeira&quot;},{&quot;src&quot;:&quot;assets/img/units/laranjeiras/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Casa de banho privativa com duche&quot;},{&quot;src&quot;:&quot;assets/img/units/laranjeiras/photo_5.jpg&quot;,&quot;caption&quot;:&quot;Pormenores decorativos do solar&quot;},{&quot;src&quot;:&quot;assets/img/units/laranjeiras/photo_6.jpg&quot;,&quot;caption&quot;:&quot;Varanda com vista desafogada para o vale&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/laranjeiras/photo_1.jpg" 
+                     alt="Apartamento das Laranjeiras — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-laranjeiras" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-laranjeiras', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-laranjeiras', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-laranjeiras">
+                1 / 6
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-laranjeiras')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-laranjeiras">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Sala de estar com lareira rústica e TV</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Apartamento das Laranjeiras</h3>
+                <p class="card-story-desc">Envolto pelo aroma cítrico do pomar de laranjeiras. Confortável quarto de casal, sala de estar com lareira de granito e kitchenette funcional para pequenos-almoços e refeições ligeiras.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">1 Cama de Casal</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">1-2 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Solar T1 · 48 m²</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira de Granito</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Kitchenette Equipada</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <span class="spec-text">Pomar de Laranjeiras</span>
+                </div>
+  
+              </div>
+
+              
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">85&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>95&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=laranjeiras" class="card-details-btn" aria-label="Reservar Apartamento das Laranjeiras">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: CASA DA AZEITONA -->
+          <article class="accommodation-card accommodation-card-zigzag is-reversed" 
+                   id="card-azeitona" 
+                   data-min-guests="1" 
+                   data-max-guests="2" 
+                   data-guests-min="1" 
+                   data-guests-max="2">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/azeitona/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Fachada tradicional em granito com entrada privativa&quot;},{&quot;src&quot;:&quot;assets/img/units/azeitona/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Sala de estar ampla com lareira a lenha&quot;},{&quot;src&quot;:&quot;assets/img/units/azeitona/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Quarto de casal acolhedor e silencioso&quot;},{&quot;src&quot;:&quot;assets/img/units/azeitona/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Cozinha completa e zona de refeições&quot;},{&quot;src&quot;:&quot;assets/img/units/azeitona/photo_5.jpg&quot;,&quot;caption&quot;:&quot;Terraço exterior virado para as oliveiras&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/azeitona/photo_1.jpg" 
+                     alt="Casa da Azeitona — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-azeitona" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-azeitona', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-azeitona', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-azeitona">
+                1 / 5
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-azeitona')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-azeitona">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Fachada tradicional em granito com entrada privativa</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Casa da Azeitona</h3>
+                <p class="card-story-desc">Casa independente em cantaria de granito com terraço privativo. Sala ampla com lareira a lenha, cozinha equipada e quarto de casal reservado para momentos de tranquilidade na montanha.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">1 Cama de Casal</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">1-2 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Casa Rústica T1</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira a Lenha</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Cozinha Completa</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+                  <span class="spec-text">Terraço Privativo</span>
+                </div>
+  
+              </div>
+
+              
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">85&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>95&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=azeitona" class="card-details-btn" aria-label="Reservar Casa da Azeitona">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: CASA DO RANCHO -->
+          <article class="accommodation-card accommodation-card-zigzag " 
+                   id="card-rancho" 
+                   data-min-guests="1" 
+                   data-max-guests="2" 
+                   data-guests-min="1" 
+                   data-guests-max="2">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/rancho/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Sala de estar acolhedora com lareira e vigas de madeira&quot;},{&quot;src&quot;:&quot;assets/img/units/rancho/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Quarto com duas camas individuais confortáveis&quot;},{&quot;src&quot;:&quot;assets/img/units/rancho/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Kitchenette equipada e mesa de jantar&quot;},{&quot;src&quot;:&quot;assets/img/units/rancho/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Terraço privativo com sol e tranquilidade&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/rancho/photo_1.jpg" 
+                     alt="Casa do Rancho — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-rancho" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-rancho', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-rancho', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-rancho">
+                1 / 4
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-rancho')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-rancho">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Sala de estar acolhedora com lareira e vigas de madeira</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Casa do Rancho</h3>
+                <p class="card-story-desc">Construção típica em granito rodeada de oliveiras. Sala acolhedora com lareira tradicional, kitchenette equipada e terraço soalheiro privativo com vista desafogada sobre a encosta.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">2 Camas Twin</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">1-2 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Casa Rústica T1</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira Tradicional</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Kitchenette Equipada</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+                  <span class="spec-text">Terraço Soalheiro</span>
+                </div>
+  
+              </div>
+
+              
+              <div class="card-supplement-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Berço disponível sob pedido (+10 €/noite)</span>
+              </div>
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">85&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>95&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=rancho" class="card-details-btn" aria-label="Reservar Casa do Rancho">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: CASA DO BURRO -->
+          <article class="accommodation-card accommodation-card-zigzag is-reversed" 
+                   id="card-burro" 
+                   data-min-guests="1" 
+                   data-max-guests="2" 
+                   data-guests-min="1" 
+                   data-guests-max="2">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/burro/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Alpendre rústico em pedra e entrada privativa&quot;},{&quot;src&quot;:&quot;assets/img/units/burro/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Sala de estar luminosa com lareira em cantaria&quot;},{&quot;src&quot;:&quot;assets/img/units/burro/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Quarto de casal com apontamentos campestres&quot;},{&quot;src&quot;:&quot;assets/img/units/burro/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Cozinha completa para estadias independentes&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/burro/photo_1.jpg" 
+                     alt="Casa do Burro — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-burro" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-burro', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-burro', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-burro">
+                1 / 4
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-burro')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-burro">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Alpendre rústico em pedra e entrada privativa</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Casa do Burro</h3>
+                <p class="card-story-desc">Antigo anexo rural recuperado com detalhe e autenticidade. Entrada direta para o jardim, sala de estar com lareira de cantaria, cozinha completa e quarto de casal acolhedor.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">1 Cama de Casal</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">1-2 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Casa Rústica T1</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira em Cantaria</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Cozinha Completa</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <span class="spec-text">Acesso Direto ao Jardim</span>
+                </div>
+  
+              </div>
+
+              
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">85&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>95&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=burro" class="card-details-btn" aria-label="Reservar Casa do Burro">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: CASA DA CASEIRA -->
+          <article class="accommodation-card accommodation-card-zigzag " 
+                   id="card-caseira" 
+                   data-min-guests="3" 
+                   data-max-guests="4" 
+                   data-guests-min="3" 
+                   data-guests-max="4">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/caseira/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Salão nobre com lareira de cantaria e vigas antigas&quot;},{&quot;src&quot;:&quot;assets/img/units/caseira/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Quarto de casal master com vista panorâmica&quot;},{&quot;src&quot;:&quot;assets/img/units/caseira/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Quarto twin acolhedor no piso superior&quot;},{&quot;src&quot;:&quot;assets/img/units/caseira/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Cozinha equipada com mesa de refeições familiar&quot;},{&quot;src&quot;:&quot;assets/img/units/caseira/photo_5.jpg&quot;,&quot;caption&quot;:&quot;Exterior em pedra com pátio florido&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/caseira/photo_1.jpg" 
+                     alt="Casa da Caseira — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-caseira" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-caseira', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-caseira', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-caseira">
+                1 / 5
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-caseira')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-caseira">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Salão nobre com lareira de cantaria e vigas antigas</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Casa da Caseira</h3>
+                <p class="card-story-desc">Habitação de 2 pisos com capacidade familiar. Grande salão comum com lareira rústica imponente, cozinha completa e dois quartos independentes (um de casal e um twin).</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">Casal + 2 Twin (2Q)</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">Até 4 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Casa Rústica T2</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira Salão Nobre</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Cozinha Familiar</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+                  <span class="spec-text">Pátio Florido</span>
+                </div>
+  
+              </div>
+
+              
+              <div class="card-supplement-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Cama extra sob pedido (+25 €/noite)</span>
+              </div>
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">85&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>95&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=caseira" class="card-details-btn" aria-label="Reservar Casa da Caseira">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: CASA DO TELHEIRO -->
+          <article class="accommodation-card accommodation-card-zigzag is-reversed" 
+                   id="card-telheiro" 
+                   data-min-guests="5" 
+                   data-max-guests="6" 
+                   data-guests-min="5" 
+                   data-guests-max="6">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/telheiro/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Alpendre coberto privativo com mobiliário de exterior&quot;},{&quot;src&quot;:&quot;assets/img/units/telheiro/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Salão de convívio com lareira e mesa generosa&quot;},{&quot;src&quot;:&quot;assets/img/units/telheiro/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Quarto principal de casal confortável e soalheiro&quot;},{&quot;src&quot;:&quot;assets/img/units/telheiro/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Quartos adicionais para família alargada&quot;},{&quot;src&quot;:&quot;assets/img/units/telheiro/photo_5.jpg&quot;,&quot;caption&quot;:&quot;Cozinha rústica completa com despensa&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/telheiro/photo_1.jpg" 
+                     alt="Casa do Telheiro — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-telheiro" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-telheiro', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-telheiro', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-telheiro">
+                1 / 5
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-telheiro')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-telheiro">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Alpendre coberto privativo com mobiliário de exterior</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Casa do Telheiro</h3>
+                <p class="card-story-desc">Três quartos confortáveis e ampla área social. Amplo alpendre privativo coberto, lareira de granito na sala de estar, cozinha rústica espaçosa e privacidade total para famílias.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">2 Casal + 2 Twin (3Q)</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">Até 6 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Casa Rústica T3</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira de Granito</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Cozinha Espaçosa</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+                  <span class="spec-text">Alpendre Coberto</span>
+                </div>
+  
+              </div>
+
+              
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">255&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>285&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=telheiro" class="card-details-btn" aria-label="Reservar Casa do Telheiro">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- CARTÃO: CASA DO OLIVAL -->
+          <article class="accommodation-card accommodation-card-zigzag " 
+                   id="card-olival" 
+                   data-min-guests="7" 
+                   data-max-guests="8" 
+                   data-guests-min="7" 
+                   data-guests-max="8">
+            
+            <!-- COLUNA FOTOGRÁFICA -->
+            <div class="card-media-gallery" 
+                 data-photos="[{&quot;src&quot;:&quot;assets/img/units/olival/photo_1.jpg&quot;,&quot;caption&quot;:&quot;Terraço privativo soalheiro virado para as oliveiras seculares&quot;},{&quot;src&quot;:&quot;assets/img/units/olival/photo_2.jpg&quot;,&quot;caption&quot;:&quot;Salão nobre de estar com lareira e ambiente rústico&quot;},{&quot;src&quot;:&quot;assets/img/units/olival/photo_3.jpg&quot;,&quot;caption&quot;:&quot;Cozinha espaçosa com forno a lenha tradicional&quot;},{&quot;src&quot;:&quot;assets/img/units/olival/photo_4.jpg&quot;,&quot;caption&quot;:&quot;Quarto de casal master com vista para o olival&quot;},{&quot;src&quot;:&quot;assets/img/units/olival/photo_5.jpg&quot;,&quot;caption&quot;:&quot;Quarto twin acolhedor com decoração de época&quot;},{&quot;src&quot;:&quot;assets/img/units/olival/photo_6.jpg&quot;,&quot;caption&quot;:&quot;Vista deslumbrante sobre os 3,2 hectares de serra&quot;}]" 
+                 data-current-idx="0">
+              
+              <div class="card-main-image-wrap">
+                <img src="assets/img/units/olival/photo_1.jpg" 
+                     alt="Casa do Olival — Casa Grande" 
+                     class="card-hero-img" 
+                     id="img-card-olival" 
+                     loading="lazy" 
+                     decoding="async">
+              </div>
+
+              <!-- Botões de Navegação -->
+              <button type="button" class="gallery-nav-btn prev" aria-label="Fotografia anterior" onclick="changeCardPhoto('card-olival', -1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="gallery-nav-btn next" aria-label="Fotografia seguinte" onclick="changeCardPhoto('card-olival', 1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Contador de Fotos -->
+              <div class="gallery-counter-pill" id="counter-card-olival">
+                1 / 6
+              </div>
+
+              <!-- Botão de Ampliação -->
+              <button type="button" class="gallery-zoom-btn" aria-label="Ver fotografia sem corte" onclick="openGalleryLightbox('card-olival')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+
+              <!-- Legenda Dinâmica -->
+              <div class="gallery-caption-bar" id="caption-card-olival">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <span class="gallery-caption-text">Terraço privativo soalheiro virado para as oliveiras seculares</span>
+              </div>
+
+            </div>
+
+            <!-- COLUNA DE CONTEÚDO EDITORIAL (ESTILO REFERÊNCIA) -->
+            <div class="card-content-wrap">
+              
+              <div class="card-header-block">
+                <h3 class="card-title">Casa do Olival</h3>
+                <p class="card-story-desc">A maior habitação da quinta, rodeada de olival ancestral. Quatro quartos privativos, cozinha com forno tradicional, sala de estar generosa e terraço privativo para refeições ao ar livre.</p>
+              </div>
+
+              <!-- GRELHA DE COMODIDADES & ESPECIFICAÇÕES (2 LINHAS X 3 COLUNAS) -->
+              <div class="card-specs-grid">
+                
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></span>
+                  <span class="spec-text">2 Casal + 4 Twin (4Q)</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <span class="spec-text">Até 8 Hóspedes</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                  <span class="spec-text">Casa Rústica T4</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                  <span class="spec-text">Lareira & Forno</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                  <span class="spec-text">Grande Cozinha</span>
+                </div>
+  
+                <div class="spec-grid-item">
+                  <span class="spec-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <span class="spec-text">Terraço no Olival</span>
+                </div>
+  
+              </div>
+
+              
+
+              <!-- BARRA INFERIOR: PREÇO DUPLO INTELIGENTE & BOTÃO RESERVAR -->
+              <div class="card-bottom-bar">
+                
+                <div class="card-pricing-block">
+                  <div class="price-primary-line">
+                    <span class="price-value">340&nbsp;€</span>
+                    <span class="price-unit">/ NOITE</span>
+                  </div>
+                  <div class="price-festive-line" title="Válido no Natal, Passagem de Ano, Carnaval e Páscoa (mínimo 3 noites)">
+                    <span class="festive-dot" aria-hidden="true"></span>
+                    <span>Épocas festivas: <strong>380&nbsp;€</strong>/noite</span>
+                  </div>
+                </div>
+
+                <a href="reservas.html?unit=olival" class="card-details-btn" aria-label="Reservar Casa do Olival">
+                  <span>Reservar</span>
+                  <span class="btn-arrow-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+      
+    
+
+</main>
+
+  <!-- RODAPÉ CANÓNICO BRUTO (3 COLUNAS COM MAPA EMBED) -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Coluna 1: Marca & Contactos -->
+        <div class="footer-col">
+          <div class="footer-brand-title">Casa Grande</div>
+          <p class="footer-brand-desc">
+            Turismo rural acolhedor no Parque Natural da Serra da Estrela. Casas de pedra independentes, lareira a lenha e olival secular de quatro séculos da família Vasconcelos.
+          </p>
+          <ul class="footer-contacts-list">
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">Telemóvel:</span>
+              <a href="tel:+351934297935" class="footer-contact-val">(+351) 934 297 935</a>
+            </li>
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">Telefone Fixo:</span>
+              <a href="tel:+351238496341" class="footer-contact-val">(+351) 238 496 341</a>
+            </li>
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">E-mail:</span>
+              <a href="mailto:info@casagrande.com.pt" class="footer-contact-val">info@casagrande.com.pt</a>
+            </li>
+          </ul>
+
+          <div class="footer-social-icons" aria-label="Redes Sociais Oficiais">
+            <a href="https://instagram.com/casagrande_th" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram da Casa Grande" title="Instagram @casagrande_th">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/CGPacosDaSerra" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook da Casa Grande" title="Facebook Casa Grande">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Secções do Website na Vertical -->
+        <div class="footer-col">
+          <h4>Secções do Website</h4>
+          <ul class="footer-vertical-nav">
+            <li><a href="index.html" class="footer-nav-link">Início</a></li>
+            <li><a href="alojamentos.html" class="footer-nav-link">Alojamentos</a></li>
+            <li><a href="actividades.html" class="footer-nav-link">Serra da Estrela</a></li>
+            <li><a href="duvidas.html" class="footer-nav-link">FAQs</a></li>
+            <li><a href="reservas.html" class="footer-nav-link footer-nav-highlight">Reservar Estadia</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Localização & Mapa Embed -->
+        <div class="footer-col">
+          <h4>Localização &amp; Acessos</h4>
+          <p class="footer-location-text">
+            Largo Dr. Luís Mendes Caldeira nº 1, 6290-241 Paços da Serra, Gouveia<br>
+            Serra da Estrela, Portugal
+          </p>
+          
+          <p class="footer-distances-line">
+            Distâncias: Gouveia (8 km) • Seia (8 km) • Coimbra (75 km) • Porto (170 km) • Lisboa (290 km)
+          </p>
+
+          <div class="footer-map-under">
+            <iframe
+              title="Localização da Casa Grande em Paços da Serra"
+              src="https://maps.google.com/maps?q=40.459570,-7.649389+(Casa%20Grande%20Pa%C3%A7os%20da%20Serra)&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://maps.google.com/maps?q=40.459570,-7.649389" target="_blank" rel="noopener noreferrer" class="footer-map-cta" aria-label="Abrir localização no Google Maps">
+              <span>Abrir no Google Maps</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Casa Grande — Paços da Serra, Gouveia. Todos os direitos reservados.
+        </div>
+        <div class="footer-legal-links">
+          <a href="duvidas.html">Informações</a>
+          <span class="sep">•</span>
+          <a href="alojamentos.html">Normas da Casa</a>
+          <span class="sep">•</span>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+        </div>
+        <div>
+          Desenvolvido segundo o Standard de Qualidade Bruto
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- LIGHTBOX MODAL PARA AMPLIAÇÃO MANUAL DE FOTOGRAFIAS (SEM CORTES) -->
+  <div class="gallery-lightbox-modal" id="galleryLightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de Fotografia">
+    <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Fechar ampliação">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="lightbox-content-box">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+</body>
+</html>

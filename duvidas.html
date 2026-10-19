@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dúvidas Frequentes & Contacto com a Anfitriã — Casa Grande | Serra da Estrela</title>
+  <meta name="description" content="Esclareça todas as dúvidas sobre as estadias na Casa Grande em Paços da Serra: lareiras, pequeno-almoço caseiro, horários, camas extra e mensagem direta à família.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  
+  <!-- Favicon Standard Bruto -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- BOTÃO FLUTUANTE DE MENU (FIXO NO TOPO ESQUERDO) -->
+  <button type="button" class="floating-menu-trigger js-drawer-open" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="main-drawer">
+    <span class="menu-icon-bars" aria-hidden="true">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+    </span>
+    <span class="menu-trigger-text">Menu</span>
+  </button>
+
+  <!-- BOTÃO FLUTUANTE DE RESERVA (CALENDÁRIO — REVELA 'RESERVAR' & GLOW NO HOVER) -->
+  <a href="reservas.html" class="floating-booking-cta" aria-label="Reservar Estadia na Casa Grande">
+    <span class="booking-cta-icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    </span>
+    <span class="booking-cta-text">Reservar</span>
+  </a>
+
+  <!-- PAINEL LATERAL DE NAVEGAÇÃO (LUXURY SLIDE-IN DRAWER) -->
+  <div class="nav-drawer-backdrop js-drawer-close" aria-hidden="true"></div>
+  <aside class="nav-drawer" id="main-drawer" aria-label="Menu Principal" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/img/logo_center.png" alt="Casa Grande" class="drawer-logo" / decoding="async">
+      </div>
+      <button type="button" class="drawer-close-btn js-drawer-close" aria-label="Fechar Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <nav class="drawer-nav">
+        <ul class="drawer-menu-list">
+          <li><a href="index.html" class="drawer-menu-link"><span class="link-title">Início</span></a></li>
+          <li><a href="alojamentos.html" class="drawer-menu-link"><span class="link-title">Alojamentos</span></a></li>
+          <li><a href="actividades.html" class="drawer-menu-link"><span class="link-title">Serra da Estrela</span></a></li>
+          <li><a href="duvidas.html" class="drawer-menu-link drawer-menu-link--highlight"><span class="link-title">FAQs</span></a></li>
+        </ul>
+
+        <div class="drawer-booking-action">
+          <a href="reservas.html" class="drawer-booking-btn">
+            <span class="drawer-btn-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
+            <span class="drawer-btn-label">Reservar Estadia</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="drawer-footer">
+        <div class="drawer-contacts">
+          <a href="duvidas.html#contacto" class="drawer-section-title">Contactos</a>
+          <a href="tel:+351934297935" class="drawer-contact-val">(+351) 934 297 935</a>
+          <a href="mailto:info@casagrande.com.pt" class="drawer-contact-val">info@casagrande.com.pt</a>
+          <p class="drawer-address-text">Largo Dr. Luís Mendes Caldeira nº 1<br>6290-241 Paços da Serra, Gouveia</p>
+        </div>
+
+        <div class="drawer-socials">
+          <a href="https://instagram.com/casagrande_th" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Instagram</a>
+          <span class="sep">·</span>
+          <a href="https://www.facebook.com/CGPacosDaSerra" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- HERO ESCURO EDITORIAL COM MARCA (DESTAQUE MÁXIMO DO LOGÓTIPO BRUTO) -->
+    <header class="subpage-dark-hero">
+      <div class="interior-brand-bar">
+        <a href="index.html" title="Voltar à Página Inicial — Casa Grande">
+          <img src="assets/img/logo_center.png" alt="Casa Grande" class="interior-brand-logo" decoding="async">
+        </a>
+      </div>
+
+      <div class="container subpage-hero-container">
+        <h1 class="subpage-hero-title">Dúvidas Frequentes e Apoio à Reserva</h1>
+        <i class="ico-separator" style="margin: 16px auto 20px auto;"></i>
+        <p class="subpage-hero-desc">
+          Reunimos aqui as respostas transparentes às perguntas mais comuns dos nossos hóspedes. Se precisar de esclarecimento ou aconselhamento, envie a sua mensagem no formulário.
+        </p>
+      </div>
+    </header>
+
+    <!-- SECÇÃO DEDICADA DE FAQS (ESQUERDA) + CONTACTO STICKY COESO (DIREITA) -->
+    <section class="faq-section">
+      <div class="container">
+        
+        <div class="faq-layout-grid">
+          
+          <!-- Coluna Esquerda: Acordeão Detalhado (Todas Começam Fechadas) -->
+          <div class="faq-accordion">
+            
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>O pequeno-almoço está incluído em todas as tarifas e como é servido?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Sim, sem qualquer custo adicional. O pequeno-almoço caseiro está incluído em todas as noites da sua estadia e é entregue diretamente na sua habitação. É composto por pão fresco da padaria tradicional da aldeia, queijo da Serra da Estrela, manteiga fresca, compotas caseiras da quinta, café, leite e chá quente. Dispomos também de opções veganas e vegetarianas mediante pedido prévio.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>As habitações dispõem de lareira com lenha incluída no Inverno?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Todas as nove habitações (apartamentos do solar e casas de campo autónomas) dispõem de lareira tradicional em pedra de cantaria ou salamandra a lenha. O cesto de lenha proveniente das podas do nosso olival secular é fornecido e reposto diariamente sem qualquer custo suplementar. Para conforto absoluto nos meses frios, os quartos e casas de banho contam também com emissores de aquecimento elétrico de apoio.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>As casas têm cozinha ou kitchenette equipada para refeições?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Sim, todas as unidades contam com cozinha completa ou kitchenette autónoma equipada com placa de fogão, frigorífico, micro-ondas, torradeira, máquina de café e todos os utensílios de loiça e cozinha necessários para confeccionar refeições em total privacidade familiar.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Quais são os horários de check-in e check-out?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>O check-in realiza-se entre as 16h00 e as 22h00. Pedimos apenas que nos avise com cerca de 30 minutos de antecedência por telefone sobre a sua hora aproximada de chegada. Para que a sua estadia termine com tranquilidade e sem pressas matinais, o check-out na Casa Grande é tardio e descontraído, podendo usufruir da habitação até às 14h00.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Como são os acessos rodoviários à aldeia no Inverno caso neve na Serra?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A aldeia de Paços da Serra situa-se na encosta a 720 metros de altitude, servida por estrada nacional ampla e perfeitamente pavimentada. O acesso à aldeia e ao portão da quinta é limpo prioritariamente pelos limpa-neves municipais e nunca fica cortado, permitindo-lhe subir confortavelmente à neve (Torre, Penhas Douradas e Lagoa Comprida) e regressar ao calor da lareira em total segurança.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>O estacionamento é privativo e gratuito no interior da quinta?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Sim, dispomos de amplo parque de estacionamento privativo, seguro e gratuito dentro da propriedade murada. Ao chegar ao Largo Dr. Luís Mendes Caldeira em Paços da Serra, basta telefonar para o nosso acolhimento (+351 934 297 935) para abrirmos de imediato o portão à sua viatura.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Como funciona a estadia para crianças, berços e camas adicionais?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Para bebés até aos 3 anos, a Casa do Rancho dispõe de berço próprio (+10 €/noite). Na Casa da Caseira é possível colocar até duas camas extra de solteiro para crianças (+25 €/noite cada). Para famílias maiores de 6 a 8 pessoas, a Casa do Telheiro (T3) e a Casa do Olival (T4) oferecem quartos múltiplos e privacidade total. A quinta possui 3,2 hectares de olival vedado e baloiços ao ar livre seguros para crianças.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Existe estadia mínima obrigatória e qual a política de cancelamento?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A estadia mínima é de duas noites durante a época geral e de três noites nos períodos festivos especiais (Passagem de Ano, Carnaval e Páscoa). As reservas diretas beneficiam de política flexível com prioridade de remarcação de datas ou reembolso em caso de imprevisto comunicado com antecedência razoável.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>São permitidos animais de estimação?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Para preservação dos soalhos e mobiliário antigo de castanho do solar, e por respeito estrito a hóspedes com sensibilidades alérgicas, não é permitida a estadia de animais de estimação no interior das habitações.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>A quinta dispõe de espaços verdes, eira e piscina para os hóspedes?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Sim, os nossos hóspedes têm usufruto livre dos 3,2 hectares da quinta: o jardim histórico de camélias seculares, a eira em granito, caminhos entre oliveiras e a piscina biológica de água natural para banhos refrescantes nos meses de Primavera e Verão.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>A ligação à Internet Wi-Fi é fiável para teletrabalho e streaming?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Sim, toda a propriedade e cada habitação contam com cobertura Wi-Fi estável e rápida, perfeita para reuniões por videochamada, trabalho remoto no campo ou streaming à lareira com vista serena para a montanha.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Coluna Direita: Cartão Sticky de Contacto com a Anfitriã (Coeso) -->
+          <aside class="sticky-contact-card">
+            <div class="contact-card-header">
+              <h3>Ficou com alguma dúvida?</h3>
+              <p>Envie a sua mensagem diretamente à família antes de reservar. Respondemos no próprio dia com todo o gosto.</p>
+            </div>
+
+            <form class="direct-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! A anfitriã responderá muito em breve.');">
+              <div class="form-group">
+                <label for="contact-name">O Seu Nome</label>
+                <input type="text" id="contact-name" placeholder="Ex: Maria Santos" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">E-mail ou Telemóvel</label>
+                <input type="text" id="contact-email" placeholder="Ex: maria@email.com ou 912 345 678" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">A Sua Mensagem</label>
+                <textarea id="contact-message" rows="5" placeholder="Escreva aqui a sua dúvida sobre datas, crianças, berço ou acessos..." required></textarea>
+              </div>
+
+              <button type="submit" class="submit-contact-btn">
+                <span>Enviar Mensagem à Anfitriã</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ CANÓNICO BRUTO (3 COLUNAS COM MAPA EMBED) -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Coluna 1: Marca & Contactos -->
+        <div class="footer-col">
+          <div class="footer-brand-title">Casa Grande</div>
+          <p class="footer-brand-desc">
+            Turismo rural acolhedor no Parque Natural da Serra da Estrela. Casas de pedra independentes, lareira a lenha e olival secular de quatro séculos da família Vasconcelos.
+          </p>
+          <ul class="footer-contacts-list">
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">Telemóvel:</span>
+              <a href="tel:+351934297935" class="footer-contact-val">(+351) 934 297 935</a>
+            </li>
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">Telefone Fixo:</span>
+              <a href="tel:+351238496341" class="footer-contact-val">(+351) 238 496 341</a>
+            </li>
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">E-mail:</span>
+              <a href="mailto:info@casagrande.com.pt" class="footer-contact-val">info@casagrande.com.pt</a>
+            </li>
+          </ul>
+
+          <div class="footer-social-icons" aria-label="Redes Sociais Oficiais">
+            <a href="https://instagram.com/casagrande_th" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram da Casa Grande" title="Instagram @casagrande_th">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/CGPacosDaSerra" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook da Casa Grande" title="Facebook Casa Grande">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Secções do Website na Vertical -->
+        <div class="footer-col">
+          <h4>Secções do Website</h4>
+          <ul class="footer-vertical-nav">
+            <li><a href="index.html" class="footer-nav-link">Início</a></li>
+            <li><a href="alojamentos.html" class="footer-nav-link">Alojamentos</a></li>
+            <li><a href="actividades.html" class="footer-nav-link">Serra da Estrela</a></li>
+            <li><a href="duvidas.html" class="footer-nav-link">FAQs</a></li>
+            <li><a href="reservas.html" class="footer-nav-link footer-nav-highlight">Reservar Estadia</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Localização & Mapa Embed -->
+        <div class="footer-col">
+          <h4>Localização &amp; Acessos</h4>
+          <p class="footer-location-text">
+            Largo Dr. Luís Mendes Caldeira nº 1, 6290-241 Paços da Serra, Gouveia<br>
+            Serra da Estrela, Portugal
+          </p>
+          
+          <p class="footer-distances-line">
+            Distâncias: Gouveia (8 km) • Seia (8 km) • Coimbra (75 km) • Porto (170 km) • Lisboa (290 km)
+          </p>
+
+          <div class="footer-map-under">
+            <iframe
+              title="Localização da Casa Grande em Paços da Serra"
+              src="https://maps.google.com/maps?q=40.459570,-7.649389+(Casa%20Grande%20Pa%C3%A7os%20da%20Serra)&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://maps.google.com/maps?q=40.459570,-7.649389" target="_blank" rel="noopener noreferrer" class="footer-map-cta" aria-label="Abrir localização no Google Maps">
+              <span>Abrir no Google Maps</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Casa Grande — Paços da Serra, Gouveia. Todos os direitos reservados.
+        </div>
+        <div class="footer-legal-links">
+          <a href="duvidas.html">Informações</a>
+          <span class="sep">•</span>
+          <a href="alojamentos.html">Normas da Casa</a>
+          <span class="sep">•</span>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+        </div>
+        <div>
+          Desenvolvido segundo o Standard de Qualidade Bruto
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

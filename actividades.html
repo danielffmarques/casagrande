@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Serra da Estrela nos Arredores — Casa Grande | Paços da Serra</title>
+  <meta name="description" content="Guia de experiências na Serra da Estrela a partir da Casa Grande em Paços da Serra: neve na Torre, praias fluviais de altitude, aldeias históricas e gastronomia serrana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  
+  <!-- Favicon Standard Bruto -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- BOTÃO FLUTUANTE DE MENU (FIXO NO TOPO ESQUERDO) -->
+  <button type="button" class="floating-menu-trigger js-drawer-open" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="main-drawer">
+    <span class="menu-icon-bars" aria-hidden="true">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+    </span>
+    <span class="menu-trigger-text">Menu</span>
+  </button>
+
+  <!-- BOTÃO FLUTUANTE DE RESERVA (CALENDÁRIO — REVELA 'RESERVAR' & GLOW NO HOVER) -->
+  <a href="reservas.html" class="floating-booking-cta" aria-label="Reservar Estadia na Casa Grande">
+    <span class="booking-cta-icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    </span>
+    <span class="booking-cta-text">Reservar</span>
+  </a>
+
+  <!-- PAINEL LATERAL DE NAVEGAÇÃO (LUXURY SLIDE-IN DRAWER) -->
+  <div class="nav-drawer-backdrop js-drawer-close" aria-hidden="true"></div>
+  <aside class="nav-drawer" id="main-drawer" aria-label="Menu Principal" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/img/logo_center.png" alt="Casa Grande" class="drawer-logo" / decoding="async">
+      </div>
+      <button type="button" class="drawer-close-btn js-drawer-close" aria-label="Fechar Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <nav class="drawer-nav">
+        <ul class="drawer-menu-list">
+          <li><a href="index.html" class="drawer-menu-link"><span class="link-title">Início</span></a></li>
+          <li><a href="alojamentos.html" class="drawer-menu-link"><span class="link-title">Alojamentos</span></a></li>
+          <li><a href="actividades.html" class="drawer-menu-link drawer-menu-link--highlight"><span class="link-title">Serra da Estrela</span></a></li>
+          <li><a href="duvidas.html" class="drawer-menu-link"><span class="link-title">FAQs</span></a></li>
+        </ul>
+        <div class="drawer-booking-action">
+          <a href="reservas.html" class="drawer-booking-btn">
+            <span class="drawer-btn-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
+            <span class="drawer-btn-label">Reservar Estadia</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="drawer-footer">
+        <div class="drawer-contacts">
+          <a href="duvidas.html#contacto" class="drawer-section-title">Contactos</a>
+          <a href="tel:+351934297935" class="drawer-contact-val">(+351) 934 297 935</a>
+          <a href="mailto:info@casagrande.com.pt" class="drawer-contact-val">info@casagrande.com.pt</a>
+          <p class="drawer-address-text">Largo Dr. Luís Mendes Caldeira nº 1<br>6290-241 Paços da Serra, Gouveia</p>
+        </div>
+
+        <div class="drawer-socials">
+          <a href="https://instagram.com/casagrande_th" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Instagram</a>
+          <span class="sep">·</span>
+          <a href="https://www.facebook.com/CGPacosDaSerra" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- HERO ESCURO EDITORIAL COM MARCA (DESTAQUE MÁXIMO DO LOGÓTIPO BRUTO) -->
+    <header class="subpage-dark-hero">
+      <div class="interior-brand-bar">
+        <a href="index.html" title="Voltar à Página Inicial — Casa Grande">
+          <img src="assets/img/logo_center.png" alt="Casa Grande" class="interior-brand-logo" decoding="async">
+        </a>
+      </div>
+
+      <div class="container subpage-hero-container">
+        <h1 class="subpage-hero-title">O que Descobrir nos Arredores da Serra</h1>
+        <i class="ico-separator" style="margin: 16px auto 20px auto;"></i>
+        <p class="subpage-hero-desc">
+          A nossa aldeia de Paços da Serra está estrategicamente situada entre Gouveia e Seia, permitindo aceder aos pontos mais altos e recantos mais serenos da montanha.
+        </p>
+      </div>
+    </header>
+
+    <!-- GUIA DE ATIVIDADES: FILTRO DUPLO INTERATIVO (OPÇÃO 1) -->
+    <section class="activities-section" id="catalogo-actividades" style="padding-top: 10px; padding-bottom: 80px;">
+      <div class="container">
+        
+        <!-- BARRA DE DUPLO FILTRO: LADO A LADO (FRENTE A FRENTE) COM DESIGN EDITORIAL -->
+        <div class="activities-filter-bar">
+          <div class="activities-filters-group">
+            
+            <!-- Seletor 1: Época do Ano / Sazonalidade -->
+            <div class="filter-dropdown-wrapper">
+              <label for="season-filter-select" class="filter-label">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <span>Época do Ano:</span>
+              </label>
+              <div class="custom-select-box">
+                <select id="season-filter-select" class="guest-select-input" aria-label="Filtrar por época do ano">
+                  <option value="all" selected>Todas as Épocas</option>
+                  <option value="inverno">Inverno &amp; Neve</option>
+                  <option value="verao">Verão &amp; Praias Fluviais</option>
+                </select>
+                <div class="select-chevron" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seletor 2: Tipo de Experiência / Categoria -->
+            <div class="filter-dropdown-wrapper">
+              <label for="category-filter-select" class="filter-label">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span>Experiência:</span>
+              </label>
+              <div class="custom-select-box">
+                <select id="category-filter-select" class="guest-select-input" aria-label="Filtrar por categoria de experiência">
+                  <option value="all" selected>Todas as Categorias</option>
+                  <option value="natureza">Passeios &amp; Ar Livre</option>
+                  <option value="monumentos">Monumentos &amp; Cultura</option>
+                  <option value="restaurantes">Restaurantes &amp; Cafés</option>
+                </select>
+                <div class="select-chevron" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="filter-live-status">
+            <span class="active-count-badge" id="activities-count-badge">18 Experiências Disponíveis</span>
+          </div>
+        </div>
+
+        <!-- GRELHA UNIFICADA DE CARTÕES DE ATIVIDADES -->
+        <div class="activities-grid" id="activities-unified-grid">
+          
+          <!-- 1. Torre & Estância de Ski -->
+          <article class="activity-card" data-season="inverno" data-category="natureza">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_1.jpg" alt="Torre da Serra da Estrela" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-snow" title="Temporada de Inverno e Neve">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="12" y1="2" x2="9" y2="5"></line><line x1="12" y1="2" x2="15" y2="5"></line><line x1="12" y1="22" x2="9" y2="19"></line><line x1="12" y1="22" x2="15" y2="19"></line><line x1="3.34" y1="7" x2="20.66" y2="17"></line><line x1="20.66" y1="7" x2="3.34" y2="17"></line></svg>
+                  <span>Inverno</span>
+                </span>
+                <span class="sil-tag sil-tag-nature" title="Passeios & Ar Livre">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l6 12H4l5-9 3 5 2-8z"/></svg>
+                  <span>Ar Livre</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Torre &amp; Estância de Ski</h3>
+                <span class="activity-distance-text">38 km · 45 min</span>
+              </div>
+              <p class="activity-desc">O ponto mais alto de Portugal continental (1993 m). Desportos de neve, pistas de ski e trenó, e lojas tradicionais de queijo da serra e fumeiro regional.</p>
+            </div>
+          </article>
+
+          <!-- 2. Covão da Ametade -->
+          <article class="activity-card" data-season="inverno" data-category="natureza">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_4.jpg" alt="Covão da Ametade" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-snow" title="Temporada de Inverno">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="12" y1="2" x2="9" y2="5"></line><line x1="12" y1="2" x2="15" y2="5"></line><line x1="12" y1="22" x2="9" y2="19"></line><line x1="12" y1="22" x2="15" y2="19"></line><line x1="3.34" y1="7" x2="20.66" y2="17"></line><line x1="20.66" y1="7" x2="3.34" y2="17"></line></svg>
+                  <span>Inverno</span>
+                </span>
+                <span class="sil-tag sil-tag-nature" title="Passeios & Ar Livre">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l6 12H4l5-9 3 5 2-8z"/></svg>
+                  <span>Ar Livre</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Covão da Ametade</h3>
+                <span class="activity-distance-text">42 km · 50 min</span>
+              </div>
+              <p class="activity-desc">Antigo vale glaciar rodeado por bosques de bétulas e escarpas graníticas onde nasce o rio Zêzere. Um dos cenários mais poéticos da montanha.</p>
+            </div>
+          </article>
+
+          <!-- 3. Lagoa Comprida & Covão dos Conchos -->
+          <article class="activity-card" data-season="all" data-category="natureza">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_2.jpg" alt="Lagoa Comprida no Inverno" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-nature" title="Passeios & Ar Livre">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l6 12H4l5-9 3 5 2-8z"/></svg>
+                  <span>Ar Livre</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Lagoa Comprida</h3>
+                <span class="activity-distance-text">29 km · 35 min</span>
+              </div>
+              <p class="activity-desc">A maior lagoa do maciço central, de origem glaciar. No inverno ganha contornos dramáticos e serenos, ponto de partida para o trilho do Covão dos Conchos.</p>
+            </div>
+          </article>
+
+          <!-- 4. Vale do Rossim -->
+          <article class="activity-card" data-season="verao" data-category="natureza">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_9.jpg" alt="Vale do Rossim" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-sun" title="Temporada de Verão">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2.5"></line><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2.5"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2.5"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2.5"></line><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2.5"></line><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2.5"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2.5"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2.5"></line></svg>
+                  <span>Verão</span>
+                </span>
+                <span class="sil-tag sil-tag-nature" title="Passeios & Ar Livre">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l6 12H4l5-9 3 5 2-8z"/></svg>
+                  <span>Ar Livre</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Vale do Rossim</h3>
+                <span class="activity-distance-text">24 km · 30 min</span>
+              </div>
+              <p class="activity-desc">Praia fluvial de altitude a 1400 metros com águas límpidas entre rochedos, apoio de praia, canoas e passeios pedestres em redor da albufeira.</p>
+            </div>
+          </article>
+
+          <!-- 5. Praia Fluvial de Loriga -->
+          <article class="activity-card" data-season="verao" data-category="natureza">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_5.jpg" alt="Praia Fluvial de Loriga" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-sun" title="Temporada de Verão">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2.5"></line><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2.5"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2.5"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2.5"></line><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2.5"></line><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2.5"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2.5"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2.5"></line></svg>
+                  <span>Verão</span>
+                </span>
+                <span class="sil-tag sil-tag-nature" title="Passeios & Ar Livre">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l6 12H4l5-9 3 5 2-8z"/></svg>
+                  <span>Ar Livre</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Praia Fluvial de Loriga</h3>
+                <span class="activity-distance-text">31 km · 38 min</span>
+              </div>
+              <p class="activity-desc">Instalada num deslumbrante desfiladeiro glaciar com socalcos e piscinas naturais de água pura da ribeira de Loriga.</p>
+            </div>
+          </article>
+
+          <!-- 6. Praia Fluvial de Lapa dos Dinheiros -->
+          <article class="activity-card" data-season="verao" data-category="natureza">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_6.jpg" alt="Praia Fluvial de Lapa dos Dinheiros" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-sun" title="Temporada de Verão">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2.5"></line><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2.5"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2.5"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2.5"></line><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2.5"></line><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2.5"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2.5"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2.5"></line></svg>
+                  <span>Verão</span>
+                </span>
+                <span class="sil-tag sil-tag-nature" title="Passeios & Ar Livre">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l6 12H4l5-9 3 5 2-8z"/></svg>
+                  <span>Ar Livre</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Lapa dos Dinheiros</h3>
+                <span class="activity-distance-text">16 km · 20 min</span>
+              </div>
+              <p class="activity-desc">Enquadrada num souto secular com pequenas cascatas, pontes em madeira e piscinas de água corrente muito frescas no verão.</p>
+            </div>
+          </article>
+
+          <!-- 7. Museu do Pão em Seia -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_8.jpg" alt="Museu do Pão em Seia" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Museu do Pão</h3>
+                <span class="activity-distance-text">8 km · 10 min</span>
+              </div>
+              <p class="activity-desc">Um dos maiores museus gastronómicos da Península Ibérica, com recriação de fornos tradicionais a lenha, oficinas de moagem e restaurante regional.</p>
+            </div>
+          </article>
+
+          <!-- 8. Convento de São Francisco -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/historia_5.jpg" alt="Convento de São Francisco em Gouveia" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Convento de São Francisco</h3>
+                <span class="activity-distance-text">5 km · 7 min</span>
+              </div>
+              <p class="activity-desc">Fundado no século XVIII em Gouveia, este convento franciscano destaca-se pela sua arquitetura sóbria em cantaria de granito e claustro sereno.</p>
+            </div>
+          </article>
+
+          <!-- 9. Museu Natural da Electricidade -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_12.jpg" alt="Museu Natural da Electricidade" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Museu da Electricidade</h3>
+                <span class="activity-distance-text">12 km · 15 min</span>
+              </div>
+              <p class="activity-desc">Instalado na antiga Central Hidroelétrica da Senhora do Desterro, preserva a maquinaria original que aproveitou as águas da serra no início do séc. XX.</p>
+            </div>
+          </article>
+
+          <!-- 10. Aldeia Histórica de Linhares da Beira -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_7.jpg" alt="Linhares da Beira" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Linhares da Beira</h3>
+                <span class="activity-distance-text">19 km · 25 min</span>
+              </div>
+              <p class="activity-desc">Aldeia Histórica do séc. XII com imponente castelo medieval e ruelas calcetadas, reconhecida como a capital do voo livre em parapente.</p>
+            </div>
+          </article>
+
+          <!-- 11. Igreja da Misericórdia de Gouveia -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/historia_8.jpg" alt="Igreja da Misericórdia de Gouveia" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Igreja da Misericórdia</h3>
+                <span class="activity-distance-text">7 km · 9 min</span>
+              </div>
+              <p class="activity-desc">Templo com imponente fachada barroca em cantaria de granito, retábulos de talha dourada e valioso património de arte sacra beirã.</p>
+            </div>
+          </article>
+
+          <!-- 12. Pelourinho de Seia & Passos da Via Sacra -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/historia_6.jpg" alt="Pelourinho de Seia" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Pelourinho de Seia &amp; Passos</h3>
+                <span class="activity-distance-text">7 km · 9 min</span>
+              </div>
+              <p class="activity-desc">Monumento quinhentista manuelino no centro histórico de Seia, integrado no tradicional roteiro secular das capelas dos Passos da Paixão.</p>
+            </div>
+          </article>
+
+          <!-- 13. Pelourinho de Melo & Vergílio Ferreira -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_15.jpg" alt="Pelourinho de Melo" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Pelourinho de Melo</h3>
+                <span class="activity-distance-text">15 km · 18 min</span>
+              </div>
+              <p class="activity-desc">Aldeia beirã natal do escritor Vergílio Ferreira, com pelourinho histórico, casas solarengas de granito e recantos poéticos da serra.</p>
+            </div>
+          </article>
+
+          <!-- 14. Antas de Paranhos -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/actividades_3.jpg" alt="Antas de Paranhos" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Antas de Paranhos</h3>
+                <span class="activity-distance-text">18 km · 22 min</span>
+              </div>
+              <p class="activity-desc">Dólmen megalítico pré-histórico com esteios monumentais em granito preservado na paisagem campestre do vale do Mondego.</p>
+            </div>
+          </article>
+
+          <!-- 15. PNSE — Delegações & Interpretação -->
+          <article class="activity-card" data-season="all" data-category="monumentos">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/historia_7.jpg" alt="Parque Natural da Serra da Estrela" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Visita o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-culture" title="Monumentos & Cultura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zm-8 8v8h2v-8H4zm6 0v8h2v-8h-2zm6 0v8h2v-8h-2zm-12 10v2h20v-2H2z"/></svg>
+                  <span>Cultura</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>PNSE Delegações Gouveia &amp; Seia</h3>
+                <span class="activity-distance-text">7 km · 9 min</span>
+              </div>
+              <p class="activity-desc">Centros oficiais do Parque Natural da Serra da Estrela com mapas cartográficos de trilhos, orientação de caminhadas e apoio ao visitante.</p>
+            </div>
+          </article>
+
+          <!-- 16. Restaurante Caverna da Bicharada -->
+          <article class="activity-card" data-season="all" data-category="restaurantes">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/alojamentos_10.jpg" alt="Restaurante Caverna da Bicharada" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Aberto o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-dining" title="Restaurantes & Cafés">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+                  <span>Restaurante</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Caverna da Bicharada</h3>
+                <span class="activity-distance-text">5 km · 7 min</span>
+              </div>
+              <p class="activity-desc">Cozinha regional beirã de referência em espaço rústico acolhedor, famosa pelo cabrito assado no forno a lenha, chanfana e tábuas de queijo da serra.</p>
+            </div>
+          </article>
+
+          <!-- 17. Café / Bar Fernando Santos Lopes -->
+          <article class="activity-card" data-season="all" data-category="restaurantes">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/alojamentos_15.jpg" alt="Café Bar Fernando Santos Lopes" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Aberto o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-dining" title="Restaurantes & Cafés">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+                  <span>Café / Bar</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Fernando Santos Lopes</h3>
+                <span class="activity-distance-text">3,4 km · 5 min</span>
+              </div>
+              <p class="activity-desc">Ponto de paragem acolhedor e próximo da quinta para café da manhã, queijadas da serra, petiscos tradicionais e ambiente descontraído de aldeia.</p>
+            </div>
+          </article>
+
+          <!-- 18. Restaurante Pizzaria Italia -->
+          <article class="activity-card" data-season="all" data-category="restaurantes">
+            <div class="activity-img-wrap">
+              <img src="assets/img/showcase/alojamentos_16.jpg" alt="Restaurante Pizzaria Italia em Seia" loading="lazy" decoding="async">
+            </div>
+            <div class="activity-body">
+              <div class="activity-silhouettes-bar">
+                <span class="sil-tag sil-tag-yearround" title="Aberto o Ano Inteiro">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ano Inteiro</span>
+                </span>
+                <span class="sil-tag sil-tag-dining" title="Restaurantes & Cafés">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+                  <span>Pizzaria</span>
+                </span>
+              </div>
+              <div class="activity-header-line">
+                <h3>Pizzaria Italia</h3>
+                <span class="activity-distance-text">7 km · 9 min</span>
+              </div>
+              <p class="activity-desc">Pizzas artesanais de massa fina cozidas em forno de lenha e massas italianas frescas em Seia, ideal para jantares informais em família.</p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ CANÓNICO BRUTO (3 COLUNAS COM MAPA EMBED) -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Coluna 1: Marca & Contactos -->
+        <div class="footer-col">
+          <div class="footer-brand-title">Casa Grande</div>
+          <p class="footer-brand-desc">
+            Turismo rural acolhedor no Parque Natural da Serra da Estrela. Casas de pedra independentes, lareira a lenha e olival secular de quatro séculos da família Vasconcelos.
+          </p>
+          <ul class="footer-contacts-list">
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">Telemóvel:</span>
+              <a href="tel:+351934297935" class="footer-contact-val">(+351) 934 297 935</a>
+            </li>
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">Telefone Fixo:</span>
+              <a href="tel:+351238496341" class="footer-contact-val">(+351) 238 496 341</a>
+            </li>
+            <li class="footer-contact-row">
+              <span class="footer-contact-label">E-mail:</span>
+              <a href="mailto:info@casagrande.com.pt" class="footer-contact-val">info@casagrande.com.pt</a>
+            </li>
+          </ul>
+
+          <div class="footer-social-icons" aria-label="Redes Sociais Oficiais">
+            <a href="https://instagram.com/casagrande_th" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram da Casa Grande" title="Instagram @casagrande_th">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/CGPacosDaSerra" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook da Casa Grande" title="Facebook Casa Grande">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Secções do Website na Vertical -->
+        <div class="footer-col">
+          <h4>Secções do Website</h4>
+          <ul class="footer-vertical-nav">
+            <li><a href="index.html" class="footer-nav-link">Início</a></li>
+            <li><a href="alojamentos.html" class="footer-nav-link">Alojamentos</a></li>
+            <li><a href="actividades.html" class="footer-nav-link">Serra da Estrela</a></li>
+            <li><a href="duvidas.html" class="footer-nav-link">FAQs</a></li>
+            <li><a href="reservas.html" class="footer-nav-link footer-nav-highlight">Reservar Estadia</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Localização & Mapa Embed -->
+        <div class="footer-col">
+          <h4>Localização &amp; Acessos</h4>
+          <p class="footer-location-text">
+            Largo Dr. Luís Mendes Caldeira nº 1, 6290-241 Paços da Serra, Gouveia<br>
+            Serra da Estrela, Portugal
+          </p>
+          
+          <p class="footer-distances-line">
+            Distâncias: Gouveia (8 km) • Seia (8 km) • Coimbra (75 km) • Porto (170 km) • Lisboa (290 km)
+          </p>
+
+          <div class="footer-map-under">
+            <iframe
+              title="Localização da Casa Grande em Paços da Serra"
+              src="https://maps.google.com/maps?q=40.459570,-7.649389+(Casa%20Grande%20Pa%C3%A7os%20da%20Serra)&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://maps.google.com/maps?q=40.459570,-7.649389" target="_blank" rel="noopener noreferrer" class="footer-map-cta" aria-label="Abrir localização no Google Maps">
+              <span>Abrir no Google Maps</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Casa Grande — Paços da Serra, Gouveia. Todos os direitos reservados.
+        </div>
+        <div class="footer-legal-links">
+          <a href="duvidas.html">Informações</a>
+          <span class="sep">•</span>
+          <a href="alojamentos.html">Normas da Casa</a>
+          <span class="sep">•</span>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+        </div>
+        <div>
+          Desenvolvido segundo o Standard de Qualidade Bruto
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

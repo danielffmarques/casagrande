@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" fill="none">
+  <defs>
+    <!-- Brilho Dourado e Âmbar de Fundo (Aura Clássica e Régia) -->
+    <radialGradient id="acanthusGlow" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.20"/>
+      <stop offset="40%" stop-color="#B89738" stop-opacity="0.09"/>
+      <stop offset="75%" stop-color="#4A3F2C" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#4A3F2C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradientes de Granito da Beira Alta (Texturas de Pedra Lavrada e Cantaria) -->
+    <linearGradient id="graniteStone1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7D7465"/>
+      <stop offset="35%" stop-color="#635B4E"/>
+      <stop offset="70%" stop-color="#4D453A"/>
+      <stop offset="100%" stop-color="#363028"/>
+    </linearGradient>
+    <linearGradient id="graniteStone2" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#8A8070"/>
+      <stop offset="40%" stop-color="#6E6557"/>
+      <stop offset="80%" stop-color="#544B3F"/>
+      <stop offset="100%" stop-color="#3C352C"/>
+    </linearGradient>
+    <linearGradient id="graniteStoneDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#524A3D"/>
+      <stop offset="50%" stop-color="#3C352B"/>
+      <stop offset="100%" stop-color="#241F18"/>
+    </linearGradient>
+    <linearGradient id="graniteHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A89D8B"/>
+      <stop offset="50%" stop-color="#8D8271"/>
+      <stop offset="100%" stop-color="#5E5547"/>
+    </linearGradient>
+
+    <!-- Juntas de Argamassa Histórica e Sombras Profundas -->
+    <linearGradient id="mortarShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1612"/>
+      <stop offset="100%" stop-color="#28221B"/>
+    </linearGradient>
+
+    <!-- Estilo Acanthus: Folhagem Esculpida em Ouro Régio Antigo e Bronze Clássico -->
+    <linearGradient id="acanthusGoldPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB"/>
+      <stop offset="25%" stop-color="#D4AF37"/>
+      <stop offset="60%" stop-color="#AA8222"/>
+      <stop offset="85%" stop-color="#7B5B13"/>
+      <stop offset="100%" stop-color="#4E3708"/>
+    </linearGradient>
+    <linearGradient id="acanthusGoldSecondary" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7"/>
+      <stop offset="35%" stop-color="#E2BA49"/>
+      <stop offset="70%" stop-color="#B8860B"/>
+      <stop offset="90%" stop-color="#835C0A"/>
+      <stop offset="100%" stop-color="#553A04"/>
+    </linearGradient>
+    <linearGradient id="acanthusGoldShade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C29B38"/>
+      <stop offset="45%" stop-color="#8E6B1D"/>
+      <stop offset="80%" stop-color="#5C420D"/>
+      <stop offset="100%" stop-color="#342304"/>
+    </linearGradient>
+
+    <!-- Acanthus Verde-Nobre Clássico com Musgo de Granito -->
+    <linearGradient id="acanthusMossLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A8D53"/>
+      <stop offset="40%" stop-color="#536332"/>
+      <stop offset="75%" stop-color="#36421E"/>
+      <stop offset="100%" stop-color="#1E2610"/>
+    </linearGradient>
+    <linearGradient id="acanthusLeafLuster" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#F3E5AB" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Brilho Régio de Fundo -->
+  <circle cx="430" cy="420" r="330" fill="url(#acanthusGlow)"/>
+
+  <!-- GRUPO PRINCIPAL: MURO DE GRANITO DO SOLAR COM ORNAMENTAÇÃO ACANTHUS -->
+  <g id="acanthus-granite-wall" opacity="0.84">
+
+    <!-- 1. BLOCOS DE ALVENARIA E CANTARIA DE GRANITO SETECENTISTA -->
+    <g id="granite-masonry">
+      <!-- Sombra de Base do Muro -->
+      <path d="M 120 720 L 730 720 L 730 735 L 120 735 Z" fill="url(#mortarShadow)" opacity="0.6"/>
+
+      <!-- Bloco Inferior 1 (Esquerda) -->
+      <path d="M 140 590 L 390 590 L 390 710 L 140 710 Z" fill="url(#graniteStone1)" stroke="#231F19" stroke-width="2.5"/>
+      <path d="M 142 592 L 388 592 L 388 600 L 142 600 Z" fill="url(#graniteHighlight)" opacity="0.45"/>
+      <!-- Textura de Piqueteado no Granito -->
+      <circle cx="180" cy="630" r="1.5" fill="#231F19" opacity="0.4"/>
+      <circle cx="230" cy="660" r="1.8" fill="#A89D8B" opacity="0.3"/>
+      <circle cx="310" cy="625" r="1.6" fill="#231F19" opacity="0.4"/>
+      <circle cx="340" cy="675" r="1.5" fill="#A89D8B" opacity="0.3"/>
+
+      <!-- Bloco Inferior 2 (Direita) -->
+      <path d="M 400 590 L 710 590 L 710 710 L 400 710 Z" fill="url(#graniteStone2)" stroke="#231F19" stroke-width="2.5"/>
+      <path d="M 402 592 L 708 592 L 708 600 L 402 600 Z" fill="url(#graniteHighlight)" opacity="0.45"/>
+      <circle cx="460" cy="640" r="1.6" fill="#231F19" opacity="0.4"/>
+      <circle cx="530" cy="620" r="1.8" fill="#A89D8B" opacity="0.35"/>
+      <circle cx="610" cy="665" r="1.6" fill="#231F19" opacity="0.4"/>
+      <circle cx="660" cy="630" r="1.5" fill="#A89D8B" opacity="0.3"/>
+
+      <!-- Bloco Médio 1 (Esquerda/Centro) -->
+      <path d="M 180 470 L 470 470 L 470 580 L 180 580 Z" fill="url(#graniteStone2)" stroke="#231F19" stroke-width="2.5"/>
+      <path d="M 182 472 L 468 472 L 468 480 L 182 480 Z" fill="url(#graniteHighlight)" opacity="0.5"/>
+      <circle cx="240" cy="510" r="1.6" fill="#231F19" opacity="0.4"/>
+      <circle cx="330" cy="535" r="1.8" fill="#A89D8B" opacity="0.35"/>
+      <circle cx="410" cy="505" r="1.6" fill="#231F19" opacity="0.4"/>
+
+      <!-- Bloco Médio 2 (Direita) -->
+      <path d="M 480 470 L 680 470 L 680 580 L 480 580 Z" fill="url(#graniteStone1)" stroke="#231F19" stroke-width="2.5"/>
+      <path d="M 482 472 L 678 472 L 678 480 L 482 480 Z" fill="url(#graniteHighlight)" opacity="0.5"/>
+      <circle cx="540" cy="520" r="1.7" fill="#231F19" opacity="0.4"/>
+      <circle cx="610" cy="535" r="1.5" fill="#A89D8B" opacity="0.3"/>
+
+      <!-- Bloco Superior com Aparelho de Cantaria -->
+      <path d="M 230 350 L 640 350 L 640 460 L 230 460 Z" fill="url(#graniteStoneDark)" stroke="#231F19" stroke-width="2.5"/>
+      <path d="M 232 352 L 638 352 L 638 360 L 232 360 Z" fill="url(#graniteHighlight)" opacity="0.5"/>
+      <circle cx="300" cy="395" r="1.6" fill="#A89D8B" opacity="0.35"/>
+      <circle cx="430" cy="415" r="1.8" fill="#231F19" opacity="0.45"/>
+      <circle cx="560" cy="390" r="1.6" fill="#A89D8B" opacity="0.35"/>
+
+      <!-- 2. CORNIJA E REMATE MOLDURADO DE CANTARIA (ARQUITETURA SOLAR SENHORIAL) -->
+      <!-- Plinto Inferior da Cornija -->
+      <path d="M 200 332 L 670 332 L 670 348 L 200 348 Z" fill="url(#graniteStone1)" stroke="#231F19" stroke-width="2"/>
+      <path d="M 202 334 L 668 334 L 668 340 L 202 340 Z" fill="url(#graniteHighlight)" opacity="0.6"/>
+
+      <!-- Peito / Moldura em Boel Saliente com Chanfro Clássico -->
+      <path d="M 180 306 C 220 306, 650 306, 690 306 L 680 330 L 190 330 Z" fill="url(#graniteStone2)" stroke="#231F19" stroke-width="2.5"/>
+      <path d="M 184 308 L 686 308 L 680 316 L 190 316 Z" fill="url(#graniteHighlight)" opacity="0.65"/>
+      <!-- Sombra Projetada sob a Moldura -->
+      <path d="M 195 330 L 675 330 L 675 335 L 195 335 Z" fill="#181410" opacity="0.55"/>
+    </g>
+
+    <!-- 3. ORNAMENTAÇÃO EM ESTILO ACANTHUS CLÁSSICO (FOLHAGEM ESCULPIDA, CURVAS FLUIDAS E VOLUTAS) -->
+    <!-- GRUPO ACANTHUS PRINCIPAL (COROANDO O MURO EM OURO VELHO E VERDE-NOBRE) -->
+    <g id="acanthus-carvings">
+
+      <!-- VOLUTA DE ACANTO ESQUERDA (CURVA ESPIRALADA COM FOLHAS LOBADAS) -->
+      <g id="acanthus-volute-left" transform="translate(230, 290)">
+        <!-- Tronco Espiralado da Voluta -->
+        <path d="M 0 10 C -40 -10, -90 -60, -85 -120 C -80 -170, -25 -195, 25 -175 C 70 -155, 80 -105, 55 -65 C 35 -35, 0 -35, -15 -60 C -25 -80, -10 -100, 10 -95" 
+              stroke="url(#acanthusGoldPrimary)" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <path d="M 0 8 C -38 -12, -87 -60, -82 -118 C -78 -166, -26 -190, 22 -172 C 65 -153, 75 -105, 52 -67" 
+              stroke="url(#acanthusGoldSecondary)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+        <!-- Lóbulos e Folhas de Acanto Esculpidas Irradiando da Voluta -->
+        <!-- Lóbulo 1 (Superior Longo Curvado) -->
+        <path d="M 20 -178 C 30 -225, -20 -255, -70 -240 C -50 -210, -20 -195, 20 -178 Z" 
+              fill="url(#acanthusGoldPrimary)" stroke="#523908" stroke-width="1.2"/>
+        <path d="M 15 -182 C 10 -220, -30 -242, -65 -235 C -35 -215, -5 -200, 15 -182 Z" 
+              fill="url(#acanthusLeafLuster)"/>
+        <!-- Nervura Central Dourada do Lóbulo -->
+        <path d="M 20 -178 C -5 -210, -35 -225, -70 -240" stroke="#FFEAA7" stroke-width="1.4" stroke-linecap="round"/>
+
+        <!-- Lóbulo 2 (Noroeste Ondulado com Recortes Serrados de Acanto) -->
+        <path d="M -70 -140 C -125 -165, -165 -120, -155 -70 C -130 -85, -100 -105, -70 -140 Z" 
+              fill="url(#acanthusGoldSecondary)" stroke="#523908" stroke-width="1.2"/>
+        <path d="M -70 -140 C -115 -145, -145 -110, -155 -70" stroke="#FFEAA7" stroke-width="1.4" stroke-linecap="round"/>
+
+        <!-- Lóbulo 3 (Oeste Baixo) -->
+        <path d="M -85 -80 C -140 -70, -145 -10, -110 30 C -100 -5, -85 -45, -85 -80 Z" 
+              fill="url(#acanthusGoldPrimary)" stroke="#523908" stroke-width="1.2"/>
+        <path d="M -85 -80 C -120 -60, -130 -15, -110 30" stroke="#FFEAA7" stroke-width="1.4" stroke-linecap="round"/>
+
+        <!-- Folha Interior Menor (Voluta Núcleo) -->
+        <path d="M 40 -80 C 65 -60, 60 -25, 30 -15 C 25 -35, 20 -55, 40 -80 Z" 
+              fill="url(#acanthusGoldSecondary)" stroke="#523908" stroke-width="1"/>
+      </g>
+
+      <!-- CARTOUCHE CENTRAL COM FLORÃO CLÁSSICO DE ACANTO (SIMETRIA RÉGIA) -->
+      <g id="acanthus-center-cartouche" transform="translate(440, 295)">
+        <!-- Medalhão / Folha Central Ascendente de Acanto -->
+        <path d="M 0 10 C -35 -30, -50 -90, -40 -150 C -25 -190, 0 -220, 0 -220 C 0 -220, 25 -190, 40 -150 C 50 -90, 35 -30, 0 10 Z" 
+              fill="url(#acanthusGoldPrimary)" stroke="#4E3708" stroke-width="1.5"/>
+        <!-- Nervura Central com Brilho -->
+        <path d="M 0 8 L 0 -215" stroke="#FFF0B3" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Dentes / Recortes Laterais Característicos da Folha de Acanto -->
+        <!-- Lado Esquerdo -->
+        <path d="M -22 -60 C -45 -75, -75 -65, -85 -45 C -65 -45, -45 -48, -25 -52" 
+              fill="url(#acanthusGoldSecondary)" stroke="#4E3708" stroke-width="1"/>
+        <path d="M -32 -110 C -60 -130, -95 -115, -100 -90 C -80 -90, -55 -95, -35 -100" 
+              fill="url(#acanthusGoldSecondary)" stroke="#4E3708" stroke-width="1"/>
+        <path d="M -28 -160 C -50 -185, -80 -175, -80 -150 C -65 -150, -48 -152, -30 -155" 
+              fill="url(#acanthusGoldSecondary)" stroke="#4E3708" stroke-width="1"/>
+
+        <!-- Lado Direito (Simetria Clássica Arquitetural) -->
+        <path d="M 22 -60 C 45 -75, 75 -65, 85 -45 C 65 -45, 45 -48, 25 -52" 
+              fill="url(#acanthusGoldSecondary)" stroke="#4E3708" stroke-width="1"/>
+        <path d="M 32 -110 C 60 -130, 95 -115, 100 -90 C 80 -90, 55 -95, 35 -100" 
+              fill="url(#acanthusGoldSecondary)" stroke="#4E3708" stroke-width="1"/>
+        <path d="M 28 -160 C 50 -185, 80 -175, 80 -150 C 65 -150, 48 -152, 30 -155" 
+              fill="url(#acanthusGoldSecondary)" stroke="#4E3708" stroke-width="1"/>
+
+        <!-- Roseta / Botão Central da Cartela -->
+        <circle cx="0" cy="-35" r="14" fill="url(#acanthusGoldShade)" stroke="#4E3708" stroke-width="1.2"/>
+        <circle cx="0" cy="-35" r="8" fill="url(#acanthusGoldSecondary)"/>
+        <circle cx="0" cy="-35" r="3.5" fill="#FFF0B3"/>
+      </g>
+
+      <!-- VOLUTA DE ACANTO DIREITA (ESPELHADA COM TOQUE ORGÂNICO) -->
+      <g id="acanthus-volute-right" transform="translate(650, 290)">
+        <path d="M 0 10 C 40 -10, 90 -60, 85 -120 C 80 -170, 25 -195, -25 -175 C -70 -155, -80 -105, -55 -65 C -35 -35, 0 -35, 15 -60 C 25 -80, 10 -100, -10 -95" 
+              stroke="url(#acanthusGoldPrimary)" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <path d="M 0 8 C 38 -12, 87 -60, 82 -118 C 78 -166, 26 -190, -22 -172 C -65 -153, -75 -105, -52 -67" 
+              stroke="url(#acanthusGoldSecondary)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+        <!-- Lóbulo Superior -->
+        <path d="M -20 -178 C -30 -225, 20 -255, 70 -240 C 50 -210, 20 -195, -20 -178 Z" 
+              fill="url(#acanthusGoldPrimary)" stroke="#523908" stroke-width="1.2"/>
+        <path d="M -15 -182 C -10 -220, 30 -242, 65 -235 C 35 -215, 5 -200, -15 -182 Z" 
+              fill="url(#acanthusLeafLuster)"/>
+        <path d="M -20 -178 C 5 -210, 35 -225, 70 -240" stroke="#FFEAA7" stroke-width="1.4" stroke-linecap="round"/>
+
+        <!-- Lóbulo Nordeste -->
+        <path d="M 70 -140 C 125 -165, 165 -120, 155 -70 C 130 -85, 100 -105, 70 -140 Z" 
+              fill="url(#acanthusGoldSecondary)" stroke="#523908" stroke-width="1.2"/>
+        <path d="M 70 -140 C 115 -145, 145 -110, 155 -70" stroke="#FFEAA7" stroke-width="1.4" stroke-linecap="round"/>
+
+        <!-- Lóbulo Leste -->
+        <path d="M 85 -80 C 140 -70, 145 -10, 110 30 C 100 -5, 85 -45, 85 -80 Z" 
+              fill="url(#acanthusGoldPrimary)" stroke="#523908" stroke-width="1.2"/>
+        <path d="M 85 -80 C 120 -60, 130 -15, 110 30" stroke="#FFEAA7" stroke-width="1.4" stroke-linecap="round"/>
+      </g>
+
+      <!-- 4. TENTÁCULOS DE HERA E MUSGO VERDE-NOBRE ENTRE AS JUNTAS DA PEDRA -->
+      <g id="granite-creeper-vines">
+        <!-- Ramo de Folhas Naturais que desce pelo muro -->
+        <path d="M 390 340 C 370 390, 395 440, 380 490 C 365 540, 330 580, 345 640" 
+              stroke="#36421E" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+
+        <!-- Folhas Naturais com Nervuras em Ouro -->
+        <path d="M 380 390 C 350 375, 335 400, 345 425 C 365 420, 375 405, 380 390 Z" 
+              fill="url(#acanthusMossLeaf)" stroke="#1E2610" stroke-width="1"/>
+        <path d="M 380 390 C 360 400, 345 415, 345 425" stroke="#FFEAA7" stroke-width="0.8"/>
+
+        <path d="M 390 450 C 420 435, 435 460, 425 485 C 405 480, 395 465, 390 450 Z" 
+              fill="url(#acanthusMossLeaf)" stroke="#1E2610" stroke-width="1"/>
+        <path d="M 390 450 C 410 460, 425 475, 425 485" stroke="#FFEAA7" stroke-width="0.8"/>
+
+        <path d="M 370 515 C 340 500, 325 525, 335 550 C 355 545, 365 530, 370 515 Z" 
+              fill="url(#acanthusMossLeaf)" stroke="#1E2610" stroke-width="1"/>
+        <path d="M 370 515 C 350 525, 335 540, 335 550" stroke="#FFEAA7" stroke-width="0.8"/>
+
+        <!-- Trepadeira Direita -->
+        <path d="M 500 340 C 520 400, 495 450, 515 510 C 530 560, 560 610, 550 670" 
+              stroke="#36421E" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+        <path d="M 510 410 C 540 395, 555 420, 545 445 C 525 440, 515 425, 510 410 Z" 
+              fill="url(#acanthusMossLeaf)" stroke="#1E2610" stroke-width="1"/>
+        <path d="M 505 480 C 475 465, 460 490, 470 515 C 490 510, 500 495, 505 480 Z" 
+              fill="url(#acanthusMossLeaf)" stroke="#1E2610" stroke-width="1"/>
+      </g>
+
+    </g>
+  </g>
+</svg>

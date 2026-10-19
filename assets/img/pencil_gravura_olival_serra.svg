@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <defs>
+    <!-- Filtro de textura de grafite / lápis antigo -->
+    <filter id="pencil-texture-olival" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.046" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <g filter="url(#pencil-texture-olival)" stroke="#3f3832" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Ramo principal nodoso da oliveira centenária da Casa Grande -->
+    <path d="M 40 470 Q 120 380, 210 300 T 360 170 Q 420 120, 470 60" stroke-width="2.2" opacity="0.9" />
+    <path d="M 45 475 Q 125 385, 215 304 T 364 174 Q 424 124, 475 64" stroke-width="1.0" opacity="0.5" stroke-dasharray="6 4" />
+    
+    <!-- Ramificações secundárias das azeitonas -->
+    <path d="M 210 300 Q 280 270, 340 260 T 420 280" stroke-width="1.5" opacity="0.85" />
+    <path d="M 150 360 Q 180 390, 230 410" stroke-width="1.3" opacity="0.8" />
+    <path d="M 290 220 Q 250 180, 190 160" stroke-width="1.4" opacity="0.8" />
+    <path d="M 360 170 Q 320 120, 270 80" stroke-width="1.3" opacity="0.8" />
+
+    <!-- Textura rugosa de casca centenária a lápis -->
+    <g opacity="0.45" stroke-width="0.75">
+      <line x1="80" y1="425" x2="92" y2="435" />
+      <line x1="120" y1="385" x2="132" y2="395" />
+      <line x1="175" y1="330" x2="185" y2="342" />
+      <line x1="245" y1="260" x2="255" y2="272" />
+      <line x1="320" y1="200" x2="330" y2="212" />
+      <line x1="395" y1="140" x2="405" y2="152" />
+    </g>
+
+    <!-- ==================== CACHOS DE AZEITONAS EM GRAVURA A LÁPIS ==================== -->
+    <!-- Azeitona 1 (com pedúnculo e hachuras de sombra curva) -->
+    <path d="M 340 260 Q 345 285, 335 305" stroke-width="1.0" opacity="0.85" />
+    <ellipse cx="332" cy="325" rx="14" ry="20" stroke-width="1.4" opacity="0.9" transform="rotate(15, 332, 325)" />
+    <!-- Brilho e hachuras de curvatura na azeitona -->
+    <g opacity="0.4" stroke-width="0.7">
+      <path d="M 338 312 A 16 16 0 0 1 342 338" />
+      <path d="M 334 316 A 12 12 0 0 1 338 335" />
+      <line x1="328" y1="338" x2="338" y2="343" />
+    </g>
+
+    <!-- Azeitona 2 (ao lado da 1) -->
+    <path d="M 340 260 Q 365 280, 375 298" stroke-width="1.0" opacity="0.85" />
+    <ellipse cx="385" cy="315" rx="13" ry="19" stroke-width="1.4" opacity="0.9" transform="rotate(-20, 385, 315)" />
+    <g opacity="0.4" stroke-width="0.7">
+      <path d="M 378 305 A 14 14 0 0 1 376 328" />
+      <path d="M 382 308 A 10 10 0 0 1 380 324" />
+    </g>
+
+    <!-- Azeitona 3 (no ramo superior) -->
+    <path d="M 270 80 Q 255 105, 245 120" stroke-width="1.0" opacity="0.85" />
+    <ellipse cx="240" cy="138" rx="13" ry="18" stroke-width="1.4" opacity="0.9" transform="rotate(10, 240, 138)" />
+    <g opacity="0.4" stroke-width="0.7">
+      <path d="M 246 128 A 14 14 0 0 1 248 148" />
+    </g>
+
+    <!-- Azeitona 4 (ramo da esquerda) -->
+    <path d="M 190 160 Q 170 180, 160 200" stroke-width="1.0" opacity="0.85" />
+    <ellipse cx="154" cy="218" rx="13" ry="18" stroke-width="1.4" opacity="0.9" transform="rotate(-15, 154, 218)" />
+    <g opacity="0.4" stroke-width="0.7">
+      <path d="M 148 208 A 14 14 0 0 1 146 228" />
+    </g>
+
+    <!-- ==================== FOLHAS DE OLIVEIRA A LÁPIS (LANCEOLADAS) ==================== -->
+    <!-- Folha 1 (Ponta Superior) -->
+    <g transform="translate(470, 60) rotate(-45)">
+      <path d="M 0 0 Q 35 -15, 80 0 Q 35 15, 0 0" stroke-width="1.3" opacity="0.9" />
+      <line x1="0" y1="0" x2="80" y2="0" stroke-width="1.0" opacity="0.8" />
+      <!-- Hachuras de página inferior cinzento-prateada da oliveira -->
+      <g opacity="0.4" stroke-width="0.6">
+        <line x1="15" y1="0" x2="25" y2="8" />
+        <line x1="30" y1="0" x2="42" y2="9" />
+        <line x1="45" y1="0" x2="58" y2="8" />
+        <line x1="60" y1="0" x2="70" y2="5" />
+      </g>
+    </g>
+
+    <!-- Folha 2 (Ponta Superior Secundária) -->
+    <g transform="translate(450, 80) rotate(-15)">
+      <path d="M 0 0 Q 35 -14, 75 0 Q 35 14, 0 0" stroke-width="1.3" opacity="0.9" />
+      <line x1="0" y1="0" x2="75" y2="0" stroke-width="1.0" opacity="0.8" />
+      <g opacity="0.4" stroke-width="0.6">
+        <line x1="18" y1="0" x2="28" y2="-7" />
+        <line x1="34" y1="0" x2="46" y2="-8" />
+        <line x1="50" y1="0" x2="62" y2="-6" />
+      </g>
+    </g>
+
+    <!-- Folha 3 (Junto à Azeitona 1 e 2) -->
+    <g transform="translate(360, 255) rotate(35)">
+      <path d="M 0 0 Q 38 -15, 85 0 Q 38 15, 0 0" stroke-width="1.3" opacity="0.9" />
+      <line x1="0" y1="0" x2="85" y2="0" stroke-width="1.0" opacity="0.8" />
+      <g opacity="0.4" stroke-width="0.6">
+        <line x1="18" y1="0" x2="30" y2="8" />
+        <line x1="35" y1="0" x2="48" y2="9" />
+        <line x1="52" y1="0" x2="65" y2="8" />
+      </g>
+    </g>
+
+    <!-- Folha 4 (Oposta junto às azeitonas) -->
+    <g transform="translate(320, 265) rotate(-65)">
+      <path d="M 0 0 Q 35 -14, 78 0 Q 35 14, 0 0" stroke-width="1.3" opacity="0.9" />
+      <line x1="0" y1="0" x2="78" y2="0" stroke-width="1.0" opacity="0.8" />
+      <g opacity="0.4" stroke-width="0.6">
+        <line x1="18" y1="0" x2="28" y2="-7" />
+        <line x1="35" y1="0" x2="48" y2="-8" />
+      </g>
+    </g>
+
+    <!-- Folha 5 (Ramo Esquerda) -->
+    <g transform="translate(190, 160) rotate(-135)">
+      <path d="M 0 0 Q 35 -14, 80 0 Q 35 14, 0 0" stroke-width="1.3" opacity="0.9" />
+      <line x1="0" y1="0" x2="80" y2="0" stroke-width="1.0" opacity="0.8" />
+      <g opacity="0.4" stroke-width="0.6">
+        <line x1="16" y1="0" x2="28" y2="7" />
+        <line x1="32" y1="0" x2="45" y2="8" />
+        <line x1="50" y1="0" x2="62" y2="7" />
+      </g>
+    </g>
+
+    <!-- Folha 6 (Ramo Médio) -->
+    <g transform="translate(250, 230) rotate(-25)">
+      <path d="M 0 0 Q 35 -14, 76 0 Q 35 14, 0 0" stroke-width="1.3" opacity="0.9" />
+      <line x1="0" y1="0" x2="76" y2="0" stroke-width="1.0" opacity="0.8" />
+    </g>
+
+    <!-- Folha 7 (Ramo Baixo) -->
+    <g transform="translate(160, 350) rotate(70)">
+      <path d="M 0 0 Q 35 -14, 75 0 Q 35 14, 0 0" stroke-width="1.3" opacity="0.9" />
+      <line x1="0" y1="0" x2="75" y2="0" stroke-width="1.0" opacity="0.8" />
+    </g>
+
+    <!-- Tufos botânicos de alfazema/urze da serra na base do ramo -->
+    <g transform="translate(60, 440) rotate(-20)" opacity="0.75" stroke-width="0.9">
+      <path d="M 0 0 Q 10 -40, 5 -80" />
+      <ellipse cx="6" cy="-75" rx="3" ry="5" stroke-width="0.8" />
+      <ellipse cx="8" cy="-62" rx="3" ry="5" stroke-width="0.8" />
+      <ellipse cx="5" cy="-50" rx="3" ry="5" stroke-width="0.8" />
+      <ellipse cx="9" cy="-38" rx="3" ry="5" stroke-width="0.8" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" fill="none">
+  <defs>
+    <!-- Brilho Âmbar e Dourado do Fogo e Conforto do Solar -->
+    <radialGradient id="fireHearthGlow" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#FF9E00" stop-opacity="0.28"/>
+      <stop offset="35%" stop-color="#D4AF37" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#C2410C" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#2B2118" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Granito Nobre Aparelhado (Cantaria de Lareira Setecentista) -->
+    <linearGradient id="mantelGranite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8C8271"/>
+      <stop offset="40%" stop-color="#6E6555"/>
+      <stop offset="80%" stop-color="#4F4638"/>
+      <stop offset="100%" stop-color="#342E24"/>
+    </linearGradient>
+    <linearGradient id="jambGranite" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#736A5B"/>
+      <stop offset="50%" stop-color="#554D40"/>
+      <stop offset="100%" stop-color="#3A3329"/>
+    </linearGradient>
+    <linearGradient id="graniteBevel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B2A796"/>
+      <stop offset="35%" stop-color="#8C8271"/>
+      <stop offset="100%" stop-color="#554D40"/>
+    </linearGradient>
+    <linearGradient id="deepHearthShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#140F0B"/>
+      <stop offset="60%" stop-color="#231710"/>
+      <stop offset="100%" stop-color="#3A170A"/>
+    </linearGradient>
+
+    <!-- Estilo Acanthus: Ouro Régio Esculpido na Cantaria -->
+    <linearGradient id="acanthusMantelGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2B2"/>
+      <stop offset="30%" stop-color="#D4AF37"/>
+      <stop offset="65%" stop-color="#9E7818"/>
+      <stop offset="90%" stop-color="#664C09"/>
+      <stop offset="100%" stop-color="#3B2A04"/>
+    </linearGradient>
+    <linearGradient id="acanthusScrollGold" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7"/>
+      <stop offset="40%" stop-color="#E2BA49"/>
+      <stop offset="75%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#553A04"/>
+    </linearGradient>
+
+    <!-- Labaredas e Brasas da Lareira a Lenha de Oliveira e Carvalho -->
+    <radialGradient id="embersCore" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="25%" stop-color="#FFAA00"/>
+      <stop offset="60%" stop-color="#FF4800"/>
+      <stop offset="85%" stop-color="#9E0000"/>
+      <stop offset="100%" stop-color="#400101"/>
+    </radialGradient>
+    <linearGradient id="flameOrange" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FF3C00"/>
+      <stop offset="45%" stop-color="#FF9E00"/>
+      <stop offset="80%" stop-color="#FFDC00"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="charredLog" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#42342B"/>
+      <stop offset="45%" stop-color="#231A14"/>
+      <stop offset="100%" stop-color="#120C08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Brilho Aconchegante do Fogo de Montanha -->
+  <circle cx="400" cy="460" r="320" fill="url(#fireHearthGlow)"/>
+
+  <!-- LAREIRA MONUMENTAL DE CANTARIA EM ESTILO ACANTHUS -->
+  <g id="acanthus-fireplace-group" opacity="0.85">
+
+    <!-- 1. CORPO DE PEDRA E OMBREIRAS EM GRANITO DA SERRA -->
+    <g id="fireplace-architecture">
+      <!-- Ombreira Esquerda (Pilar de Granito Aparelhado) -->
+      <path d="M 170 330 L 265 330 L 265 720 L 170 720 Z" fill="url(#jambGranite)" stroke="#231D17" stroke-width="2.5"/>
+      <!-- Chanfro / Filete de Luz na Borda da Ombreira -->
+      <path d="M 172 332 L 180 332 L 180 718 L 172 718 Z" fill="url(#graniteBevel)" opacity="0.6"/>
+      <!-- Sombra Interna da Ombreira -->
+      <path d="M 255 330 L 265 330 L 265 720 L 255 720 Z" fill="#1A1510" opacity="0.6"/>
+      <!-- Juntas dos Blocos da Ombreira Esquerda -->
+      <line x1="170" y1="450" x2="265" y2="450" stroke="#1A1510" stroke-width="2"/>
+      <line x1="170" y1="570" x2="265" y2="570" stroke="#1A1510" stroke-width="2"/>
+
+      <!-- Ombreira Direita (Pilar de Granito Aparelhado) -->
+      <path d="M 535 330 L 630 330 L 630 720 L 535 720 Z" fill="url(#jambGranite)" stroke="#231D17" stroke-width="2.5"/>
+      <path d="M 622 332 L 628 332 L 628 718 L 622 718 Z" fill="url(#graniteBevel)" opacity="0.5"/>
+      <path d="M 535 330 L 545 330 L 545 720 L 535 720 Z" fill="#1A1510" opacity="0.6"/>
+      <!-- Juntas dos Blocos da Ombreira Direita -->
+      <line x1="535" y1="450" x2="630" y2="450" stroke="#1A1510" stroke-width="2"/>
+      <line x1="535" y1="570" x2="630" y2="570" stroke="#1A1510" stroke-width="2"/>
+
+      <!-- 2. LAR / BOCA DA LAREIRA EM ARCO DE CANTARIA ABATIDO -->
+      <!-- Interior Escuro Tisando da Lareira -->
+      <path d="M 265 720 L 265 440 C 265 375, 535 375, 535 440 L 535 720 Z" fill="url(#deepHearthShadow)"/>
+
+      <!-- Arco de Cantaria com Pedras Radiais (Aduelas) -->
+      <path d="M 250 440 C 250 360, 550 360, 550 440 L 535 440 C 535 375, 265 375, 265 440 Z" 
+            fill="url(#mantelGranite)" stroke="#231D17" stroke-width="2"/>
+      <!-- Fecho do Arco (Pedra de Fecho Central) -->
+      <path d="M 385 365 L 415 365 L 410 405 L 390 405 Z" fill="url(#graniteBevel)" stroke="#231D17" stroke-width="1.5"/>
+
+      <!-- Placa de Fundo da Lareira em Ferro Antigo Tisando -->
+      <rect x="310" y="470" width="180" height="230" rx="4" fill="#120D0A" stroke="#2B211A" stroke-width="1.5"/>
+      <!-- Brasão de Fogo Rústico na Placa de Ferro -->
+      <ellipse cx="400" cy="530" rx="36" ry="46" fill="#1E1611" stroke="#3D3025" stroke-width="1.2"/>
+    </g>
+
+    <!-- 3. LENHA DE OLIVEIRA A ARDER E BRASAS INCANDESCENTES -->
+    <g id="fireplace-fire">
+      <!-- Cama de Brasas e Cinzas Douradas -->
+      <ellipse cx="400" cy="695" rx="110" ry="22" fill="url(#embersCore)"/>
+
+      <!-- Tronco Traseiro de Oliveira -->
+      <path d="M 310 685 C 340 670, 460 670, 490 685 L 485 700 C 450 688, 350 688, 315 700 Z" 
+            fill="url(#charredLog)" stroke="#0E0906" stroke-width="1.2"/>
+
+      <!-- Tronco Frontal Queimado com Fendas Douradas -->
+      <path d="M 330 690 C 370 655, 430 655, 470 690 L 455 705 C 420 675, 380 675, 345 705 Z" 
+            fill="url(#charredLog)" stroke="#0E0906" stroke-width="1.4"/>
+      <!-- Fendas Incandescentes na Casca da Lenha -->
+      <path d="M 360 682 Q 380 675 400 680" stroke="#FF9E00" stroke-width="1.5"/>
+      <path d="M 415 678 Q 430 675 445 682" stroke="#FF9E00" stroke-width="1.5"/>
+
+      <!-- Labaredas Dançantes Nobres (Chamas Vivas) -->
+      <!-- Chama Central Grande -->
+      <path d="M 385 680 C 375 630, 360 600, 395 540 C 420 595, 435 625, 415 680 Z" 
+            fill="url(#flameOrange)" opacity="0.9"/>
+      <!-- Núcleo Branco da Chama -->
+      <path d="M 390 680 C 385 645, 380 620, 398 580 C 412 620, 415 645, 408 680 Z" 
+            fill="#FFFCE8" opacity="0.85"/>
+
+      <!-- Chama Secundária Esquerda -->
+      <path d="M 350 685 C 340 645, 355 620, 370 590 C 375 625, 370 655, 360 685 Z" 
+            fill="url(#flameOrange)" opacity="0.8"/>
+
+      <!-- Chama Secundária Direita -->
+      <path d="M 445 685 C 455 645, 440 615, 425 585 C 420 625, 430 655, 440 685 Z" 
+            fill="url(#flameOrange)" opacity="0.8"/>
+
+      <!-- Faíscas de Calor Ascendentes -->
+      <circle cx="395" cy="510" r="2.2" fill="#FFE57F"/>
+      <circle cx="415" cy="485" r="1.8" fill="#FFB703"/>
+      <circle cx="375" cy="460" r="1.5" fill="#FFD166"/>
+      <circle cx="425" cy="430" r="1.4" fill="#FFE57F"/>
+    </g>
+
+    <!-- 4. MONUMENTAL PADIEIRA E CORNIJA ESCULPIDA EM ESTILO ACANTHUS -->
+    <g id="acanthus-mantelpiece">
+
+      <!-- MÍSULAS CLÁSSICAS DE ACANTO (CONSOLES ESCULPIDAS SUPORTANDO A TRAVE) -->
+      <!-- Mísula Esquerda (Console em Voluta e Folha de Acanto) -->
+      <g id="corbel-left" transform="translate(180, 275)">
+        <path d="M 0 0 L 80 0 L 80 55 C 80 90, 50 115, 20 110 C -5 105, 0 65, 30 60 C 50 55, 60 40, 60 20 L 0 20 Z" 
+              fill="url(#mantelGranite)" stroke="#231D17" stroke-width="2"/>
+        <!-- Folha de Acanto Esculpida em Ouro Dourando a Mísula -->
+        <path d="M 25 15 C 45 35, 60 60, 55 85 C 45 105, 25 105, 15 95 C 25 80, 35 65, 30 45 Z" 
+              fill="url(#acanthusMantelGold)" stroke="#4E3708" stroke-width="1.2"/>
+        <path d="M 25 15 C 38 45, 45 75, 35 95" stroke="#FFEAA7" stroke-width="1.2"/>
+      </g>
+
+      <!-- Mísula Direita (Console em Voluta e Folha de Acanto) -->
+      <g id="corbel-right" transform="translate(540, 275)">
+        <path d="M 80 0 L 0 0 L 0 55 C 0 90, 30 115, 60 110 C 85 105, 80 65, 50 60 C 30 55, 20 40, 20 20 L 80 20 Z" 
+              fill="url(#mantelGranite)" stroke="#231D17" stroke-width="2"/>
+        <path d="M 55 15 C 35 35, 20 60, 25 85 C 35 105, 55 105, 65 95 C 55 80, 45 65, 50 45 Z" 
+              fill="url(#acanthusMantelGold)" stroke="#4E3708" stroke-width="1.2"/>
+        <path d="M 55 15 C 42 45, 35 75, 45 95" stroke="#FFEAA7" stroke-width="1.2"/>
+      </g>
+
+      <!-- TRAVE / ARQUITRAVE PRINCIPAL DE GRANITO -->
+      <path d="M 150 260 L 650 260 L 650 330 L 150 330 Z" fill="url(#mantelGranite)" stroke="#231D17" stroke-width="2.5"/>
+      <path d="M 152 262 L 648 262 L 648 270 L 152 270 Z" fill="url(#graniteBevel)" opacity="0.6"/>
+
+      <!-- CORNIJA SUPERIOR COM MOLDURA CLÁSSICA SALIENTE -->
+      <path d="M 130 230 L 670 230 L 650 260 L 150 260 Z" fill="url(#mantelGranite)" stroke="#231D17" stroke-width="2.5"/>
+      <path d="M 132 232 L 668 232 L 664 240 L 136 240 Z" fill="url(#graniteBevel)" opacity="0.7"/>
+
+      <!-- PRATELIERA / REMATE DO TOPO DA CORNIJA -->
+      <path d="M 120 216 L 680 216 L 680 230 L 120 230 Z" fill="url(#mantelGranite)" stroke="#231D17" stroke-width="2"/>
+      <path d="M 122 218 L 678 218 L 678 223 L 122 223 Z" fill="url(#graniteBevel)" opacity="0.75"/>
+
+      <!-- 5. FRIZO ORNAMENTAL CENTRAL EM ESTILO ACANTHUS (VOLUTAS FLUIDAS E FOLHAS EM RELEVO) -->
+      <g id="mantel-acanthus-frieze" transform="translate(400, 295)">
+
+        <!-- Roseta Central de Acanto -->
+        <circle cx="0" cy="0" r="18" fill="url(#acanthusScrollGold)" stroke="#4E3708" stroke-width="1.4"/>
+        <circle cx="0" cy="0" r="10" fill="url(#acanthusMantelGold)"/>
+        <circle cx="0" cy="0" r="4" fill="#FFFFFF" opacity="0.8"/>
+
+        <!-- Folha de Acanto Superior da Roseta -->
+        <path d="M -8 -16 C -18 -40, 0 -55, 0 -55 C 0 -55, 18 -40, 8 -16 Z" 
+              fill="url(#acanthusMantelGold)" stroke="#4E3708" stroke-width="1.1"/>
+        <path d="M 0 -16 L 0 -52" stroke="#FFF0B3" stroke-width="1.2"/>
+
+        <!-- Folha de Acanto Inferior da Roseta -->
+        <path d="M -8 16 C -18 40, 0 52, 0 52 C 0 52, 18 40, 8 16 Z" 
+              fill="url(#acanthusMantelGold)" stroke="#4E3708" stroke-width="1.1"/>
+
+        <!-- Voluta e Folhagem de Acanto Fluindo para a Esquerda -->
+        <path d="M -18 0 C -60 -25, -120 -30, -170 0 C -200 18, -210 40, -195 55 C -180 65, -155 50, -165 30 C -175 15, -160 -5, -135 -8 C -100 -12, -50 8, -20 5" 
+              stroke="url(#acanthusMantelGold)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+        <path d="M -18 -2 C -60 -27, -120 -32, -170 -2 C -198 16, -208 38, -195 52" 
+              stroke="#FFF0B3" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+        <!-- Lóbulos de Acanto Esquerda -->
+        <path d="M -70 -25 C -95 -55, -130 -45, -120 -20 C -105 -22, -90 -22, -70 -25 Z" 
+              fill="url(#acanthusScrollGold)" stroke="#4E3708" stroke-width="1"/>
+        <path d="M -130 -12 C -165 -35, -190 -15, -175 5 C -160 0, -145 -5, -130 -12 Z" 
+              fill="url(#acanthusScrollGold)" stroke="#4E3708" stroke-width="1"/>
+
+        <!-- Voluta e Folhagem de Acanto Fluindo para a Direita (Simetria Clássica Arquitetural) -->
+        <path d="M 18 0 C 60 -25, 120 -30, 170 0 C 200 18, 210 40, 195 55 C 180 65, 155 50, 165 30 C 175 15, 160 -5, 135 -8 C 100 -12, 50 8, 20 5" 
+              stroke="url(#acanthusMantelGold)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+        <path d="M 18 -2 C 60 -27, 120 -32, 170 -2 C 198 16, 208 38, 195 52" 
+              stroke="#FFF0B3" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+        <!-- Lóbulos de Acanto Direita -->
+        <path d="M 70 -25 C 95 -55, 130 -45, 120 -20 C 105 -22, 90 -22, 70 -25 Z" 
+              fill="url(#acanthusScrollGold)" stroke="#4E3708" stroke-width="1"/>
+        <path d="M 130 -12 C 165 -35, 190 -15, 175 5 C 160 0, 145 -5, 130 -12 Z" 
+              fill="url(#acanthusScrollGold)" stroke="#4E3708" stroke-width="1"/>
+      </g>
+    </g>
+
+  </g>
+</svg>

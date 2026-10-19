@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
+  <!-- Marca de Água Heráldica Central de Linha Nobre Setecentista (Filigrana em Traço Fino) -->
+  <g stroke="#3a332a" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Moldura Exterior Oval Dupla com Perolado Fino -->
+    <ellipse cx="300" cy="300" rx="260" ry="260" stroke-width="1.0" opacity="0.65" />
+    <ellipse cx="300" cy="300" rx="252" ry="252" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.45" />
+    <ellipse cx="300" cy="300" rx="244" ry="244" stroke-width="0.8" opacity="0.55" />
+
+    <!-- Quatro Pontos Cardeais de Bússola Antiga / Marcas de Canteiro -->
+    <line x1="300" y1="30" x2="300" y2="52" stroke-width="1.2" opacity="0.8" />
+    <line x1="300" y1="548" x2="300" y2="570" stroke-width="1.2" opacity="0.8" />
+    <line x1="30" y1="300" x2="52" y2="300" stroke-width="1.2" opacity="0.8" />
+    <line x1="548" y1="300" x2="570" y2="300" stroke-width="1.2" opacity="0.8" />
+    
+    <circle cx="300" cy="41" r="2.5" fill="#3a332a" opacity="0.7" />
+    <circle cx="300" cy="559" r="2.5" fill="#3a332a" opacity="0.7" />
+    <circle cx="41" cy="300" r="2.5" fill="#3a332a" opacity="0.7" />
+    <circle cx="559" cy="300" r="2.5" fill="#3a332a" opacity="0.7" />
+
+    <!-- Brasão Oval Nobre Central -->
+    <path d="M 300 135 C 410 135, 430 220, 430 310 C 430 420, 300 475, 300 475 C 300 475, 170 420, 170 310 C 170 220, 190 135, 300 135 Z" stroke-width="1.4" opacity="0.85" />
+    <path d="M 300 145 C 398 145, 418 222, 418 308 C 418 408, 300 460, 300 460 C 300 460, 182 408, 182 308 C 182 222, 202 145, 300 145 Z" stroke-width="0.7" stroke-dasharray="4 3" opacity="0.5" />
+
+    <!-- Coroa / Cimalha Nobre Superior de Cantaria -->
+    <path d="M 245 130 Q 300 100, 355 130 L 350 112 Q 300 88, 250 112 Z" stroke-width="1.2" opacity="0.8" />
+    <circle cx="300" cy="85" r="4" stroke-width="1.0" opacity="0.8" />
+    <circle cx="265" cy="98" r="3" stroke-width="0.9" opacity="0.7" />
+    <circle cx="335" cy="98" r="3" stroke-width="0.9" opacity="0.7" />
+
+    <!-- Ramos Heráldicos de Oliveira e Louro em Torno do Brasão -->
+    <!-- Ramo Esquerdo -->
+    <path d="M 300 485 Q 160 480, 140 340 Q 130 220, 240 125" stroke-width="1.1" opacity="0.7" />
+    <!-- Folhas do Ramo Esquerdo -->
+    <path d="M 140 340 Q 115 320, 108 342 Q 130 355, 140 340 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 142 375 Q 118 370, 115 392 Q 138 395, 142 375 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 152 415 Q 130 422, 135 444 Q 155 435, 152 415 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 180 455 Q 165 475, 185 488 Q 198 468, 180 455 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 148 290 Q 120 280, 122 305 Q 145 310, 148 290 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 165 240 Q 140 222, 148 245 Q 168 255, 165 240 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 195 190 Q 175 168, 188 188 Q 205 200, 195 190 Z" stroke-width="0.8" opacity="0.6" />
+
+    <!-- Ramo Direito -->
+    <path d="M 300 485 Q 440 480, 460 340 Q 470 220, 360 125" stroke-width="1.1" opacity="0.7" />
+    <!-- Folhas do Ramo Direito -->
+    <path d="M 460 340 Q 485 320, 492 342 Q 470 355, 460 340 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 458 375 Q 482 370, 485 392 Q 462 395, 458 375 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 448 415 Q 470 422, 465 444 Q 445 435, 448 415 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 420 455 Q 435 475, 415 488 Q 402 468, 420 455 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 452 290 Q 480 280, 478 305 Q 455 310, 452 290 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 435 240 Q 460 222, 452 245 Q 432 255, 435 240 Z" stroke-width="0.8" opacity="0.6" />
+    <path d="M 405 190 Q 425 168, 412 188 Q 395 200, 405 190 Z" stroke-width="0.8" opacity="0.6" />
+
+    <!-- Monograma Central Elegante: 'C' e 'G' entrelaçados (Casa Grande) -->
+    <g transform="translate(300, 290)" stroke-width="1.8" opacity="0.85">
+      <!-- Letra C Nobre -->
+      <path d="M 30 -55 C -45 -55, -60 -20, -60 15 C -60 50, -42 80, 30 80 C 45 80, 55 72, 60 62" />
+      <path d="M 30 -47 C -35 -47, -50 -16, -50 15 C -50 45, -35 72, 30 72" stroke-width="0.8" opacity="0.5" />
+      
+      <!-- Letra G Entrelaçada -->
+      <path d="M -20 -40 C 45 -40, 60 -10, 60 25 C 60 65, 35 85, -15 85 C -40 85, -55 70, -55 45 L 15 45 L 15 25" />
+      <path d="M -15 -32 C 38 -32, 50 -6, 50 25 C 50 58, 28 77, -15 77" stroke-width="0.8" opacity="0.5" />
+      
+      <!-- Florão central clássico -->
+      <circle cx="2" cy="15" r="2.5" fill="#3a332a" opacity="0.6" />
+    </g>
+
+    <!-- Datação Histórica em Algarismos Romanos: MDCCXL (1740) -->
+    <g transform="translate(300, 420)" stroke-width="0.8" opacity="0.75">
+      <path d="M -70 0 L -62 -14 L -54 0 L -46 -14 L -38 0" /> <!-- M -->
+      <path d="M -26 0 L -26 -14 Q -10 -7, -26 0" /> <!-- D -->
+      <path d="M 2 -14 C -12 -14, -12 0, 2 0" /> <!-- C -->
+      <path d="M 18 -14 C 4 -14, 4 0, 18 0" /> <!-- C -->
+      <path d="M 30 -14 L 38 0 L 46 -14" /> <!-- X -->
+      <path d="M 58 -14 L 58 0 L 68 0" /> <!-- L -->
+    </g>
+
+    <!-- Voluta e Laço Barroco Inferior -->
+    <path d="M 260 495 Q 300 525, 340 495" stroke-width="1.2" opacity="0.75" />
+    <path d="M 275 510 Q 300 535, 325 510" stroke-width="0.8" opacity="0.6" />
+  </g>
+</svg>

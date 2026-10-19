@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Grande — Interações React (Vunabaka &amp; AstroAnimate)</title>
+  <meta name="description" content="Demonstração em tempo real das interações em React: Cabeçalho Vunabaka com auto-hide/reveal, SlidingOverlayButton, ArrowCTAButton e HighlightText do AstroAnimate.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- React 18 e Babel para execução no browser -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    /* Estilos complementares específicos dos componentes interativos */
+    .arrow-cta-btn svg {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .arrow-cta-btn:hover svg {
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Root para renderização do componente React -->
+  <div id="react-root"></div>
+
+  <!-- Código React compilado pelo Babel no browser -->
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    /* 1. HOOK useScrollHeader */
+    function useScrollHeader({ threshold = 10 } = {}) {
+      const [isFixed, setIsFixed] = useState(false);
+      const [isScrollUp, setIsScrollUp] = useState(false);
+      const [scrollTop, setScrollTop] = useState(0);
+
+      useEffect(() => {
+        let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        let ticking = false;
+
+        const updateScroll = () => {
+          const currentScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+          const pastThreshold = currentScrollY > threshold;
+          setIsFixed(pastThreshold);
+
+          const scrollingUp = currentScrollY < lastScrollY && pastThreshold;
+          setIsScrollUp(scrollingUp);
+
+          setScrollTop(currentScrollY);
+          lastScrollY = currentScrollY;
+          ticking = false;
+        };
+
+        const onScroll = () => {
+          if (!ticking) {
+            window.requestAnimationFrame(updateScroll);
+            ticking = true;
+          }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        updateScroll();
+
+        return () => window.removeEventListener('scroll', onScroll);
+      }, [threshold]);
+
+      const isVisible = !isFixed || isScrollUp;
+
+      return { isFixed, isScrollUp, isVisible, scrollTop };
+    }
+
+    /* 2. COMPONENTE SlidingOverlayButton (AstroAnimate) */
+    function SlidingOverlayButton({ as: Component = 'button', href, variant = 'gold', children, onClick, style = {} }) {
+      const [isHovered, setIsHovered] = useState(false);
+
+      const colorSchemes = {
+        gold: { baseBg: '#C28E58', baseColor: '#FFFFFF', overlayBg: '#211D19', hoverColor: '#FAF7F2' },
+        dark: { baseBg: '#211D19', baseColor: '#FAF7F2', overlayBg: '#C28E58', hoverColor: '#FFFFFF' },
+        outline: { baseBg: 'transparent', baseColor: '#FFFFFF', overlayBg: '#C28E58', hoverColor: '#FFFFFF' }
+      };
+
+      const theme = colorSchemes[variant] || colorSchemes.gold;
+
+      const btnStyle = {
+        position: 'relative',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+        padding: '11px 24px',
+        backgroundColor: theme.baseBg,
+        color: isHovered ? theme.hoverColor : theme.baseColor,
+        border: `1px solid ${isHovered ? theme.overlayBg : (variant === 'outline' ? '#FFFFFF' : theme.baseBg)}`,
+        borderRadius: '3px',
+        fontFamily: '"Montserrat", sans-serif',
+        fontSize: '0.78rem',
+        fontWeight: 700,
+        letterSpacing: '0.14em',
+        textTransform: 'uppercase',
+        textDecoration: 'none',
+        cursor: 'pointer',
+        lineHeight: 1,
+        zIndex: 1,
+        boxShadow: isHovered ? '0 4px 18px rgba(33, 29, 25, 0.2)' : 'none',
+        transform: isHovered ? 'translateY(-1px)' : 'translateY(0)',
+        transition: 'color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease',
+        ...style
+      };
+
+      const overlayStyle = {
+        position: 'absolute',
+        inset: 0,
+        backgroundColor: theme.overlayBg,
+        transform: isHovered ? 'translateY(0)' : 'translateY(100%)',
+        transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+        zIndex: -1,
+        pointerEvents: 'none'
+      };
+
+      const props = {
+        ...(Component === 'a' ? { href } : { type: 'button' }),
+        style: btnStyle,
+        onMouseEnter: () => setIsHovered(true),
+        onMouseLeave: () => setIsHovered(false),
+        onClick
+      };
+
+      return (
+        <Component {...props}>
+          <span style={overlayStyle} aria-hidden="true"></span>
+          <span style={{ position: 'relative', zIndex: 2 }}>{children}</span>
+        </Component>
+      );
+    }
+
+    /* 3. COMPONENTE ArrowCTAButton (AstroAnimate) */
+    function ArrowCTAButton({ as: Component = 'a', href = '#', label, children, accentColor = '#C28E58', color = '#211D19', style = {} }) {
+      const [isHovered, setIsHovered] = useState(false);
+      const textContent = label || children;
+
+      const containerStyle = {
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '12px',
+        fontFamily: '"Montserrat", sans-serif',
+        fontSize: '0.86rem',
+        fontWeight: 600,
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        color: isHovered ? accentColor : color,
+        textDecoration: 'none',
+        position: 'relative',
+        paddingBottom: '4px',
+        cursor: 'pointer',
+        background: 'none',
+        border: 'none',
+        transition: 'color 0.3s ease, transform 0.3s ease',
+        transform: isHovered ? 'translateX(3px)' : 'translateX(0)',
+        ...style
+      };
+
+      const underlineStyle = {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '1.5px',
+        backgroundColor: accentColor,
+        transformOrigin: 'left',
+        transform: isHovered ? 'scaleX(1)' : 'scaleX(0.25)',
+        opacity: isHovered ? 1 : 0.6,
+        transition: 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease'
+      };
+
+      return (
+        <Component
+          href={href}
+          style={containerStyle}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <span>{textContent}</span>
+          <span style={{ display: 'inline-flex', alignItems: 'center', transform: isHovered ? 'translateX(5px)' : 'translateX(0)', transition: 'transform 0.3s ease' }} aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12" width="13" height="11" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="1" y1="6" x2="13" y2="6" />
+              <polyline points="8 1 13 6 8 11" />
+            </svg>
+          </span>
+          <span style={underlineStyle} aria-hidden="true" />
+        </Component>
+      );
+    }
+
+    /* 4. COMPONENTE HighlightText (AstroAnimate) */
+    function HighlightText({ children, variant = 'background', color = 'rgba(194, 142, 88, 0.32)', trigger = 'hover', style = {} }) {
+      const [isActive, setIsActive] = useState(trigger === 'always');
+
+      useEffect(() => {
+        if (trigger === 'load') {
+          const t = setTimeout(() => setIsActive(true), 200);
+          return () => clearTimeout(t);
+        }
+      }, [trigger]);
+
+      const isUnderline = variant === 'underline';
+
+      const hlStyle = {
+        position: 'relative',
+        display: 'inline-block',
+        backgroundImage: `linear-gradient(120deg, ${color} 0%, ${color} 100%)`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: isUnderline ? '0 100%' : '0 88%',
+        backgroundSize: (isActive || trigger === 'always')
+          ? (isUnderline ? '100% 2px' : '100% 0.42em')
+          : (isUnderline ? '0% 2px' : '0% 0.42em'),
+        transition: 'background-size 500ms cubic-bezier(0.16, 1, 0.3, 1)',
+        padding: '0 2px',
+        borderRadius: '2px',
+        ...style
+      };
+
+      const handlers = trigger === 'hover' ? {
+        onMouseEnter: () => setIsActive(true),
+        onMouseLeave: () => setIsActive(false)
+      } : {};
+
+      return (
+        <span style={hlStyle} {...handlers}>
+          {children}
+        </span>
+      );
+    }
+
+    /* 5. CABEÇALHO FLUTUANTE VUNABAKA */
+    function HeaderVunabaka() {
+      const { isFixed, isScrollUp, isVisible } = useScrollHeader({ threshold: 10 });
+      const isSolid = isFixed && isScrollUp;
+
+      const headerStyle = {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 900,
+        width: '100%',
+        boxSizing: 'border-box',
+        padding: isSolid ? '1.1rem 2rem' : '2.2rem 2rem',
+        backgroundColor: isSolid ? '#FAF7F2' : 'transparent',
+        color: isSolid ? '#211D19' : '#FFFFFF',
+        borderBottom: isSolid ? '1px solid #EAE2D7' : '1px solid transparent',
+        boxShadow: isSolid ? '0 4px 20px rgba(33, 29, 25, 0.08)' : 'none',
+        transform: isVisible ? 'translateY(0)' : 'translateY(-100%)',
+        opacity: isVisible ? 1 : 0,
+        visibility: isVisible ? 'visible' : 'hidden',
+        transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease'
+      };
+
+      const navLinkStyle = {
+        fontFamily: '"Cinzel", "Cinzel Decorative", serif',
+        fontSize: '0.82rem',
+        fontWeight: 500,
+        letterSpacing: '0.12em',
+        textTransform: 'uppercase',
+        color: isSolid ? '#211D19' : '#FFFFFF',
+        textDecoration: 'none',
+        position: 'relative',
+        padding: '6px 0',
+        transition: 'color 0.3s ease'
+      };
+
+      const logoImgStyle = {
+        height: isSolid ? '42px' : '52px',
+        width: 'auto',
+        maxWidth: '260px',
+        objectFit: 'contain',
+        filter: isSolid ? 'brightness(0.12)' : 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4))',
+        transition: 'height 0.35s ease, filter 0.35s ease'
+      };
+
+      return (
+        <header style={headerStyle}>
+          <div style={{ maxWidth: '1440px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
+            
+            <nav style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
+              <ul style={{ display: 'flex', alignItems: 'center', gap: '28px', listStyle: 'none', margin: 0, padding: 0 }}>
+                <li><a href="alojamentos.html" style={navLinkStyle}>Alojamentos</a></li>
+                <li><a href="actividades.html" style={navLinkStyle}>Serra da Estrela</a></li>
+                <li><a href="duvidas.html" style={navLinkStyle}>FAQs</a></li>
+              </ul>
+            </nav>
+
+            <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+              <a href="index.html">
+                <img src="assets/img/logo_center.png" alt="Casa Grande" style={logoImgStyle} />
+              </a>
+            </div>
+
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+              <SlidingOverlayButton as="a" href="reservas.html" variant={isSolid ? 'dark' : 'gold'}>
+                RESERVAR ESTADIA
+              </SlidingOverlayButton>
+            </div>
+
+          </div>
+        </header>
+      );
+    }
+
+    /* 6. APLICAÇÃO PRINCIPAL REACT */
+    function App() {
+      return (
+        <div style={{ backgroundColor: '#FAF7F2', minHeight: '100vh', color: '#211D19', fontFamily: '"Montserrat", sans-serif' }}>
+          
+          <HeaderVunabaka />
+
+          {/* Hero com inverno */}
+          <section style={{
+            position: 'relative',
+            minHeight: '100vh',
+            height: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            backgroundImage: 'linear-gradient(180deg, rgba(20, 17, 14, 0.45) 0%, rgba(20, 17, 14, 0.85) 100%), url("assets/img/hero_inverno.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            padding: '120px 24px 32px 24px',
+            boxSizing: 'border-box',
+            color: '#FFFFFF'
+          }}>
+            <div style={{ maxWidth: '960px', margin: 'auto', textAlign: 'center' }}>
+              <span style={{ display: 'inline-block', fontSize: '0.78rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#C28E58', marginBottom: '16px', fontWeight: 600 }}>
+                Turismo de Habitação &amp; Casas de Campo
+              </span>
+              <h1 style={{ fontFamily: '"Cinzel", serif', fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', fontWeight: 400, lineHeight: 1.15, margin: '0 0 24px 0' }}>
+                Casa Grande, Serra da Estrela
+              </h1>
+              <p style={{ fontSize: '1.08rem', lineHeight: 1.7, color: 'rgba(255, 255, 255, 0.94)', maxWidth: '780px', margin: '0 auto 36px auto' }}>
+                Quatro séculos de património sob os cumes nevados da montanha. Onde o frio agreste se rende ao calor acolhedor de uma{' '}
+                <HighlightText color="rgba(194, 142, 88, 0.55)" trigger="hover">
+                  lareira a lenha
+                </HighlightText>{' '}
+                e à serenidade secular do olival em Paços da Serra.
+              </p>
+
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <SlidingOverlayButton as="a" href="#alojamentos" variant="gold">
+                  Conhecer os Espaços
+                </SlidingOverlayButton>
+                <SlidingOverlayButton as="a" href="reservas.html" variant="outline">
+                  Ver Disponibilidade
+                </SlidingOverlayButton>
+              </div>
+            </div>
+
+            {/* Barra de Informação Ambiental Centrada */}
+            <div style={{ maxWidth: '1320px', margin: '0 auto', width: '100%', position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '16px', paddingBottom: '8px', borderTop: '1px solid rgba(255, 255, 255, 0.15)', fontSize: '0.82rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', zIndex: 1 }}>
+                <span style={{ fontSize: '1.5rem', fontWeight: 300, color: '#FFFFFF' }}>13:00</span>
+                <div style={{ fontSize: '0.76rem', color: '#D6CCC2', lineHeight: 1.35 }}>
+                  <strong style={{ display: 'block', color: '#FFFFFF', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Hora Local em Paços da Serra</strong>
+                  <span>Parque Natural da Serra da Estrela</span>
+                </div>
+              </div>
+
+              {/* Botão Explorar rigorosamente centrado a 50% */}
+              <a href="#alojamentos" style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', color: '#FFFFFF', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none', opacity: 0.85, zIndex: 2 }}>
+                <span>Explorar</span>
+                <div style={{ width: '24px', height: '24px', border: '1px solid rgba(255, 255, 255, 0.35)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
+                </div>
+              </a>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', textAlign: 'right', fontSize: '0.82rem', color: '#D6CCC2', zIndex: 1 }}>
+                <div>
+                  <strong style={{ display: 'block', color: '#FFFFFF', fontSize: '0.92rem' }}>720 Metros de Altitude</strong>
+                  <span>Encosta da Serra da Estrela · Gouveia</span>
+                </div>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>
+              </div>
+            </div>
+          </section>
+
+          {/* Nota Demonstrativa ao Anfitrião */}
+          <aside style={{ backgroundColor: '#F4EDE4', padding: '36px 24px', borderBottom: '1px solid #DFD5C8' }}>
+            <div style={{ maxWidth: '1100px', margin: '0 auto', backgroundColor: '#FFFFFF', border: '1px solid #DFD5C8', borderLeft: '4px solid #C28E58', padding: '24px 32px', borderRadius: '4px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', borderBottom: '1px dashed #EAE2D7', paddingBottom: '10px' }}>
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C28E58' }}>Nota Demonstrativa ao Anfitrião</span>
+                <span style={{ fontSize: '0.76rem', color: '#887E74', textTransform: 'uppercase' }}>Padrão Bruto · Remoção Coordenada em Produção</span>
+              </div>
+              <h3 style={{ fontFamily: '"Cinzel", serif', fontSize: '1.15rem', margin: '0 0 8px 0', color: '#211D19' }}>Curadoria Editorial Dinâmica por Estação do Ano</h3>
+              <p style={{ fontSize: '0.92rem', lineHeight: 1.65, color: '#4A443E', margin: 0 }}>
+                De acordo com a época em que estamos, as fotografias principais e os textos editoriais adaptam-se dinamicamente: no <strong>Inverno</strong>, a vasta neve da montanha, as lareiras nos solares e o conforto de montanha; na <strong>Primavera e Verão</strong>, as camélias em flor, a frescura do olival secular de 3,2 hectares e as praias fluviais como o Vale do Rossim.
+              </p>
+            </div>
+          </aside>
+
+          {/* Secção de Alojamentos com ArrowCTAButton */}
+          <section id="alojamentos" style={{ maxWidth: '1200px', margin: '80px auto', padding: '0 24px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+              <span style={{ fontSize: '0.76rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C28E58', fontWeight: 600 }}>Interações em React (Vunabaka + AstroAnimate)</span>
+              <h2 style={{ fontFamily: '"Cinzel", serif', fontSize: '2.2rem', margin: '12px 0 16px 0', color: '#211D19' }}>Acomodações na Casa Grande</h2>
+              <p style={{ maxWidth: '640px', margin: '0 auto', color: '#655E57', lineHeight: 1.6 }}>
+                Experimente o scroll para baixo e para cima para testar o header Vunabaka, e faça hover nos botões com transições AstroAnimate.
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
+              
+              <div style={{ backgroundColor: '#FFFFFF', border: '1px solid #E6DDD2', borderRadius: '4px', padding: '32px', boxShadow: '0 4px 16px rgba(33, 29, 25, 0.04)' }}>
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C28E58' }}>Turismo de Habitação</span>
+                <h3 style={{ fontFamily: '"Cinzel", serif', fontSize: '1.28rem', margin: '8px 0 12px 0', color: '#211D19' }}>O Solar Nobre (Séc. XVIII)</h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#655E57', marginBottom: '24px' }}>
+                  Apartamentos com tetos em masseira de castanho, lareira e vistas panorâmicas sobre o olival secular e a montanha.
+                </p>
+                <ArrowCTAButton href="alojamentos.html">
+                  Explorar os Alojamentos
+                </ArrowCTAButton>
+              </div>
+
+              <div style={{ backgroundColor: '#FFFFFF', border: '1px solid #E6DDD2', borderRadius: '4px', padding: '32px', boxShadow: '0 4px 16px rgba(33, 29, 25, 0.04)' }}>
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C28E58' }}>Casas de Campo</span>
+                <h3 style={{ fontFamily: '"Cinzel", serif', fontSize: '1.28rem', margin: '8px 0 12px 0', color: '#211D19' }}>Casas de Pedra no Olival</h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#655E57', marginBottom: '24px' }}>
+                  Construções tradicionais em cantaria de granito recuperadas com conforto pleno, lareira a lenha e pátio exterior privativo.
+                </p>
+                <ArrowCTAButton href="alojamentos.html">
+                  Conhecer Casa Caseira
+                </ArrowCTAButton>
+              </div>
+
+              <div style={{ backgroundColor: '#FFFFFF', border: '1px solid #E6DDD2', borderRadius: '4px', padding: '32px', boxShadow: '0 4px 16px rgba(33, 29, 25, 0.04)' }}>
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C28E58' }}>Parque Natural</span>
+                <h3 style={{ fontFamily: '"Cinzel", serif', fontSize: '1.28rem', margin: '8px 0 12px 0', color: '#211D19' }}>Roteiros de Inverno</h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#655E57', marginBottom: '24px' }}>
+                  Da subida à Torre (1993m) às lagoas e queijarias artesanais da região de Gouveia e Serra da Estrela.
+                </p>
+                <ArrowCTAButton href="actividades.html">
+                  Descobrir a Serra
+                </ArrowCTAButton>
+              </div>
+
+            </div>
+          </section>
+
+          {/* Espaço para teste de scroll */}
+          <div style={{ height: '400px', backgroundColor: '#F0EAE1', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#887E74', fontSize: '0.9rem' }}>
+            Role para cima para ver o cabeçalho Vunabaka descer suavemente em modo sólido
+          </div>
+
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('react-root')).render(<App />);
+  </script>
+</body>
+</html>
